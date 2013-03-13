@@ -14,12 +14,11 @@
     "completions":
     [
 
-
 /*
 
 C:\www\lemonstand\ls\boot.php:
-   54: 
-   55: 	function ls_detect_command_line_interface()
+   54:
+	,	{ "trigger": "ls_detect_command_line_interface", "contents": "ls_detect_command_line_interface();" }
  */
 
 /*
@@ -32,25 +31,20 @@ C:\www\lemonstand\ls\controllers\application.php:
 
 
 		{ "trigger": "h", "contents": "h(${1:str});\n$0" }
-	]
-}
+	,	{ "trigger": "plainText", "contents": "plainText(${1:str});\n$0" }
+	,	{ "trigger": "displayDate", "contents": "displayDate( ${1:date}, ${2:Format});\n$0" }
 
 /*
-
-
-   22: 
-   23: 	function plainText($Str)
-   35: 	function displayDate( $Date, $Format = '%x' )
-   43: 	function gmtNow()
-   66: 	function traceLog($Str, $Listener = 'INFO')
-   71: 	
-   72: 	function flash()
-   93: 	function post($name, $default = null)
-  120: 	function post_array_item($array_name, $name, $default = null)
-  149: 	function option_state($current_value, $selected_value)
-  168: 	function checkbox_state($value)
-  189: 	function radio_state($value)
-  219: 	function root_url($value = '/', $add_host_name_and_protocol = false, $protocol = null)
+	,	{ "trigger": "gmtNow", "contents": "gmtNow();" }
+	,	{ "trigger": "traceLog", "contents": "traceLog($Str, $Listener = 'INFO');" }
+   71:
+	,	{ "trigger": "flash", "contents": "flash();" }
+	,	{ "trigger": "post", "contents": "post($name, $default = null);" }
+	,	{ "trigger": "post_array_item", "contents": "post_array_item($array_name, $name, $default = null);" }
+	,	{ "trigger": "option_state", "contents": "option_state($current_value, $selected_value);" }
+	,	{ "trigger": "checkbox_state", "contents": "checkbox_state($value);" }
+	,	{ "trigger": "radio_state", "contents": "radio_state($value);" }
+	,	{ "trigger": "root_url", "contents": "root_url($value = '/', $add_host_name_and_protocol = false, $protocol = null);" }
 
 C:\www\lemonstand\ls\modules\accesstools\classes\accesstools_module.php:
     2: 
@@ -73,7 +67,7 @@ C:\www\lemonstand\ls\modules\api\controllers\api_settings.php:
     3: 	class Api_Settings extends Backend_Controller {
 
 C:\www\lemonstand\ls\modules\api\init\custom_helpers.php:
-    7: 		function api() {
+	,	{ "trigger": "api", "contents": "api();" } {
 
 C:\www\lemonstand\ls\modules\api\models\api_route.php:
     2: 
@@ -106,8 +100,8 @@ C:\www\lemonstand\ls\modules\backend\behaviors\backend_csvimport.php:
 C:\www\lemonstand\ls\modules\backend\behaviors\backend_filebrowser.php:
     2: 
     3: 	class Backend_FileBrowser extends Phpr_ControllerBehavior
-  502: 	
-  503: 	function backend_filebrowser_sort_files($a, $b)
+  502:
+	,	{ "trigger": "backend_filebrowser_sort_files", "contents": "backend_filebrowser_sort_files($a, $b);" }
 
 C:\www\lemonstand\ls\modules\backend\classes\backend.php:
     2: 
@@ -131,8 +125,8 @@ C:\www\lemonstand\ls\modules\backend\classes\backend_dashboardcontroller.php:
 C:\www\lemonstand\ls\modules\backend\classes\backend_events.php:
     2: 
     3: 	class Backend_Events extends Phpr_Extensible
-   13: 		
-   14: 		function uninitialize() 
+   13:
+	,	{ "trigger": "uninitialize", "contents": "uninitialize();" } 
 
 C:\www\lemonstand\ls\modules\backend\classes\backend_module.php:
     2: 
@@ -191,15 +185,15 @@ C:\www\lemonstand\ls\modules\backend\helpers\backend_reports.php:
     3: 	class Backend_Reports
 
 C:\www\lemonstand\ls\modules\backend\init\custom_helpers.php:
-   25: 	function backend_button($caption, $attributes = array(), $ajaxHandler=null, $ajaxParams = null, $formElement = null)
-   34: 	function backend_ajax_button($caption, $ajaxHandler, $attributes = array(), $ajaxParams = null)
-   43: 	function backend_ctr_button($caption, $button_class, $attributes = array(), $ajaxHandler=null, $ajaxParams = null, $formElement = null)
-   52: 	function backend_ctr_ajax_button($caption, $button_class, $ajaxHandler, $attributes = array(), $ajaxParams = null)
-   69: 	function url($url)
-   79: 	function zebra($counterName)
-   89: 	function module_build($moduleId)
-   99: 	function click_link($url)
-  110: 	function alt_click_link($url, $alt_url)
+	,	{ "trigger": "backend_button", "contents": "backend_button($caption, $attributes = array();" }, $ajaxHandler=null, $ajaxParams = null, $formElement = null)
+	,	{ "trigger": "backend_ajax_button", "contents": "backend_ajax_button($caption, $ajaxHandler, $attributes = array();" }, $ajaxParams = null)
+	,	{ "trigger": "backend_ctr_button", "contents": "backend_ctr_button($caption, $button_class, $attributes = array();" }, $ajaxHandler=null, $ajaxParams = null, $formElement = null)
+	,	{ "trigger": "backend_ctr_ajax_button", "contents": "backend_ctr_ajax_button($caption, $button_class, $ajaxHandler, $attributes = array();" }, $ajaxParams = null)
+	,	{ "trigger": "url", "contents": "url($url);" }
+	,	{ "trigger": "zebra", "contents": "zebra($counterName);" }
+	,	{ "trigger": "module_build", "contents": "module_build($moduleId);" }
+	,	{ "trigger": "click_link", "contents": "click_link($url);" }
+	,	{ "trigger": "alt_click_link", "contents": "alt_click_link($url, $alt_url);" }
 
 C:\www\lemonstand\ls\modules\backend\models\backend_appearanceconfiguration.php:
     2: 
@@ -302,298 +296,298 @@ C:\www\lemonstand\ls\modules\blogpro\routers\blogpro_default_router.php:
     3: 	class BlogPro_Default_Router extends Api_Router_Base {
 
 C:\www\lemonstand\ls\modules\boilerplate\3rdpart\php_beautifier\Beautifier\Decorator.php:
-   35:     function __construct(PHP_Beautifier_Interface $oBeaut) 
-   39:     function __call($sMethod, $aArgs) 
+	,	{ "trigger": "__construct", "contents": "__construct(PHP_Beautifier_Interface $oBeaut);" }
+	,	{ "trigger": "__call", "contents": "__call($sMethod, $aArgs);" } 
 
 C:\www\lemonstand\ls\modules\boilerplate\3rdpart\php_beautifier\Beautifier\StreamWrapper.php:
-   37:     function stream_open($sPath, $sMode, $iOptions, &$sOpenedPath);
-   38:     function stream_close();
-   39:     function stream_read($iCount);
-   40:     function stream_write($sData);
-   41:     function stream_eof();
-   42:     function stream_tell();
-   43:     function stream_seek($iOffset, $iWhence);
-   44:     function stream_flush();
-   45:     function stream_stat();
-   46:     function unlink($sPath);
-   47:     function dir_opendir($sPath, $iOptions);
-   48:     function dir_readdir();
-   49:     function dir_rewinddir();
-   50:     function dir_closedir();
+	,	{ "trigger": "stream_open", "contents": "stream_open($sPath, $sMode, $iOptions, &$sOpenedPath);" };
+	,	{ "trigger": "stream_close", "contents": "stream_close();" };
+	,	{ "trigger": "stream_read", "contents": "stream_read($iCount);" };
+	,	{ "trigger": "stream_write", "contents": "stream_write($sData);" };
+	,	{ "trigger": "stream_eof", "contents": "stream_eof();" };
+	,	{ "trigger": "stream_tell", "contents": "stream_tell();" };
+	,	{ "trigger": "stream_seek", "contents": "stream_seek($iOffset, $iWhence);" };
+	,	{ "trigger": "stream_flush", "contents": "stream_flush();" };
+	,	{ "trigger": "stream_stat", "contents": "stream_stat();" };
+	,	{ "trigger": "unlink", "contents": "unlink($sPath);" };
+	,	{ "trigger": "dir_opendir", "contents": "dir_opendir($sPath, $iOptions);" };
+	,	{ "trigger": "dir_readdir", "contents": "dir_readdir();" };
+	,	{ "trigger": "dir_rewinddir", "contents": "dir_rewinddir();" };
+	,	{ "trigger": "dir_closedir", "contents": "dir_closedir();" };
 
 C:\www\lemonstand\ls\modules\boilerplate\3rdpart\php_beautifier\Beautifier\Filter\Default.filter.php:
-   50:     function __call($sMethod, $aArgs) 
-   84:     function t_close_tag($sTag) 
-   94:     function t_switch($sTag) 
-   98:     function t_control($sTag) 
-  102:     function t_case($sTag) 
-  111:     function t_parenthesis_open($sTag) 
-  115:     function t_parenthesis_close($sTag) 
-  126:     function t_open_brace($sTag) 
-  143:    
-  144:     function t_close_brace($sTag) 
-  164:     function t_semi_colon($sTag) 
-  172:     function t_as($sTag) 
-  177:     function t_new($sTag) 
-  181:     function t_whitespace($sTag) 
-  184:     function t_doc_comment($sTag) 
-  209:     function t_comment($sTag) 
-  224:     function comment_short($sTag) 
-  229:     function comment_large($sTag) 
-  265:     function t_else($sTag) 
-  302:     function t_equal($sTag) 
-  307:     function t_logical($sTag) 
-  312:     function t_foreach($sTag) 
-  316:     function t_for($sTag) 
-  320:     function t_comma($sTag) 
-  325:     function t_dot($sTag) 
-  330:     function t_include($sTag) 
-  334:     function t_language_construct($sTag) 
-  338:     function t_constant_encapsed_string($sTag) 
-  342:     function t_variable($sTag) 
-  349:     function t_question($sTag) 
-  354:     function t_colon($sTag) 
-  365:     function t_double_colon($sTag) 
-  369:     function t_break($sTag) 
-  384:     function t_continue($sTag) 
-  391:     function t_default($sTag) 
-  395:     function t_end_suffix($sTag) 
-  402:     function t_extends($sTag) 
-  407:     function t_implements($sTag) 
-  412:     function t_instanceof($sTag) 
-  417:     function t_equal_sign($sTag) 
-  422:     function t_assigment($sTag) 
-  427:     function t_assigment_pre($sTag) 
-  432:     function t_clone($sTag) {
-  435:     function t_array($sTag) 
-  443:     function t_object_operator($sTag) 
-  448:     function t_operator($sTag)
+	,	{ "trigger": "__call", "contents": "__call($sMethod, $aArgs);" }
+	,	{ "trigger": "t_close_tag", "contents": "t_close_tag($sTag);" }
+	,	{ "trigger": "t_switch", "contents": "t_switch($sTag);" }
+	,	{ "trigger": "t_control", "contents": "t_control($sTag);" }
+	,	{ "trigger": "t_case", "contents": "t_case($sTag);" }
+	,	{ "trigger": "t_parenthesis_open", "contents": "t_parenthesis_open($sTag);" }
+	,	{ "trigger": "t_parenthesis_close", "contents": "t_parenthesis_close($sTag);" }
+	,	{ "trigger": "t_open_brace", "contents": "t_open_brace($sTag);" } 
+  143:
+	,	{ "trigger": "t_close_brace", "contents": "t_close_brace($sTag);" }
+	,	{ "trigger": "t_semi_colon", "contents": "t_semi_colon($sTag);" }
+	,	{ "trigger": "t_as", "contents": "t_as($sTag);" }
+	,	{ "trigger": "t_new", "contents": "t_new($sTag);" }
+	,	{ "trigger": "t_whitespace", "contents": "t_whitespace($sTag);" }
+	,	{ "trigger": "t_doc_comment", "contents": "t_doc_comment($sTag);" }
+	,	{ "trigger": "t_comment", "contents": "t_comment($sTag);" }
+	,	{ "trigger": "comment_short", "contents": "comment_short($sTag);" }
+	,	{ "trigger": "comment_large", "contents": "comment_large($sTag);" }
+	,	{ "trigger": "t_else", "contents": "t_else($sTag);" }
+	,	{ "trigger": "t_equal", "contents": "t_equal($sTag);" }
+	,	{ "trigger": "t_logical", "contents": "t_logical($sTag);" }
+	,	{ "trigger": "t_foreach", "contents": "t_foreach($sTag);" }
+	,	{ "trigger": "t_for", "contents": "t_for($sTag);" }
+	,	{ "trigger": "t_comma", "contents": "t_comma($sTag);" }
+	,	{ "trigger": "t_dot", "contents": "t_dot($sTag);" }
+	,	{ "trigger": "t_include", "contents": "t_include($sTag);" }
+	,	{ "trigger": "t_language_construct", "contents": "t_language_construct($sTag);" }
+	,	{ "trigger": "t_constant_encapsed_string", "contents": "t_constant_encapsed_string($sTag);" }
+	,	{ "trigger": "t_variable", "contents": "t_variable($sTag);" }
+	,	{ "trigger": "t_question", "contents": "t_question($sTag);" }
+	,	{ "trigger": "t_colon", "contents": "t_colon($sTag);" }
+	,	{ "trigger": "t_double_colon", "contents": "t_double_colon($sTag);" }
+	,	{ "trigger": "t_break", "contents": "t_break($sTag);" }
+	,	{ "trigger": "t_continue", "contents": "t_continue($sTag);" }
+	,	{ "trigger": "t_default", "contents": "t_default($sTag);" }
+	,	{ "trigger": "t_end_suffix", "contents": "t_end_suffix($sTag);" }
+	,	{ "trigger": "t_extends", "contents": "t_extends($sTag);" }
+	,	{ "trigger": "t_implements", "contents": "t_implements($sTag);" }
+	,	{ "trigger": "t_instanceof", "contents": "t_instanceof($sTag);" }
+	,	{ "trigger": "t_equal_sign", "contents": "t_equal_sign($sTag);" }
+	,	{ "trigger": "t_assigment", "contents": "t_assigment($sTag);" }
+	,	{ "trigger": "t_assigment_pre", "contents": "t_assigment_pre($sTag);" }
+	,	{ "trigger": "t_clone", "contents": "t_clone($sTag);" } {
+	,	{ "trigger": "t_array", "contents": "t_array($sTag);" }
+	,	{ "trigger": "t_object_operator", "contents": "t_object_operator($sTag);" }
+	,	{ "trigger": "t_operator", "contents": "t_operator($sTag);" }
 
 C:\www\lemonstand\ls\modules\boilerplate\3rdpart\php_beautifier\Beautifier\Filter\IndentStyles.filter.php:
-  113:     function t_open_brace_bsd($sTag) 
-  124:     function t_close_brace_bsd($sTag) 
-  140:     function t_open_brace_ws($sTag) 
-  152:     function t_close_brace_ws($sTag) 
-  168:     function t_close_brace_gnu($sTag) 
-  186:     function t_open_brace_gnu($sTag) 
-  200:     function t_else($sTag) 
+	,	{ "trigger": "t_open_brace_bsd", "contents": "t_open_brace_bsd($sTag);" }
+	,	{ "trigger": "t_close_brace_bsd", "contents": "t_close_brace_bsd($sTag);" }
+	,	{ "trigger": "t_open_brace_ws", "contents": "t_open_brace_ws($sTag);" }
+	,	{ "trigger": "t_close_brace_ws", "contents": "t_close_brace_ws($sTag);" }
+	,	{ "trigger": "t_close_brace_gnu", "contents": "t_close_brace_gnu($sTag);" }
+	,	{ "trigger": "t_open_brace_gnu", "contents": "t_open_brace_gnu($sTag);" }
+	,	{ "trigger": "t_else", "contents": "t_else($sTag);" } 
 
 C:\www\lemonstand\ls\modules\boilerplate\3rdpart\php_beautifier\Beautifier\Filter\ListClassFunction.filter.php:
-   72:     function t_function($sTag) 
-   83:     function includeInList($sTag, $sValue) 
-   87:     function t_class($sTag) 
-   98:     function t_doc_comment($sTag) 
-  105:     function t_open_tag($sTag) 
-  112:     function postProcess() 
+	,	{ "trigger": "t_function", "contents": "t_function($sTag);" }
+	,	{ "trigger": "includeInList", "contents": "includeInList($sTag, $sValue);" }
+	,	{ "trigger": "t_class", "contents": "t_class($sTag);" }
+	,	{ "trigger": "t_doc_comment", "contents": "t_doc_comment($sTag);" }
+	,	{ "trigger": "t_open_tag", "contents": "t_open_tag($sTag);" }
+	,	{ "trigger": "postProcess", "contents": "postProcess();" } 
 
 C:\www\lemonstand\ls\modules\boilerplate\3rdpart\php_beautifier\Beautifier\Filter\Pear.filter.php:
-   64:     function t_open_tag_with_echo($sTag) 
-   68:     function t_close_brace($sTag) 
-   83:     function t_semi_colon($sTag) 
-  100:     function t_case($sTag) 
-  112:     function t_default($sTag) 
-  116:     function t_break($sTag) 
-  123:     function t_open_brace($sTag) 
-  148:     function t_comment($sTag) 
-  157:     function t_open_tag($sTag) 
-  176:     function preProcess() 
-  180:     function addHeaderComment() 
+	,	{ "trigger": "t_open_tag_with_echo", "contents": "t_open_tag_with_echo($sTag);" }
+	,	{ "trigger": "t_close_brace", "contents": "t_close_brace($sTag);" }
+	,	{ "trigger": "t_semi_colon", "contents": "t_semi_colon($sTag);" }
+	,	{ "trigger": "t_case", "contents": "t_case($sTag);" }
+	,	{ "trigger": "t_default", "contents": "t_default($sTag);" }
+	,	{ "trigger": "t_break", "contents": "t_break($sTag);" }
+	,	{ "trigger": "t_open_brace", "contents": "t_open_brace($sTag);" }
+	,	{ "trigger": "t_comment", "contents": "t_comment($sTag);" }
+	,	{ "trigger": "t_open_tag", "contents": "t_open_tag($sTag);" }
+	,	{ "trigger": "preProcess", "contents": "preProcess();" }
+	,	{ "trigger": "addHeaderComment", "contents": "addHeaderComment();" } 
 
 C:\www\lemonstand\ls\modules\boilerplate\3rdpart\php_beautifier\Beautifier\Filter\phpBB.filter.php:
-   50:     function t_open_brace($sTag)
-   57:     function t_close_brace($sTag)
-   69:     function t_else($sTag)
-   80:     function t_semi_colon($sTag)
-   94:     function preProcess()
+	,	{ "trigger": "t_open_brace", "contents": "t_open_brace($sTag);" }
+	,	{ "trigger": "t_close_brace", "contents": "t_close_brace($sTag);" }
+	,	{ "trigger": "t_else", "contents": "t_else($sTag);" }
+	,	{ "trigger": "t_semi_colon", "contents": "t_semi_colon($sTag);" }
+	,	{ "trigger": "preProcess", "contents": "preProcess();" }
 
 C:\www\lemonstand\ls\modules\boilerplate\3rdpart\php_beautifier\Beautifier\StreamWrapper\Tarz.php:
-   49:     function stream_open($sPath, $sMode, $iOptions, &$sOpenedPath) 
-   62:     function getTar($sPath) 
-   86:     function stream_close() 
-   90:     function stream_read($iCount) 
-   96:     function stream_write($sData) 
-   99:     function stream_eof() 
-  109:     function stream_tell() 
-  113:     function stream_seek($iOffset, $iWhence) 
-  147:         function stream_flush() 
-  150:         function stream_stat() 
-  153:         function unlink($sPath) 
-  156:         function dir_opendir($sPath, $iOptions) 
-  168:         function dir_readdir() 
-  176:         function dir_rewinddir() 
-  180:         function dir_closedir() 
-  186:         function getFileList($aInput) 
-  190:         function tarFileExists($aInput) 
+	,	{ "trigger": "stream_open", "contents": "stream_open($sPath, $sMode, $iOptions, &$sOpenedPath);" }
+	,	{ "trigger": "getTar", "contents": "getTar($sPath);" }
+	,	{ "trigger": "stream_close", "contents": "stream_close();" }
+	,	{ "trigger": "stream_read", "contents": "stream_read($iCount);" }
+	,	{ "trigger": "stream_write", "contents": "stream_write($sData);" }
+	,	{ "trigger": "stream_eof", "contents": "stream_eof();" }
+	,	{ "trigger": "stream_tell", "contents": "stream_tell();" }
+	,	{ "trigger": "stream_seek", "contents": "stream_seek($iOffset, $iWhence);" }
+	,	{ "trigger": "stream_flush", "contents": "stream_flush();" }
+	,	{ "trigger": "stream_stat", "contents": "stream_stat();" }
+	,	{ "trigger": "unlink", "contents": "unlink($sPath);" }
+	,	{ "trigger": "dir_opendir", "contents": "dir_opendir($sPath, $iOptions);" }
+	,	{ "trigger": "dir_readdir", "contents": "dir_readdir();" }
+	,	{ "trigger": "dir_rewinddir", "contents": "dir_rewinddir();" }
+	,	{ "trigger": "dir_closedir", "contents": "dir_closedir();" }
+	,	{ "trigger": "getFileList", "contents": "getFileList($aInput);" }
+	,	{ "trigger": "tarFileExists", "contents": "tarFileExists($aInput);" } 
 
 C:\www\lemonstand\ls\modules\boilerplate\3rdpart\php_beautifier\examples\example_lowercase.php:
     4: 
     5: FUNCTION test() {
 
 C:\www\lemonstand\ls\modules\boilerplate\3rdpart\php_beautifier\examples\example_main.php:
-   21:     function folder() 
-   26:     function notInList() 
-   30:     function InList() 
+	,	{ "trigger": "folder", "contents": "folder();" }
+	,	{ "trigger": "notInList", "contents": "notInList();" }
+	,	{ "trigger": "InList", "contents": "InList();" } 
    33:     class class_1 extends class_0 {
 
 C:\www\lemonstand\ls\modules\boilerplate\3rdpart\php_beautifier\tests\BeautifierBugsTest.php:
    22: 
    23: 
    24: class BeautifierBugsTest extends PHPUnit_Framework_TestCase
-   26:     
-   27:     function setUp() 
-   31:     function setText($sText) 
-   42:     function testBugInternal1() 
-   67:     function testBug1597() 
-   92:     function testBug2301() 
-  115:     function testBugChtchevaev_2004_11_17() 
-  136:     function testBug3257() 
+   26:
+	,	{ "trigger": "setUp", "contents": "setUp();" }
+	,	{ "trigger": "setText", "contents": "setText($sText);" }
+	,	{ "trigger": "testBugInternal1", "contents": "testBugInternal1();" }
+	,	{ "trigger": "testBug1597", "contents": "testBug1597();" }
+	,	{ "trigger": "testBug2301", "contents": "testBug2301();" }
+	,	{ "trigger": "testBugChtchevaev_2004_11_17", "contents": "testBugChtchevaev_2004_11_17();" }
+	,	{ "trigger": "testBug3257", "contents": "testBug3257();" } 
   140:     class Foo {
-  142:         function Foo(\$a, \$b) {
-  155: 
-  156:         function bar() {
-  168:     function Foo(\$a, \$b) {
-  181:     function bar() {
-  205:     function deprecatedtestBugConvissor_2005_06_20() 
-  236:     function testBugJustinh_2005_07_26() 
-  265:     function testBugjuancarlos2005_09_13() 
-  282:     function testBug5711() 
+	,	{ "trigger": "Foo", "contents": "Foo(\$a, \$b);" } {
+  155:
+	,	{ "trigger": "bar", "contents": "bar();" } {
+	,	{ "trigger": "Foo", "contents": "Foo(\$a, \$b);" } {
+	,	{ "trigger": "bar", "contents": "bar();" } {
+	,	{ "trigger": "deprecatedtestBugConvissor_2005_06_20", "contents": "deprecatedtestBugConvissor_2005_06_20();" }
+	,	{ "trigger": "testBugJustinh_2005_07_26", "contents": "testBugJustinh_2005_07_26();" }
+	,	{ "trigger": "testBugjuancarlos2005_09_13", "contents": "testBugjuancarlos2005_09_13();" }
+	,	{ "trigger": "testBug5711", "contents": "testBug5711();" } 
   287: 
   288: class CampaignManagerConfig {
-  315:     function testBug6237() 
-  345:     function testBug7347() 
-  376:     function testInternal2() 
-  384:     function testBug7759() 
-  429:     function testBug7818() 
-  450:     function testBug7854() 
-  472:     function testBug7307() 
-  486:     function m1() {}
-  487:     function m2() {}
-  508:     function m1() {
-  510:     function m2() {
-  522:     function testBug_rolfhub_2007_02_07_1() 
-  564:     function testBug_rolfhub_2007_02_07_1_pear() 
-  607:     function testBug_rolfhub_2007_02_07_2() 
-  630:     function testBug10839() 
-  636:  function test(array \$moo)
-  651:     function test(array \$moo) {
-  668:     function testBug11661() 
-  735:     function atestComplexCurlySyntax() 
-  776:     function testBug11941() 
-  800:     function testBug13600() 
-  825:     function testBug13602() 
+	,	{ "trigger": "testBug6237", "contents": "testBug6237();" }
+	,	{ "trigger": "testBug7347", "contents": "testBug7347();" }
+	,	{ "trigger": "testInternal2", "contents": "testInternal2();" }
+	,	{ "trigger": "testBug7759", "contents": "testBug7759();" }
+	,	{ "trigger": "testBug7818", "contents": "testBug7818();" }
+	,	{ "trigger": "testBug7854", "contents": "testBug7854();" }
+	,	{ "trigger": "testBug7307", "contents": "testBug7307();" }
+	,	{ "trigger": "m1", "contents": "m1();" } {}
+	,	{ "trigger": "m2", "contents": "m2();" } {}
+	,	{ "trigger": "m1", "contents": "m1();" } {
+	,	{ "trigger": "m2", "contents": "m2();" } {
+	,	{ "trigger": "testBug_rolfhub_2007_02_07_1", "contents": "testBug_rolfhub_2007_02_07_1();" }
+	,	{ "trigger": "testBug_rolfhub_2007_02_07_1_pear", "contents": "testBug_rolfhub_2007_02_07_1_pear();" }
+	,	{ "trigger": "testBug_rolfhub_2007_02_07_2", "contents": "testBug_rolfhub_2007_02_07_2();" }
+	,	{ "trigger": "testBug10839", "contents": "testBug10839();" }
+	,	{ "trigger": "test", "contents": "test(array \$moo);" }
+	,	{ "trigger": "test", "contents": "test(array \$moo);" } {
+	,	{ "trigger": "testBug11661", "contents": "testBug11661();" }
+	,	{ "trigger": "atestComplexCurlySyntax", "contents": "atestComplexCurlySyntax();" }
+	,	{ "trigger": "testBug11941", "contents": "testBug11941();" }
+	,	{ "trigger": "testBug13600", "contents": "testBug13600();" }
+	,	{ "trigger": "testBug13602", "contents": "testBug13602();" } 
   848: 
   849:     
-  850:     
-  851:     function testBug13795() 
-  866:     
-  867:     function testBug13805() 
+  850:
+	,	{ "trigger": "testBug13795", "contents": "testBug13795();" } 
+  866:
+	,	{ "trigger": "testBug13805", "contents": "testBug13805();" } 
   905:     
-  906:     
-  907:     function atestBug13861() 
-  915:     function test()
-  932:     function test()
-  944:     
-  945:     function testBug14175() 
-  968:      function testBug14429() 
- 1028:     
- 1029:     function testBug11245() {
- 1051:     
- 1052:     function testBug14396() {
- 1075:     function testBug14537() { 
- 1098:     
- 1099:     function testBug14754() {
+  906:
+	,	{ "trigger": "atestBug13861", "contents": "atestBug13861();" }
+	,	{ "trigger": "test", "contents": "test();" }
+	,	{ "trigger": "test", "contents": "test();" }
+  944:
+	,	{ "trigger": "testBug14175", "contents": "testBug14175();" }
+	,	{ "trigger": "testBug14429", "contents": "testBug14429();" } 
+ 1028:
+	,	{ "trigger": "testBug11245", "contents": "testBug11245();" } {
+ 1051:
+	,	{ "trigger": "testBug14396", "contents": "testBug14396();" } {
+	,	{ "trigger": "testBug14537", "contents": "testBug14537();" } { 
+ 1098:
+	,	{ "trigger": "testBug14754", "contents": "testBug14754();" } {
 
 C:\www\lemonstand\ls\modules\boilerplate\3rdpart\php_beautifier\tests\BeautifierCommonTest.php:
    22:     
    23:     class BeautifierCommonTest extends PHPUnit_Framework_TestCase {
-   24: 
-   25:         function testnormalizeDir() 
-   30:         function testgetFilesByPattern() 
-   38:         function testgetFilesByGlob() 
-   46:         function testWsToString() {
+   24:
+	,	{ "trigger": "testnormalizeDir", "contents": "testnormalizeDir();" }
+	,	{ "trigger": "testgetFilesByPattern", "contents": "testgetFilesByPattern();" }
+	,	{ "trigger": "testgetFilesByGlob", "contents": "testgetFilesByGlob();" }
+	,	{ "trigger": "testWsToString", "contents": "testWsToString();" } {
 
 C:\www\lemonstand\ls\modules\boilerplate\3rdpart\php_beautifier\tests\BeautifierInternalTest.php:
    22: 
    23: class BeautifierInternalTest extends PHPUnit_Framework_TestCase {
-   26:     function setUp() 
-   32:     function setText($sText) 
-   37:     function testSetBeautify() 
-   52:     function testModes() 
+	,	{ "trigger": "setUp", "contents": "setUp();" }
+	,	{ "trigger": "setText", "contents": "setText($sText);" }
+	,	{ "trigger": "testSetBeautify", "contents": "testSetBeautify();" }
+	,	{ "trigger": "testModes", "contents": "testModes();" } 
 
 C:\www\lemonstand\ls\modules\boilerplate\3rdpart\php_beautifier\tests\BeautifierTest.php:
    22: 
    23: class BeautifierTest extends PHPUnit_Framework_TestCase {
-   24:     function setUp() 
-   29:     function testsetInputFile() 
-   39:     function testaddFilterDirectory() 
-   46:     function testgetFilterList() 
-   53:     function testaddFilter() 
-   98:     function testsetIndentChar() 
-  103:     function testsetIndentNumber() 
-  108:     function testsetNewLine() 
-  113:     function testsetOutputFile() 
-  118:     function testsetMode() 
-  123:     function testunsetMode() 
-  128:     function testGetFilterDescription() 
-  133:     function testsave() 
-  141:     function testget() 
-  146:     function testComments() 
-  226:     function testNestedSwitch() {
-  285:     function testresetProperties() {
-  287:     
-  288:     function testgetTokenAssoc() {
-  290:     function testgetTokenAssocText() {
-  292:     function testreplaceTokenAssoc() {
-  294:     function testgetTokenFunction() {
-  296:     function testcontrolToken() {
-  298:     function testcontrolTokenPost() {
-  300:     function testpushControlSeq() {
-  302:     function testpopControlSeq() {
-  304:     function testpushControlParenthesis() {
-  306:     function testpopControlParenthesis() {
-  308:     function testsetBeautify() {
-  310:     function testshow() {
-  312:     
-  313:     function testgetSetting() {
-  315:     function testgetControlSeq() {
-  317:     function testgetControlParenthesis() {
-  319:     
-  320:     function testgetMode() {
-  322:     function testadd() {
-  324:     function testpop() {
-  326:     function testaddNewLine() {
-  328:     function testaddIndent() {
-  330:     function testgetPreviousToken() {
-  332:     function testgetPreviousTokenConstant() {
-  334:     function testgetPreviousTokenContent() {
-  336:     function testgetNextToken() {
-  338:     function testgetNextTokenConstant() {
-  340:     function testgetNextTokenContent() {
-  342:     function testremoveWhitespace() {
+	,	{ "trigger": "setUp", "contents": "setUp();" }
+	,	{ "trigger": "testsetInputFile", "contents": "testsetInputFile();" }
+	,	{ "trigger": "testaddFilterDirectory", "contents": "testaddFilterDirectory();" }
+	,	{ "trigger": "testgetFilterList", "contents": "testgetFilterList();" }
+	,	{ "trigger": "testaddFilter", "contents": "testaddFilter();" }
+	,	{ "trigger": "testsetIndentChar", "contents": "testsetIndentChar();" }
+	,	{ "trigger": "testsetIndentNumber", "contents": "testsetIndentNumber();" }
+	,	{ "trigger": "testsetNewLine", "contents": "testsetNewLine();" }
+	,	{ "trigger": "testsetOutputFile", "contents": "testsetOutputFile();" }
+	,	{ "trigger": "testsetMode", "contents": "testsetMode();" }
+	,	{ "trigger": "testunsetMode", "contents": "testunsetMode();" }
+	,	{ "trigger": "testGetFilterDescription", "contents": "testGetFilterDescription();" }
+	,	{ "trigger": "testsave", "contents": "testsave();" }
+	,	{ "trigger": "testget", "contents": "testget();" }
+	,	{ "trigger": "testComments", "contents": "testComments();" }
+	,	{ "trigger": "testNestedSwitch", "contents": "testNestedSwitch();" } {
+	,	{ "trigger": "testresetProperties", "contents": "testresetProperties();" } {
+  287:
+	,	{ "trigger": "testgetTokenAssoc", "contents": "testgetTokenAssoc();" } {
+	,	{ "trigger": "testgetTokenAssocText", "contents": "testgetTokenAssocText();" } {
+	,	{ "trigger": "testreplaceTokenAssoc", "contents": "testreplaceTokenAssoc();" } {
+	,	{ "trigger": "testgetTokenFunction", "contents": "testgetTokenFunction();" } {
+	,	{ "trigger": "testcontrolToken", "contents": "testcontrolToken();" } {
+	,	{ "trigger": "testcontrolTokenPost", "contents": "testcontrolTokenPost();" } {
+	,	{ "trigger": "testpushControlSeq", "contents": "testpushControlSeq();" } {
+	,	{ "trigger": "testpopControlSeq", "contents": "testpopControlSeq();" } {
+	,	{ "trigger": "testpushControlParenthesis", "contents": "testpushControlParenthesis();" } {
+	,	{ "trigger": "testpopControlParenthesis", "contents": "testpopControlParenthesis();" } {
+	,	{ "trigger": "testsetBeautify", "contents": "testsetBeautify();" } {
+	,	{ "trigger": "testshow", "contents": "testshow();" } {
+  312:
+	,	{ "trigger": "testgetSetting", "contents": "testgetSetting();" } {
+	,	{ "trigger": "testgetControlSeq", "contents": "testgetControlSeq();" } {
+	,	{ "trigger": "testgetControlParenthesis", "contents": "testgetControlParenthesis();" } {
+  319:
+	,	{ "trigger": "testgetMode", "contents": "testgetMode();" } {
+	,	{ "trigger": "testadd", "contents": "testadd();" } {
+	,	{ "trigger": "testpop", "contents": "testpop();" } {
+	,	{ "trigger": "testaddNewLine", "contents": "testaddNewLine();" } {
+	,	{ "trigger": "testaddIndent", "contents": "testaddIndent();" } {
+	,	{ "trigger": "testgetPreviousToken", "contents": "testgetPreviousToken();" } {
+	,	{ "trigger": "testgetPreviousTokenConstant", "contents": "testgetPreviousTokenConstant();" } {
+	,	{ "trigger": "testgetPreviousTokenContent", "contents": "testgetPreviousTokenContent();" } {
+	,	{ "trigger": "testgetNextToken", "contents": "testgetNextToken();" } {
+	,	{ "trigger": "testgetNextTokenConstant", "contents": "testgetNextTokenConstant();" } {
+	,	{ "trigger": "testgetNextTokenContent", "contents": "testgetNextTokenContent();" } {
+	,	{ "trigger": "testremoveWhitespace", "contents": "testremoveWhitespace();" } {
 
 C:\www\lemonstand\ls\modules\boilerplate\3rdpart\php_beautifier\tests\Helpers.php:
-   16:     function handleToken($token) 
+	,	{ "trigger": "handleToken", "contents": "handleToken($token);" } 
    26: 
    27: class PHP_Beautifier_Filter_BBY extends PHP_Beautifier_Filter {
-   28:     function t_access($sTag) {
+	,	{ "trigger": "t_access", "contents": "t_access($sTag);" } {
 
 C:\www\lemonstand\ls\modules\boilerplate\3rdpart\php_beautifier\tests\Beautifier\StreamWrapperTest.php:
    22: 
    23:     
    24:     class StreamWrapperTarzTest extends PHPUnit_Framework_TestCase {
-   27:         function setUp() {
-   31:         function testopen() {
-   35:         function testclose() {
-   44:         function testread() {
-   75:         function testBz2() {
-   82:         function testOpenDir() {
-   86:         function testReadDir() {
+	,	{ "trigger": "setUp", "contents": "setUp();" } {
+	,	{ "trigger": "testopen", "contents": "testopen();" } {
+	,	{ "trigger": "testclose", "contents": "testclose();" } {
+	,	{ "trigger": "testread", "contents": "testread();" } {
+	,	{ "trigger": "testBz2", "contents": "testBz2();" } {
+	,	{ "trigger": "testOpenDir", "contents": "testOpenDir();" } {
+	,	{ "trigger": "testReadDir", "contents": "testReadDir();" } {
 
 C:\www\lemonstand\ls\modules\boilerplate\3rdpart\php_beautifier\tests\Beautifier\Filter\PearTest.php:
    23: 
    24: class PearTest extends PHPUnit_Framework_TestCase
-   26:     function setUp() 
-   35:     function testPearSample() 
+	,	{ "trigger": "setUp", "contents": "setUp();" }
+	,	{ "trigger": "testPearSample", "contents": "testPearSample();" } 
 
 C:\www\lemonstand\ls\modules\boilerplate\3rdpart\php_unit\PHPUnit\Autoload.php:
    50: 
@@ -867,18 +861,18 @@ C:\www\lemonstand\ls\modules\cms\helpers\cms_router.php:
     6: 	class Cms_Router
 
 C:\www\lemonstand\ls\modules\cms\init\custom_helpers.php:
-   28: 	function open_form($attributes = array())
-   61: 		function close_form() {
-   95: 	function flash_message()
-  135: 	function content_block($code, $name)
-  158: 	function text_content_block($code, $name)
-  177: 	function global_content_block($code, $return_content = false)
-  203: 		function site_url($url = "", $add_host_name_and_protocol = true)
-  222: 	function include_resources($src_mode = false)
-  226: 	
-  227: 	function process_ls_tags($str)
-  259: 	function theme_resource_url($path, $root_url = true, $add_host_name_and_protocol = false)
-  284: 	function resource_url($path, $root_url = true, $add_host_name_and_protocol = false)
+	,	{ "trigger": "open_form", "contents": "open_form($attributes = array();" })
+	,	{ "trigger": "close_form", "contents": "close_form();" } {
+	,	{ "trigger": "flash_message", "contents": "flash_message();" }
+	,	{ "trigger": "content_block", "contents": "content_block($code, $name);" }
+	,	{ "trigger": "text_content_block", "contents": "text_content_block($code, $name);" }
+	,	{ "trigger": "global_content_block", "contents": "global_content_block($code, $return_content = false);" }
+	,	{ "trigger": "site_url", "contents": "site_url($url = "", $add_host_name_and_protocol = true);" }
+	,	{ "trigger": "include_resources", "contents": "include_resources($src_mode = false);" }
+  226:
+	,	{ "trigger": "process_ls_tags", "contents": "process_ls_tags($str);" }
+	,	{ "trigger": "theme_resource_url", "contents": "theme_resource_url($path, $root_url = true, $add_host_name_and_protocol = false);" }
+	,	{ "trigger": "resource_url", "contents": "resource_url($path, $root_url = true, $add_host_name_and_protocol = false);" }
 
 C:\www\lemonstand\ls\modules\cms\models\cms_contentblock.php:
     2: 
@@ -935,7 +929,7 @@ C:\www\lemonstand\ls\modules\cms\models\cms_themeimportmodel.php:
 C:\www\lemonstand\ls\modules\contact\classes\contact_actions.php:
     2: 
     3: class Contact_Actions extends Cms_ActionScope {
-    4: 	function on_submit($ajax_mode = true) {
+	,	{ "trigger": "on_submit", "contents": "on_submit($ajax_mode = true);" } {
 
 C:\www\lemonstand\ls\modules\contact\classes\contact_message.php:
     2: 	
@@ -1096,10 +1090,10 @@ C:\www\lemonstand\ls\modules\core\helpers\core_xml.php:
 C:\www\lemonstand\ls\modules\core\helpers\core_ziphelper.php:
     4: 
     5: 	class Core_ZipHelper
-  101: 	
-  102: 	function zip_helper_pre_add($p_event, &$p_header)
-  153: 
-  154: 	function zip_helper_post_extract($p_event, &$p_header)
+  101:
+	,	{ "trigger": "zip_helper_pre_add", "contents": "zip_helper_pre_add($p_event, &$p_header);" }
+  153:
+	,	{ "trigger": "zip_helper_post_extract", "contents": "zip_helper_post_extract($p_event, &$p_header);" }
 
 C:\www\lemonstand\ls\modules\core\models\core_eulainfo.php:
     2: 
@@ -1112,8 +1106,8 @@ C:\www\lemonstand\ls\modules\core\models\core_version.php:
 C:\www\lemonstand\ls\modules\core\thirdpart\class.phpmailer.php:
    34: 
    35: class PHPMailer {
-  661:   function SetLanguage($lang_type = 'en', $lang_path = 'language/') {
- 1221:         function get_magic_quotes() {
+	,	{ "trigger": "SetLanguage", "contents": "SetLanguage($lang_type = 'en', $lang_path = 'language/');" } {
+	,	{ "trigger": "get_magic_quotes", "contents": "get_magic_quotes();" } {
 
 C:\www\lemonstand\ls\modules\core\thirdpart\class.smtp.php:
    35: 
@@ -1121,166 +1115,166 @@ C:\www\lemonstand\ls\modules\core\thirdpart\class.smtp.php:
 
 C:\www\lemonstand\ls\modules\core\thirdpart\pclzip.lib.php:
   161:   class PclZip
-  188:   function PclZip($p_zipname)
-  247:   function create($p_filelist)
-  433:   function add($p_filelist)
-  624:   function listContent()
-  685:   function extract()
-  846:   function extractByIndex($p_index)
- 1002:   function delete()
- 1067:   function deleteByIndex($p_index)
- 1093:   function properties()
- 1172:   function duplicate($p_archive)
- 1235:   function merge($p_archive_to_add)
- 1291:   function errorCode()
- 1307:   function errorName($p_with_code=false)
- 1353:   function errorInfo($p_full=false)
- 1392:   function privCheckFormat($p_level=0)
- 1449:   function privParseOptions(&$p_options_list, $p_size, &$v_result_list, $v_requested_options=false)
- 1830:   function privFileDescrParseAtt(&$p_file_list, &$p_filedescr, $v_options, $v_requested_options=false)
- 1945:   function privFileDescrExpand(&$p_filedescr_list, &$p_options)
- 2068:   function privCreate($p_filedescr_list, &$p_result_list, &$p_options)
- 2106:   function privAdd($p_filedescr_list, &$p_result_list, &$p_options)
- 2302:   function privOpenFd($p_mode)
- 2341:   function privCloseFd()
- 2370:   function privAddList($p_filedescr_list, &$p_result_list, &$p_options)
- 2439:   function privAddFileList($p_filedescr_list, &$p_result_list, &$p_options)
- 2504:   function privAddFile($p_filedescr, &$p_header, &$p_options)
- 2734:   function privCalculateStoredFilename(&$p_filedescr, &$p_options)
- 2849:   function privWriteFileHeader(&$p_header)
- 2898:   function privWriteCentralFileHeader(&$p_header)
- 2954:   function privWriteCentralHeader($p_nb_entries, $p_size, $p_offset, $p_comment)
- 2985:   function privList(&$p_list)
- 3082:   function privConvertHeader2FileInfo($p_header, &$p_info)
- 3120:   function privExtractByRule(&$p_file_list, $p_path, $p_remove_path, $p_remove_all_path, &$p_options)
- 3502:   function privExtractFile(&$p_entry, $p_path, $p_remove_path, $p_remove_all_path, &$p_options)
- 3908:   function privExtractFileInOutput(&$p_entry, &$p_options)
- 4033:   function privExtractFileAsString(&$p_entry, &$p_string)
- 4099:   function privReadFileHeader(&$p_header)
- 4226:   function privReadCentralFileHeader(&$p_header)
- 4361:   function privCheckFileHeaders(&$p_local_header, &$p_central_header)
- 4411:   function privReadEndCentralDir(&$p_central_dir)
- 4596:   function privDeleteByRule(&$p_result_list, &$p_options)
- 4955:   function privDirCheck($p_dir, $p_is_dir=false)
- 5018:   function privMerge(&$p_archive_to_add)
- 5227:   function privDuplicate($p_archive_filename)
- 5296:   function privErrorLog($p_error_code=0, $p_error_string='')
- 5313:   function privErrorReset()
- 5331:   function privDecrypt($p_encryption_header, &$p_buffer, $p_size, $p_crc)
- 5354:   function privDisableMagicQuotes()
- 5396:   function privSwapBackMagicQuotes()
- 5438:   function PclZipUtilPathReduction($p_dir)
- 5522:   function PclZipUtilPathInclusion($p_dir, $p_path)
- 5607:   function PclZipUtilCopyBlock($p_src, $p_dest, $p_size, $p_mode=0)
- 5679:   function PclZipUtilRename($p_src, $p_dest)
- 5714:   function PclZipUtilOptionText($p_option)
- 5748:   function PclZipUtilTranslateWinPath($p_path, $p_remove_disk_letter=true)
+	,	{ "trigger": "PclZip", "contents": "PclZip($p_zipname);" }
+	,	{ "trigger": "create", "contents": "create($p_filelist);" }
+	,	{ "trigger": "add", "contents": "add($p_filelist);" }
+	,	{ "trigger": "listContent", "contents": "listContent();" }
+	,	{ "trigger": "extract", "contents": "extract();" }
+	,	{ "trigger": "extractByIndex", "contents": "extractByIndex($p_index);" }
+	,	{ "trigger": "delete", "contents": "delete();" }
+	,	{ "trigger": "deleteByIndex", "contents": "deleteByIndex($p_index);" }
+	,	{ "trigger": "properties", "contents": "properties();" }
+	,	{ "trigger": "duplicate", "contents": "duplicate($p_archive);" }
+	,	{ "trigger": "merge", "contents": "merge($p_archive_to_add);" }
+	,	{ "trigger": "errorCode", "contents": "errorCode();" }
+	,	{ "trigger": "errorName", "contents": "errorName($p_with_code=false);" }
+	,	{ "trigger": "errorInfo", "contents": "errorInfo($p_full=false);" }
+	,	{ "trigger": "privCheckFormat", "contents": "privCheckFormat($p_level=0);" }
+	,	{ "trigger": "privParseOptions", "contents": "privParseOptions(&$p_options_list, $p_size, &$v_result_list, $v_requested_options=false);" }
+	,	{ "trigger": "privFileDescrParseAtt", "contents": "privFileDescrParseAtt(&$p_file_list, &$p_filedescr, $v_options, $v_requested_options=false);" }
+	,	{ "trigger": "privFileDescrExpand", "contents": "privFileDescrExpand(&$p_filedescr_list, &$p_options);" }
+	,	{ "trigger": "privCreate", "contents": "privCreate($p_filedescr_list, &$p_result_list, &$p_options);" }
+	,	{ "trigger": "privAdd", "contents": "privAdd($p_filedescr_list, &$p_result_list, &$p_options);" }
+	,	{ "trigger": "privOpenFd", "contents": "privOpenFd($p_mode);" }
+	,	{ "trigger": "privCloseFd", "contents": "privCloseFd();" }
+	,	{ "trigger": "privAddList", "contents": "privAddList($p_filedescr_list, &$p_result_list, &$p_options);" }
+	,	{ "trigger": "privAddFileList", "contents": "privAddFileList($p_filedescr_list, &$p_result_list, &$p_options);" }
+	,	{ "trigger": "privAddFile", "contents": "privAddFile($p_filedescr, &$p_header, &$p_options);" }
+	,	{ "trigger": "privCalculateStoredFilename", "contents": "privCalculateStoredFilename(&$p_filedescr, &$p_options);" }
+	,	{ "trigger": "privWriteFileHeader", "contents": "privWriteFileHeader(&$p_header);" }
+	,	{ "trigger": "privWriteCentralFileHeader", "contents": "privWriteCentralFileHeader(&$p_header);" }
+	,	{ "trigger": "privWriteCentralHeader", "contents": "privWriteCentralHeader($p_nb_entries, $p_size, $p_offset, $p_comment);" }
+	,	{ "trigger": "privList", "contents": "privList(&$p_list);" }
+	,	{ "trigger": "privConvertHeader2FileInfo", "contents": "privConvertHeader2FileInfo($p_header, &$p_info);" }
+	,	{ "trigger": "privExtractByRule", "contents": "privExtractByRule(&$p_file_list, $p_path, $p_remove_path, $p_remove_all_path, &$p_options);" }
+	,	{ "trigger": "privExtractFile", "contents": "privExtractFile(&$p_entry, $p_path, $p_remove_path, $p_remove_all_path, &$p_options);" }
+	,	{ "trigger": "privExtractFileInOutput", "contents": "privExtractFileInOutput(&$p_entry, &$p_options);" }
+	,	{ "trigger": "privExtractFileAsString", "contents": "privExtractFileAsString(&$p_entry, &$p_string);" }
+	,	{ "trigger": "privReadFileHeader", "contents": "privReadFileHeader(&$p_header);" }
+	,	{ "trigger": "privReadCentralFileHeader", "contents": "privReadCentralFileHeader(&$p_header);" }
+	,	{ "trigger": "privCheckFileHeaders", "contents": "privCheckFileHeaders(&$p_local_header, &$p_central_header);" }
+	,	{ "trigger": "privReadEndCentralDir", "contents": "privReadEndCentralDir(&$p_central_dir);" }
+	,	{ "trigger": "privDeleteByRule", "contents": "privDeleteByRule(&$p_result_list, &$p_options);" }
+	,	{ "trigger": "privDirCheck", "contents": "privDirCheck($p_dir, $p_is_dir=false);" }
+	,	{ "trigger": "privMerge", "contents": "privMerge(&$p_archive_to_add);" }
+	,	{ "trigger": "privDuplicate", "contents": "privDuplicate($p_archive_filename);" }
+	,	{ "trigger": "privErrorLog", "contents": "privErrorLog($p_error_code=0, $p_error_string='');" }
+	,	{ "trigger": "privErrorReset", "contents": "privErrorReset();" }
+	,	{ "trigger": "privDecrypt", "contents": "privDecrypt($p_encryption_header, &$p_buffer, $p_size, $p_crc);" }
+	,	{ "trigger": "privDisableMagicQuotes", "contents": "privDisableMagicQuotes();" }
+	,	{ "trigger": "privSwapBackMagicQuotes", "contents": "privSwapBackMagicQuotes();" }
+	,	{ "trigger": "PclZipUtilPathReduction", "contents": "PclZipUtilPathReduction($p_dir);" }
+	,	{ "trigger": "PclZipUtilPathInclusion", "contents": "PclZipUtilPathInclusion($p_dir, $p_path);" }
+	,	{ "trigger": "PclZipUtilCopyBlock", "contents": "PclZipUtilCopyBlock($p_src, $p_dest, $p_size, $p_mode=0);" }
+	,	{ "trigger": "PclZipUtilRename", "contents": "PclZipUtilRename($p_src, $p_dest);" }
+	,	{ "trigger": "PclZipUtilOptionText", "contents": "PclZipUtilOptionText($p_option);" }
+	,	{ "trigger": "PclZipUtilTranslateWinPath", "contents": "PclZipUtilTranslateWinPath($p_path, $p_remove_disk_letter=true);" }
 
 C:\www\lemonstand\ls\modules\core\thirdpart\php5.class.kses.php:
   107: 		class kses5
 
 C:\www\lemonstand\ls\modules\core\thirdpart\Twig\CompilerInterface.php:
-   27:     function compile(Twig_NodeInterface $node);
-   34:     function getSource();
+	,	{ "trigger": "compile", "contents": "compile(Twig_NodeInterface $node);" };
+	,	{ "trigger": "getSource", "contents": "getSource();" };
 
 C:\www\lemonstand\ls\modules\core\thirdpart\Twig\ExtensionInterface.php:
-   27:     function initRuntime(Twig_Environment $environment);
-   34:     function getTokenParsers();
-   41:     function getNodeVisitors();
-   48:     function getFilters();
-   55:     function getTests();
-   62:     function getFunctions();
-   69:     function getOperators();
-   76:     function getGlobals();
-   83:     function getName();
+	,	{ "trigger": "initRuntime", "contents": "initRuntime(Twig_Environment $environment);" };
+	,	{ "trigger": "getTokenParsers", "contents": "getTokenParsers();" };
+	,	{ "trigger": "getNodeVisitors", "contents": "getNodeVisitors();" };
+	,	{ "trigger": "getFilters", "contents": "getFilters();" };
+	,	{ "trigger": "getTests", "contents": "getTests();" };
+	,	{ "trigger": "getFunctions", "contents": "getFunctions();" };
+	,	{ "trigger": "getOperators", "contents": "getOperators();" };
+	,	{ "trigger": "getGlobals", "contents": "getGlobals();" };
+	,	{ "trigger": "getName", "contents": "getName();" };
 
 C:\www\lemonstand\ls\modules\core\thirdpart\Twig\FilterInterface.php:
-   25:     function compile();
-   26: 
-   27:     function needsEnvironment();
-   28: 
-   29:     function needsContext();
-   30: 
-   31:     function getSafe(Twig_Node $filterArgs);
-   32: 
-   33:     function getPreEscape();
-   34: 
-   35:     function setArguments($arguments);
-   36: 
-   37:     function getArguments();
+	,	{ "trigger": "compile", "contents": "compile();" };
+   26:
+	,	{ "trigger": "needsEnvironment", "contents": "needsEnvironment();" };
+   28:
+	,	{ "trigger": "needsContext", "contents": "needsContext();" };
+   30:
+	,	{ "trigger": "getSafe", "contents": "getSafe(Twig_Node $filterArgs);" };
+   32:
+	,	{ "trigger": "getPreEscape", "contents": "getPreEscape();" };
+   34:
+	,	{ "trigger": "setArguments", "contents": "setArguments($arguments);" };
+   36:
+	,	{ "trigger": "getArguments", "contents": "getArguments();" };
 
 C:\www\lemonstand\ls\modules\core\thirdpart\Twig\FunctionInterface.php:
-   26:     function compile();
-   27: 
-   28:     function needsEnvironment();
-   29: 
-   30:     function needsContext();
-   31: 
-   32:     function getSafe(Twig_Node $filterArgs);
-   33: 
-   34:     function setArguments($arguments);
-   35: 
-   36:     function getArguments();
+	,	{ "trigger": "compile", "contents": "compile();" };
+   27:
+	,	{ "trigger": "needsEnvironment", "contents": "needsEnvironment();" };
+   29:
+	,	{ "trigger": "needsContext", "contents": "needsContext();" };
+   31:
+	,	{ "trigger": "getSafe", "contents": "getSafe(Twig_Node $filterArgs);" };
+   33:
+	,	{ "trigger": "setArguments", "contents": "setArguments($arguments);" };
+   35:
+	,	{ "trigger": "getArguments", "contents": "getArguments();" };
 
 C:\www\lemonstand\ls\modules\core\thirdpart\Twig\LexerInterface.php:
-   28:     function tokenize($code, $filename = null);
+	,	{ "trigger": "tokenize", "contents": "tokenize($code, $filename = null);" };
 
 C:\www\lemonstand\ls\modules\core\thirdpart\Twig\LoaderInterface.php:
-   27:     function getSource($name);
-   36:     function getCacheKey($name);
-   44:     function isFresh($name, $time);
+	,	{ "trigger": "getSource", "contents": "getSource($name);" };
+	,	{ "trigger": "getCacheKey", "contents": "getCacheKey($name);" };
+	,	{ "trigger": "isFresh", "contents": "isFresh($name, $time);" };
 
 C:\www\lemonstand\ls\modules\core\thirdpart\Twig\NodeInterface.php:
-   25:     function compile(Twig_Compiler $compiler);
-   26: 
-   27:     function getLine();
-   28: 
-   29:     function getNodeTag();
+	,	{ "trigger": "compile", "contents": "compile(Twig_Compiler $compiler);" };
+   26:
+	,	{ "trigger": "getLine", "contents": "getLine();" };
+   28:
+	,	{ "trigger": "getNodeTag", "contents": "getNodeTag();" };
 
 C:\www\lemonstand\ls\modules\core\thirdpart\Twig\NodeVisitorInterface.php:
-   28:     function enterNode(Twig_NodeInterface $node, Twig_Environment $env);
-   38:     function leaveNode(Twig_NodeInterface $node, Twig_Environment $env);
-   47:     function getPriority();
+	,	{ "trigger": "enterNode", "contents": "enterNode(Twig_NodeInterface $node, Twig_Environment $env);" };
+	,	{ "trigger": "leaveNode", "contents": "leaveNode(Twig_NodeInterface $node, Twig_Environment $env);" };
+	,	{ "trigger": "getPriority", "contents": "getPriority();" };
 
 C:\www\lemonstand\ls\modules\core\thirdpart\Twig\ParserInterface.php:
-   27:     function parse(Twig_TokenStream $stream);
+	,	{ "trigger": "parse", "contents": "parse(Twig_TokenStream $stream);" };
 
 C:\www\lemonstand\ls\modules\core\thirdpart\Twig\TemplateInterface.php:
-   31:     function render(array $context);
-   39:     function display(array $context, array $blocks = array());
-   46:     function getEnvironment();
+	,	{ "trigger": "render", "contents": "render(array $context);" };
+	,	{ "trigger": "display", "contents": "display(array $context, array $blocks = array();" });
+	,	{ "trigger": "getEnvironment", "contents": "getEnvironment();" };
 
 C:\www\lemonstand\ls\modules\core\thirdpart\Twig\TestInterface.php:
-   25:     function compile();
+	,	{ "trigger": "compile", "contents": "compile();" };
 
 C:\www\lemonstand\ls\modules\core\thirdpart\Twig\TokenParserBrokerInterface.php:
-   30:     function getTokenParser($tag);
-   37:     function setParser(Twig_ParserInterface $parser);
-   44:     function getParser();
+	,	{ "trigger": "getTokenParser", "contents": "getTokenParser($tag);" };
+	,	{ "trigger": "setParser", "contents": "setParser(Twig_ParserInterface $parser);" };
+	,	{ "trigger": "getParser", "contents": "getParser();" };
 
 C:\www\lemonstand\ls\modules\core\thirdpart\Twig\TokenParserInterface.php:
-   25:     function setParser(Twig_Parser $parser);
-   34:     function parse(Twig_Token $token);
-   41:     function getTag();
+	,	{ "trigger": "setParser", "contents": "setParser(Twig_Parser $parser);" };
+	,	{ "trigger": "parse", "contents": "parse(Twig_Token $token);" };
+	,	{ "trigger": "getTag", "contents": "getTag();" };
 
 C:\www\lemonstand\ls\modules\core\thirdpart\Twig\Extension\Core.php:
-  467:     function twig_jsonencode_filter($value, $options = 0)
-  486:     function twig_jsonencode_filter($value, $options = 0)
+	,	{ "trigger": "twig_jsonencode_filter", "contents": "twig_jsonencode_filter($value, $options = 0);" }
+	,	{ "trigger": "twig_jsonencode_filter", "contents": "twig_jsonencode_filter($value, $options = 0);" }
   497: 
   498: function _twig_markup2string(&$value)
-  790:     function twig_convert_encoding($string, $to, $from)
-  795:     function twig_convert_encoding($string, $to, $from)
-  800:     function twig_convert_encoding($string, $to, $from)
+	,	{ "trigger": "twig_convert_encoding", "contents": "twig_convert_encoding($string, $to, $from);" }
+	,	{ "trigger": "twig_convert_encoding", "contents": "twig_convert_encoding($string, $to, $from);" }
+	,	{ "trigger": "twig_convert_encoding", "contents": "twig_convert_encoding($string, $to, $from);" }
   805: 
   806: function _twig_escape_js_callback($matches)
-  831:     function twig_length_filter(Twig_Environment $env, $thing)
-  844:     function twig_upper_filter(Twig_Environment $env, $string)
-  861:     function twig_lower_filter(Twig_Environment $env, $string)
-  878:     function twig_title_string_filter(Twig_Environment $env, $string)
-  895:     function twig_capitalize_string_filter(Twig_Environment $env, $string)
-  916:     function twig_length_filter(Twig_Environment $env, $thing)
-  929:     function twig_title_string_filter(Twig_Environment $env, $string)
-  942:     function twig_capitalize_string_filter(Twig_Environment $env, $string)
+	,	{ "trigger": "twig_length_filter", "contents": "twig_length_filter(Twig_Environment $env, $thing);" }
+	,	{ "trigger": "twig_upper_filter", "contents": "twig_upper_filter(Twig_Environment $env, $string);" }
+	,	{ "trigger": "twig_lower_filter", "contents": "twig_lower_filter(Twig_Environment $env, $string);" }
+	,	{ "trigger": "twig_title_string_filter", "contents": "twig_title_string_filter(Twig_Environment $env, $string);" }
+	,	{ "trigger": "twig_capitalize_string_filter", "contents": "twig_capitalize_string_filter(Twig_Environment $env, $string);" }
+	,	{ "trigger": "twig_length_filter", "contents": "twig_length_filter(Twig_Environment $env, $thing);" }
+	,	{ "trigger": "twig_title_string_filter", "contents": "twig_title_string_filter(Twig_Environment $env, $string);" }
+	,	{ "trigger": "twig_capitalize_string_filter", "contents": "twig_capitalize_string_filter(Twig_Environment $env, $string);" }
 
 C:\www\lemonstand\ls\modules\core\thirdpart\Twig\Extension\Debug.php:
    38: 
@@ -1295,19 +1289,19 @@ C:\www\lemonstand\ls\modules\core\thirdpart\Twig\Node\Expression\AssignName.php:
    13: class Twig_Node_Expression_AssignName extends Twig_Node_Expression_Name
 
 C:\www\lemonstand\ls\modules\core\thirdpart\Twig\NodeVisitor\Escaper.php:
-   25: 
-   26:     function __construct()
+   25:
+	,	{ "trigger": "__construct", "contents": "__construct();" }
 
 C:\www\lemonstand\ls\modules\core\thirdpart\Twig\NodeVisitor\SafeAnalysis.php:
     2: 
     3: class Twig_NodeVisitor_SafeAnalysis implements Twig_NodeVisitorInterface
 
 C:\www\lemonstand\ls\modules\core\thirdpart\Twig\Sandbox\SecurityPolicyInterface.php:
-   20:     function checkSecurity($tags, $filters, $functions);
-   21: 
-   22:     function checkMethodAllowed($obj, $method);
-   23: 
-   24:     function checkPropertyAllowed($obj, $method);
+	,	{ "trigger": "checkSecurity", "contents": "checkSecurity($tags, $filters, $functions);" };
+   21:
+	,	{ "trigger": "checkMethodAllowed", "contents": "checkMethodAllowed($obj, $method);" };
+   23:
+	,	{ "trigger": "checkPropertyAllowed", "contents": "checkPropertyAllowed($obj, $method);" };
 
 C:\www\lemonstand\ls\modules\disqus\classes\disqus_actions.php:
     2: 
@@ -1423,106 +1417,106 @@ C:\www\lemonstand\ls\modules\flynsarmymailchimp\classes\flynsarmymailchimp_subsc
 C:\www\lemonstand\ls\modules\flynsarmymailchimp\classes\vendor\mailchimp-api-class\MCAPI.class.php:
     2: 
     3: class MCAPI {
-   39:     function MCAPI($apikey, $secure=false) {
-   44:     function setTimeout($seconds){
-   50:     function getTimeout(){
-   53:     function useSecure($val){
-   71:     function campaignUnschedule($cid) {
-   89:     function campaignSchedule($cid, $schedule_time, $schedule_time_b=NULL) {
-  105:     function campaignResume($cid) {
-  119:     function campaignPause($cid) {
-  136:     function campaignSendNow($cid) {
-  155:     function campaignSendTest($cid, $test_emails=array (
-  240:     function campaignSegmentTest($list_id, $options) {
-  318:     function campaignCreate($type, $options, $content, $segment_opts=NULL, $type_opts=NULL) {
-  347:     function campaignUpdate($cid, $name, $value) {
-  364:     function campaignReplicate($cid) {
-  379:     function campaignDelete($cid) {
-  443:     function campaigns($filters=array (
-  501:     function campaignStats($cid) {
-  520:     function campaignClickStats($cid) {
-  550:     function campaignEmailDomainPerformance($cid) {
-  573:     function campaignMembers($cid, $status=NULL, $start=0, $limit=1000) {
-  597:     function campaignHardBounces($cid, $start=0, $limit=1000) {
-  620:     function campaignSoftBounces($cid, $start=0, $limit=1000) {
-  644:     function campaignUnsubscribes($cid, $start=0, $limit=1000) {
-  668:     function campaignAbuseReports($cid, $since=NULL, $start=0, $limit=500) {
-  690:     function campaignAdvice($cid) {
-  717:     function campaignAnalytics($cid) {
-  736:     function campaignGeoOpens($cid) {
-  755:     function campaignGeoOpensForCountry($cid, $code) {
-  789:     function campaignEepUrlStats($cid) {
-  809:     function campaignBounceMessage($cid, $email) {
-  836:     function campaignBounceMessages($cid, $start=0, $limit=25, $since=NULL) {
-  867:     function campaignEcommOrders($cid, $start=0, $limit=100, $since=NULL) {
-  896:     function campaignShareReport($cid, $opts=array (
-  915:     function campaignContent($cid, $for_archive=true) {
-  931:     function campaignTemplateContent($cid) {
-  952:     function campaignOpenedAIM($cid, $start=0, $limit=1000) {
-  973:     function campaignNotOpenedAIM($cid, $start=0, $limit=1000) {
-  996:     function campaignClickDetailAIM($cid, $url, $start=0, $limit=1000) {
- 1020:     function campaignEmailStatsAIM($cid, $email_address) {
- 1044:     function campaignEmailStatsAIMAll($cid, $start=0, $limit=100) {
- 1080:     function campaignEcommOrderAdd($order) {
- 1136:     function lists($filters=array (
- 1164:     function listMergeVars($id) {
- 1189:     function listMergeVarAdd($id, $tag, $name, $options=array (
- 1209:     function listMergeVarUpdate($id, $tag, $options) {
- 1228:     function listMergeVarDel($id, $tag) {
- 1248:     function listInterestGroupings($id) {
- 1265:     function listInterestGroupAdd($id, $group_name, $grouping_id=NULL) {
- 1283:     function listInterestGroupDel($id, $group_name, $grouping_id=NULL) {
- 1301:     function listInterestGroupUpdate($id, $old_name, $new_name, $grouping_id=NULL) {
- 1322:     function listInterestGroupingAdd($id, $name, $type, $groups) {
- 1341:     function listInterestGroupingUpdate($grouping_id, $name, $value) {
- 1357:     function listInterestGroupingDel($grouping_id) {
- 1373:     function listWebhooks($id) {
- 1397:     function listWebhookAdd($id, $url, $actions=array (
- 1416:     function listWebhookDel($id, $url) {
- 1436:     function listStaticSegments($id) {
- 1453:     function listStaticSegmentAdd($id, $name) {
- 1468:     function listStaticSegmentReset($id, $seg_id) {
- 1483:     function listStaticSegmentDel($id, $seg_id) {
- 1502:     function listStaticSegmentMembersAdd($id, $seg_id, $batch) {
- 1522:     function listStaticSegmentMembersDel($id, $seg_id, $batch) {
- 1567:     function listSubscribe($id, $email_address, $merge_vars=NULL, $email_type='html', $double_optin=true, $update_existing=false, $replace_interests=true, $send_welcome=false) {
- 1594:     function listUnsubscribe($id, $email_address, $delete_member=false, $send_goodbye=true, $send_notify=true) {
- 1618:     function listUpdateMember($id, $email_address, $merge_vars, $email_type='', $replace_interests=true) {
- 1652:     function listBatchSubscribe($id, $batch, $double_optin=true, $update_existing=false, $replace_interests=true) {
- 1678:     function listBatchUnsubscribe($id, $emails, $delete_member=false, $send_goodbye=true, $send_notify=false) {
- 1708:     function listMembers($id, $status='subscribed', $since=NULL, $start=0, $limit=100) {
- 1747:     function listMemberInfo($id, $email_address) {
- 1773:     function listMemberActivity($id, $email_address) {
- 1799:     function listAbuseReports($id, $start=0, $limit=500, $since=NULL) {
- 1822:     function listGrowthHistory($id) {
- 1848:     function listActivity($id) {
- 1866:     function listLocations($id) {
- 1886:     function listClients($id) {
- 1915:     function templates($types=array (
- 1938:     function templateInfo($tid, $type='user') {
- 1956:     function templateAdd($name, $html) {
- 1975:     function templateUpdate($id, $values) {
- 1990:     function templateDel($id) {
- 2004:     function templateUndel($id) {
- 2064:     function getAccountDetails() {
- 2079:     function generateText($type, $content) {
- 2096:     function inlineCss($html, $strip_css=false) {
- 2117:     function folders($type='campaign') {
- 2134:     function folderAdd($name, $type='campaign') {
- 2151:     function folderUpdate($fid, $name, $type='campaign') {
- 2168:     function folderDel($fid, $type='campaign') {
- 2196:     function ecommOrders($start=0, $limit=100, $since=NULL) {
- 2233:     function ecommOrderAdd($order) {
- 2248:     function ecommOrderDel($store_id, $order_id) {
- 2263:     function listsForEmail($email_address) {
- 2277:     function campaignsForEmail($email_address) {
- 2296:     function chimpChatter() {
- 2316:     function apikeys($username, $password, $expired=false) {
- 2334:     function apikeyAdd($username, $password) {
- 2355:     function apikeyExpire($username, $password) {
- 2372:     function ping() {
- 2382:     function callMethod() {
- 2391:     function callServer($method, $params) {
+	,	{ "trigger": "MCAPI", "contents": "MCAPI($apikey, $secure=false);" } {
+	,	{ "trigger": "setTimeout", "contents": "setTimeout($seconds);" }{
+	,	{ "trigger": "getTimeout", "contents": "getTimeout();" }{
+	,	{ "trigger": "useSecure", "contents": "useSecure($val);" }{
+	,	{ "trigger": "campaignUnschedule", "contents": "campaignUnschedule($cid);" } {
+	,	{ "trigger": "campaignSchedule", "contents": "campaignSchedule($cid, $schedule_time, $schedule_time_b=NULL);" } {
+	,	{ "trigger": "campaignResume", "contents": "campaignResume($cid);" } {
+	,	{ "trigger": "campaignPause", "contents": "campaignPause($cid);" } {
+	,	{ "trigger": "campaignSendNow", "contents": "campaignSendNow($cid);" } {
+	,	{ "trigger": "campaignSendTest", "contents": "campaignSendTest($cid, $test_emails=array (
+  240:     function campaignSegmentTest($list_id, $options);" } {
+	,	{ "trigger": "campaignCreate", "contents": "campaignCreate($type, $options, $content, $segment_opts=NULL, $type_opts=NULL);" } {
+	,	{ "trigger": "campaignUpdate", "contents": "campaignUpdate($cid, $name, $value);" } {
+	,	{ "trigger": "campaignReplicate", "contents": "campaignReplicate($cid);" } {
+	,	{ "trigger": "campaignDelete", "contents": "campaignDelete($cid);" } {
+	,	{ "trigger": "campaigns", "contents": "campaigns($filters=array (
+  501:     function campaignStats($cid);" } {
+	,	{ "trigger": "campaignClickStats", "contents": "campaignClickStats($cid);" } {
+	,	{ "trigger": "campaignEmailDomainPerformance", "contents": "campaignEmailDomainPerformance($cid);" } {
+	,	{ "trigger": "campaignMembers", "contents": "campaignMembers($cid, $status=NULL, $start=0, $limit=1000);" } {
+	,	{ "trigger": "campaignHardBounces", "contents": "campaignHardBounces($cid, $start=0, $limit=1000);" } {
+	,	{ "trigger": "campaignSoftBounces", "contents": "campaignSoftBounces($cid, $start=0, $limit=1000);" } {
+	,	{ "trigger": "campaignUnsubscribes", "contents": "campaignUnsubscribes($cid, $start=0, $limit=1000);" } {
+	,	{ "trigger": "campaignAbuseReports", "contents": "campaignAbuseReports($cid, $since=NULL, $start=0, $limit=500);" } {
+	,	{ "trigger": "campaignAdvice", "contents": "campaignAdvice($cid);" } {
+	,	{ "trigger": "campaignAnalytics", "contents": "campaignAnalytics($cid);" } {
+	,	{ "trigger": "campaignGeoOpens", "contents": "campaignGeoOpens($cid);" } {
+	,	{ "trigger": "campaignGeoOpensForCountry", "contents": "campaignGeoOpensForCountry($cid, $code);" } {
+	,	{ "trigger": "campaignEepUrlStats", "contents": "campaignEepUrlStats($cid);" } {
+	,	{ "trigger": "campaignBounceMessage", "contents": "campaignBounceMessage($cid, $email);" } {
+	,	{ "trigger": "campaignBounceMessages", "contents": "campaignBounceMessages($cid, $start=0, $limit=25, $since=NULL);" } {
+	,	{ "trigger": "campaignEcommOrders", "contents": "campaignEcommOrders($cid, $start=0, $limit=100, $since=NULL);" } {
+	,	{ "trigger": "campaignShareReport", "contents": "campaignShareReport($cid, $opts=array (
+  915:     function campaignContent($cid, $for_archive=true);" } {
+	,	{ "trigger": "campaignTemplateContent", "contents": "campaignTemplateContent($cid);" } {
+	,	{ "trigger": "campaignOpenedAIM", "contents": "campaignOpenedAIM($cid, $start=0, $limit=1000);" } {
+	,	{ "trigger": "campaignNotOpenedAIM", "contents": "campaignNotOpenedAIM($cid, $start=0, $limit=1000);" } {
+	,	{ "trigger": "campaignClickDetailAIM", "contents": "campaignClickDetailAIM($cid, $url, $start=0, $limit=1000);" } {
+	,	{ "trigger": "campaignEmailStatsAIM", "contents": "campaignEmailStatsAIM($cid, $email_address);" } {
+	,	{ "trigger": "campaignEmailStatsAIMAll", "contents": "campaignEmailStatsAIMAll($cid, $start=0, $limit=100);" } {
+	,	{ "trigger": "campaignEcommOrderAdd", "contents": "campaignEcommOrderAdd($order);" } {
+	,	{ "trigger": "lists", "contents": "lists($filters=array (
+ 1164:     function listMergeVars($id);" } {
+	,	{ "trigger": "listMergeVarAdd", "contents": "listMergeVarAdd($id, $tag, $name, $options=array (
+ 1209:     function listMergeVarUpdate($id, $tag, $options);" } {
+	,	{ "trigger": "listMergeVarDel", "contents": "listMergeVarDel($id, $tag);" } {
+	,	{ "trigger": "listInterestGroupings", "contents": "listInterestGroupings($id);" } {
+	,	{ "trigger": "listInterestGroupAdd", "contents": "listInterestGroupAdd($id, $group_name, $grouping_id=NULL);" } {
+	,	{ "trigger": "listInterestGroupDel", "contents": "listInterestGroupDel($id, $group_name, $grouping_id=NULL);" } {
+	,	{ "trigger": "listInterestGroupUpdate", "contents": "listInterestGroupUpdate($id, $old_name, $new_name, $grouping_id=NULL);" } {
+	,	{ "trigger": "listInterestGroupingAdd", "contents": "listInterestGroupingAdd($id, $name, $type, $groups);" } {
+	,	{ "trigger": "listInterestGroupingUpdate", "contents": "listInterestGroupingUpdate($grouping_id, $name, $value);" } {
+	,	{ "trigger": "listInterestGroupingDel", "contents": "listInterestGroupingDel($grouping_id);" } {
+	,	{ "trigger": "listWebhooks", "contents": "listWebhooks($id);" } {
+	,	{ "trigger": "listWebhookAdd", "contents": "listWebhookAdd($id, $url, $actions=array (
+ 1416:     function listWebhookDel($id, $url);" } {
+	,	{ "trigger": "listStaticSegments", "contents": "listStaticSegments($id);" } {
+	,	{ "trigger": "listStaticSegmentAdd", "contents": "listStaticSegmentAdd($id, $name);" } {
+	,	{ "trigger": "listStaticSegmentReset", "contents": "listStaticSegmentReset($id, $seg_id);" } {
+	,	{ "trigger": "listStaticSegmentDel", "contents": "listStaticSegmentDel($id, $seg_id);" } {
+	,	{ "trigger": "listStaticSegmentMembersAdd", "contents": "listStaticSegmentMembersAdd($id, $seg_id, $batch);" } {
+	,	{ "trigger": "listStaticSegmentMembersDel", "contents": "listStaticSegmentMembersDel($id, $seg_id, $batch);" } {
+	,	{ "trigger": "listSubscribe", "contents": "listSubscribe($id, $email_address, $merge_vars=NULL, $email_type='html', $double_optin=true, $update_existing=false, $replace_interests=true, $send_welcome=false);" } {
+	,	{ "trigger": "listUnsubscribe", "contents": "listUnsubscribe($id, $email_address, $delete_member=false, $send_goodbye=true, $send_notify=true);" } {
+	,	{ "trigger": "listUpdateMember", "contents": "listUpdateMember($id, $email_address, $merge_vars, $email_type='', $replace_interests=true);" } {
+	,	{ "trigger": "listBatchSubscribe", "contents": "listBatchSubscribe($id, $batch, $double_optin=true, $update_existing=false, $replace_interests=true);" } {
+	,	{ "trigger": "listBatchUnsubscribe", "contents": "listBatchUnsubscribe($id, $emails, $delete_member=false, $send_goodbye=true, $send_notify=false);" } {
+	,	{ "trigger": "listMembers", "contents": "listMembers($id, $status='subscribed', $since=NULL, $start=0, $limit=100);" } {
+	,	{ "trigger": "listMemberInfo", "contents": "listMemberInfo($id, $email_address);" } {
+	,	{ "trigger": "listMemberActivity", "contents": "listMemberActivity($id, $email_address);" } {
+	,	{ "trigger": "listAbuseReports", "contents": "listAbuseReports($id, $start=0, $limit=500, $since=NULL);" } {
+	,	{ "trigger": "listGrowthHistory", "contents": "listGrowthHistory($id);" } {
+	,	{ "trigger": "listActivity", "contents": "listActivity($id);" } {
+	,	{ "trigger": "listLocations", "contents": "listLocations($id);" } {
+	,	{ "trigger": "listClients", "contents": "listClients($id);" } {
+	,	{ "trigger": "templates", "contents": "templates($types=array (
+ 1938:     function templateInfo($tid, $type='user');" } {
+	,	{ "trigger": "templateAdd", "contents": "templateAdd($name, $html);" } {
+	,	{ "trigger": "templateUpdate", "contents": "templateUpdate($id, $values);" } {
+	,	{ "trigger": "templateDel", "contents": "templateDel($id);" } {
+	,	{ "trigger": "templateUndel", "contents": "templateUndel($id);" } {
+	,	{ "trigger": "getAccountDetails", "contents": "getAccountDetails();" } {
+	,	{ "trigger": "generateText", "contents": "generateText($type, $content);" } {
+	,	{ "trigger": "inlineCss", "contents": "inlineCss($html, $strip_css=false);" } {
+	,	{ "trigger": "folders", "contents": "folders($type='campaign');" } {
+	,	{ "trigger": "folderAdd", "contents": "folderAdd($name, $type='campaign');" } {
+	,	{ "trigger": "folderUpdate", "contents": "folderUpdate($fid, $name, $type='campaign');" } {
+	,	{ "trigger": "folderDel", "contents": "folderDel($fid, $type='campaign');" } {
+	,	{ "trigger": "ecommOrders", "contents": "ecommOrders($start=0, $limit=100, $since=NULL);" } {
+	,	{ "trigger": "ecommOrderAdd", "contents": "ecommOrderAdd($order);" } {
+	,	{ "trigger": "ecommOrderDel", "contents": "ecommOrderDel($store_id, $order_id);" } {
+	,	{ "trigger": "listsForEmail", "contents": "listsForEmail($email_address);" } {
+	,	{ "trigger": "campaignsForEmail", "contents": "campaignsForEmail($email_address);" } {
+	,	{ "trigger": "chimpChatter", "contents": "chimpChatter();" } {
+	,	{ "trigger": "apikeys", "contents": "apikeys($username, $password, $expired=false);" } {
+	,	{ "trigger": "apikeyAdd", "contents": "apikeyAdd($username, $password);" } {
+	,	{ "trigger": "apikeyExpire", "contents": "apikeyExpire($username, $password);" } {
+	,	{ "trigger": "ping", "contents": "ping();" } {
+	,	{ "trigger": "callMethod", "contents": "callMethod();" } {
+	,	{ "trigger": "callServer", "contents": "callServer($method, $params);" } {
 
 C:\www\lemonstand\ls\modules\flynsarmymailchimp\controllers\flynsarmymailchimp_interests.php:
     2: 
@@ -1535,8 +1529,8 @@ C:\www\lemonstand\ls\modules\flynsarmymailchimp\controllers\flynsarmymailchimp_s
 C:\www\lemonstand\ls\modules\flynsarmymailchimp\controllers\flynsarmymailchimp_subscribers.php:
     2: 
     3: 	class FlynsarmyMailChimp_Subscribers extends Backend_Controller
-  396: 
-  397: 		function move_subscriber( $list_id, $from_state, $to_state, $count=1 )
+  396:
+	,	{ "trigger": "move_subscriber", "contents": "move_subscriber( $list_id, $from_state, $to_state, $count=1 );" }
 
 C:\www\lemonstand\ls\modules\flynsarmymailchimp\models\flynsarmymailchimp_configuration.php:
     2: 
@@ -1553,10 +1547,10 @@ C:\www\lemonstand\ls\modules\flynsarmymailchimp\models\flynsarmymailchimp_listcu
 C:\www\lemonstand\ls\modules\flynsarmymailchimp\models\flynsarmymailchimp_subscriber.php:
     2: 
     3: 	class FlynsarmyMailChimp_Subscriber extends Core_Configuration_Model
-  164: 
-  165: 		function get_email_type_options()
-  173: 
-  174: 		function get_subscription_state_options()
+  164:
+	,	{ "trigger": "get_email_type_options", "contents": "get_email_type_options();" }
+  173:
+	,	{ "trigger": "get_subscription_state_options", "contents": "get_subscription_state_options();" }
 
 C:\www\lemonstand\ls\modules\gallery\classes\gallery_actions.php:
     2: 
@@ -2128,9 +2122,9 @@ C:\www\lemonstand\ls\modules\shop\helpers\shop_bundlehelper.php:
    13: 	class Shop_BundleHelper
 
 C:\www\lemonstand\ls\modules\shop\init\custom_helpers.php:
-   18: 	function format_currency($num, $decimals = 2)
-   34: 	function customer_logout($redirect = null)
-   64: 	function tax_incl_label($order = null)
+	,	{ "trigger": "format_currency", "contents": "format_currency($num, $decimals = 2);" }
+	,	{ "trigger": "customer_logout", "contents": "customer_logout($redirect = null);" }
+	,	{ "trigger": "tax_incl_label", "contents": "tax_incl_label($order = null);" }
 
 C:\www\lemonstand\ls\modules\shop\models\shop_autobillingparams.php:
     2: 
@@ -2301,8 +2295,8 @@ C:\www\lemonstand\ls\modules\shop\models\shop_productbundleitem.php:
 C:\www\lemonstand\ls\modules\shop\models\shop_productcsvimportmodel.php:
     4: 
     5: 	class Shop_ProductCsvImportModel extends Backend_CsvImportModel
- 2187: 	
- 2188: 	function shop_product_import_img_extract($p_event, &$p_header)
+ 2187:
+	,	{ "trigger": "shop_product_import_img_extract", "contents": "shop_product_import_img_extract($p_event, &$p_header);" }
 
 C:\www\lemonstand\ls\modules\shop\models\shop_productfile.php:
    13: 	class Shop_ProductFile extends Db_File
@@ -2338,8 +2332,8 @@ C:\www\lemonstand\ls\modules\shop\models\shop_shippinglabel.php:
 
 C:\www\lemonstand\ls\modules\shop\models\shop_shippingoption.php:
    36: 	class Shop_ShippingOption extends Db_ActiveRecord
- 1124: 	
- 1125: 	function phpr_sort_order_shipping_options($a, $b)
+ 1124:
+	,	{ "trigger": "phpr_sort_order_shipping_options", "contents": "phpr_sort_order_shipping_options($a, $b);" }
 
 C:\www\lemonstand\ls\modules\shop\models\shop_shippingparams.php:
    31: 	class Shop_ShippingParams extends Db_ActiveRecord 
@@ -2454,133 +2448,133 @@ C:\www\lemonstand\ls\modules\shop\payment_types\shop_braintree_transpredirect_pa
 C:\www\lemonstand\ls\modules\shop\payment_types\shop_braintree_transpredirect_payment\Braintree\EqualityNode.php:
     2: 
     3: class Braintree_EqualityNode
-    5:     function __construct($name)
-   10: 
-   11:     function is($value)
-   16: 
-   17:     function isNot($value)
-   22: 
-   23:     function toParam()
+	,	{ "trigger": "__construct", "contents": "__construct($name);" }
+   10:
+	,	{ "trigger": "is", "contents": "is($value);" }
+   16:
+	,	{ "trigger": "isNot", "contents": "isNot($value);" }
+   22:
+	,	{ "trigger": "toParam", "contents": "toParam();" }
 
 C:\www\lemonstand\ls\modules\shop\payment_types\shop_braintree_transpredirect_payment\Braintree\KeyValueNode.php:
     2: 
     3: class Braintree_KeyValueNode
-    5:     function __construct($name)
-   11: 
-   12:     function is($value)
-   17: 
-   18:     function toParam()
+	,	{ "trigger": "__construct", "contents": "__construct($name);" }
+   11:
+	,	{ "trigger": "is", "contents": "is($value);" }
+   17:
+	,	{ "trigger": "toParam", "contents": "toParam();" }
 
 C:\www\lemonstand\ls\modules\shop\payment_types\shop_braintree_transpredirect_payment\Braintree\MultipleValueNode.php:
     2: 
     3: class Braintree_MultipleValueNode
-    5:     function __construct($name, $allowedValues = array())
-   11: 
-   12:     function in($values)
-   27: 
-   28:     function is($value)
-   32: 
-   33:     function toParam()
+	,	{ "trigger": "__construct", "contents": "__construct($name, $allowedValues = array();" })
+   11:
+	,	{ "trigger": "in", "contents": "in($values);" }
+   27:
+	,	{ "trigger": "is", "contents": "is($value);" }
+   32:
+	,	{ "trigger": "toParam", "contents": "toParam();" }
 
 C:\www\lemonstand\ls\modules\shop\payment_types\shop_braintree_transpredirect_payment\Braintree\MultipleValueOrTextNode.php:
     2: 
     3: class Braintree_MultipleValueOrTextNode extends Braintree_MultipleValueNode
-    5:     function __construct($name)
-   10: 
-   11:     function contains($value)
-   16: 
-   17:     function endsWith($value)
-   22: 
-   23:     function is($value)
-   28: 
-   29:     function isNot($value)
-   34: 
-   35:     function startsWith($value)
-   40: 
-   41:     function toParam()
+	,	{ "trigger": "__construct", "contents": "__construct($name);" }
+   10:
+	,	{ "trigger": "contains", "contents": "contains($value);" }
+   16:
+	,	{ "trigger": "endsWith", "contents": "endsWith($value);" }
+   22:
+	,	{ "trigger": "is", "contents": "is($value);" }
+   28:
+	,	{ "trigger": "isNot", "contents": "isNot($value);" }
+   34:
+	,	{ "trigger": "startsWith", "contents": "startsWith($value);" }
+   40:
+	,	{ "trigger": "toParam", "contents": "toParam();" }
 
 C:\www\lemonstand\ls\modules\shop\payment_types\shop_braintree_transpredirect_payment\Braintree\PartialMatchNode.php:
     2: 
     3: class Braintree_PartialMatchNode extends Braintree_EqualityNode
-    5:     function startsWith($value)
-   10: 
-   11:     function endsWith($value)
+	,	{ "trigger": "startsWith", "contents": "startsWith($value);" }
+   10:
+	,	{ "trigger": "endsWith", "contents": "endsWith($value);" }
 
 C:\www\lemonstand\ls\modules\shop\payment_types\shop_braintree_transpredirect_payment\Braintree\RangeNode.php:
     2: 
     3: class Braintree_RangeNode
-    5:     function __construct($name)
-   10: 
-   11:     function greaterThanOrEqualTo($value)
-   16: 
-   17:     function lessThanOrEqualTo($value)
-   22: 
-   23:     function is($value)
-   28: 
-   29:     function between($min, $max)
-   33: 
-   34:     function toParam()
+	,	{ "trigger": "__construct", "contents": "__construct($name);" }
+   10:
+	,	{ "trigger": "greaterThanOrEqualTo", "contents": "greaterThanOrEqualTo($value);" }
+   16:
+	,	{ "trigger": "lessThanOrEqualTo", "contents": "lessThanOrEqualTo($value);" }
+   22:
+	,	{ "trigger": "is", "contents": "is($value);" }
+   28:
+	,	{ "trigger": "between", "contents": "between($min, $max);" }
+   33:
+	,	{ "trigger": "toParam", "contents": "toParam();" }
 
 C:\www\lemonstand\ls\modules\shop\payment_types\shop_braintree_transpredirect_payment\Braintree\TextNode.php:
     2: 
     3: class Braintree_TextNode extends Braintree_PartialMatchNode
-    5:     function contains($value)
+	,	{ "trigger": "contains", "contents": "contains($value);" }
 
 C:\www\lemonstand\ls\modules\shop\payment_types\shop_braintree_transpredirect_payment\Braintree\Util.php:
-   93:             function lcfirst( $str )
+	,	{ "trigger": "lcfirst", "contents": "lcfirst( $str );" }
 
 C:\www\lemonstand\ls\modules\shop\payment_types\shop_paypal_pro_payment\CentinelClient.php:
    15: 
    16:     class CentinelClient {
    28: 
-   29: 		
-   30: 		function add($name, $value) {
+   29:
+	,	{ "trigger": "add", "contents": "add($name, $value);" } {
    39: 
-   40: 
-   41: 		function getValue($name) {
+   40:
+	,	{ "trigger": "getValue", "contents": "getValue($name);" } {
    52: 
-   53: 
-   54: 		function printRequestXml(){
+   53:
+	,	{ "trigger": "printRequestXml", "contents": "printRequestXml();" }{
    65: 
    66: 
-   67: 		
-   68: 		function getRequestXml($url, $timeout){
-   88: 	   
-   89:         function getUnparsedResponse() {
+   67:
+	,	{ "trigger": "getRequestXml", "contents": "getRequestXml($url, $timeout);" }{
+   88:
+	,	{ "trigger": "getUnparsedResponse", "contents": "getUnparsedResponse();" } {
    92: 
    93: 
-   94: 
-   95:         function generatePayload($transactionPwd) {
+   94:
+	,	{ "trigger": "generatePayload", "contents": "generatePayload($transactionPwd);" } {
   116: 
-  117: 
-  118:         function unpackPayload($payload, $transactionPwd) {
-  162: 
-  163: 		function sendHttp($url, $connectTimeout="", $timeout) {
-  228: 
-  229: 		function setErrorResponse($errorNo, $errorDesc) {
-  244: 
-  245: 		function escapeXML($elementValue){
+  117:
+	,	{ "trigger": "unpackPayload", "contents": "unpackPayload($payload, $transactionPwd);" } {
+  162:
+	,	{ "trigger": "sendHttp", "contents": "sendHttp($url, $connectTimeout="", $timeout);" } {
+  228:
+	,	{ "trigger": "setErrorResponse", "contents": "setErrorResponse($errorNo, $errorDesc);" } {
+  244:
+	,	{ "trigger": "escapeXML", "contents": "escapeXML($elementValue);" }{
 
 C:\www\lemonstand\ls\modules\shop\payment_types\shop_paypal_pro_payment\CentinelUtility.php:
-    2:     function determineCardType($Card_Number){
-   27: 
-   28:     function redirectBrowser($url) {
-   45:     function clearCentinelSession() {
-   60:     function prettyPrintData($title, $dataArray) {
+	,	{ "trigger": "determineCardType", "contents": "determineCardType($Card_Number);" }{
+   27:
+	,	{ "trigger": "redirectBrowser", "contents": "redirectBrowser($url);" } {
+	,	{ "trigger": "clearCentinelSession", "contents": "clearCentinelSession();" } {
+	,	{ "trigger": "prettyPrintData", "contents": "prettyPrintData($title, $dataArray);" } {
 
 C:\www\lemonstand\ls\modules\shop\payment_types\shop_paypal_pro_payment\XMLParser.php:
    12: 
    13:   class XMLParser{
-   25: 
-   26: 		function XMLParser() {
-   35: 		
-   36: 		function startElement($parser, $name, $attrs='') { 
-   46: 
-   47: 		function elementData($parser, $data) { 
-   57: 
-   58: 		function endElement($parser, $name) { 
-   71: 
-   72: 		function deserializeXml($responseString) {
+   25:
+	,	{ "trigger": "XMLParser", "contents": "XMLParser();" } {
+   35:
+	,	{ "trigger": "startElement", "contents": "startElement($parser, $name, $attrs='');" } { 
+   46:
+	,	{ "trigger": "elementData", "contents": "elementData($parser, $data);" } { 
+   57:
+	,	{ "trigger": "endElement", "contents": "endElement($parser, $name);" } { 
+   71:
+	,	{ "trigger": "deserializeXml", "contents": "deserializeXml($responseString);" } {
 
 C:\www\lemonstand\ls\modules\shop\price_rule_actions\shop_cartbuymgetnfree_action.php:
     2: 
@@ -2680,8 +2674,8 @@ C:\www\lemonstand\ls\modules\shop\shipping_types\shop_uspsshipping.php:
     3: 	class Shop_UspsShipping extends Shop_ShippingType
 
 C:\www\lemonstand\ls\modules\shop\updates\252.php:
-    3: 
-    4: 	function update_252_add_tax_item(&$list, $name, $amount, $default_name = 'tax')
+    3:
+	,	{ "trigger": "update_252_add_tax_item", "contents": "update_252_add_tax_item(&$list, $name, $amount, $default_name = 'tax');" }
 
 C:\www\lemonstand\ls\modules\shopproductdescription\classes\shopproductdescription_module.php:
     2: 
@@ -2711,138 +2705,138 @@ C:\www\lemonstand\ls\modules\smilies\classes\smilies_module.php:
     3: 	class Smilies_Module extends Core_ModuleBase {
 
 C:\www\lemonstand\ls\modules\sslesscompiler\classes\lessc.php:
-   73: 	function findImport($url) {
-   83: 
-   84: 	function fileExists($name) {
-   98: 	function mergeBlock($target, $from) {
-  106: 	function mixImport($import, $parentBlock, &$props) {
-  151: 	function mixImports($block, $importDir = null) {
-  191: 	function compileBlock($block, $parent_tags = null) {
-  247: 
-  248: 	function sortProps($props) {
-  260: 
-  261: 	function expandParentSelectors(&$tag, $replace) {
-  273: 	function multiplyTags($parents, $current) {
-  300: 
-  301: 	function eq($left, $right) {
-  304: 
-  305: 	function patternMatch($block, $callingArgs) {
-  377: 
-  378: 	function patternMatchAll($blocks, $callingArgs) {
-  390: 	function findBlocks($search_in, $path, $args, $seen=array()) {
-  418: 	function zipSetArgs($args, $values) {
-  447: 	function compileProp($prop, $block, $tags, &$_lines, &$_blocks) {
-  548: 	function compileValue($value) {
-  620: 
-  621: 	function compileMedia($block) {
-  635: 
-  636: 	function lib_isnumber($value) {
-  639: 
-  640: 	function lib_isstring($value) {
-  643: 
-  644: 	function lib_iscolor($value) {
-  647: 
-  648: 	function lib_iskeyword($value) {
-  651: 
-  652: 	function lib_ispixel($value) {
-  655: 
-  656: 	function lib_ispercentage($value) {
-  659: 
-  660: 	function lib_isem($value) {
-  663: 
-  664: 	function lib_rgbahex($color) {
-  673: 
-  674: 	function lib_argb($color){
-  679: 	function lib_e($arg) {
-  694: 
-  695: 	function lib__sprintf($args) {
-  724: 
-  725: 	function lib_floor($arg) {
-  728: 
-  729: 	function lib_ceil($arg) {
-  732: 
-  733: 	function lib_round($arg) {
-  738: 	function quoted($s) {
-  748: 	function colorArgs($args) {
-  758: 
-  759: 	function lib_darken($args) {
-  766: 
-  767: 	function lib_lighten($args) {
-  774: 
-  775: 	function lib_saturate($args) {
-  782: 
-  783: 	function lib_desaturate($args) {
-  790: 
-  791: 	function lib_spin($args) {
-  801: 
-  802: 	function lib_fadeout($args) {
-  807: 
-  808: 	function lib_fadein($args) {
-  813: 
-  814: 	function lib_hue($color) {
-  818: 
-  819: 	function lib_saturation($color) {
-  823: 
-  824: 	function lib_lightness($color) {
-  831: 	function lib_alpha($color) {
-  837: 	function lib_fade($args) {
-  842: 
-  843: 	function lib_percentage($number) {
-  850: 	function lib_mix($args) {
-  880: 
-  881: 	function assertColor($value, $error = "expected color value") {
-  886: 
-  887: 	function toHSL($color) {
-  921: 
-  922: 	function toRGB_helper($comp, $temp1, $temp2) {
-  937: 	function toRGB($color) {
-  963: 
-  964: 	function clamp($v, $max = 1, $min = 0) {
-  972: 	function funcToColor($func) {
- 1017: 
- 1018: 	function toName($val) {
- 1029: 	function reduce($var) {
- 1096: 	function coerceColor($value) {
- 1122: 
- 1123: 	function toBool($a) {
- 1129: 	function evaluate($op, $left, $right) {
- 1187: 	function fixColor($c) {
- 1195: 
- 1196: 	function op_number_color($op, $lft, $rgt) {
- 1201: 
- 1202: 	function op_color_number($op, $lft, $rgt) {
- 1208: 
- 1209: 	function op_color_color($op, $left, $right) {
- 1240: 	function op_number_number($op, $left, $right) {
- 1281: 	function pushEnv() {
- 1292: 	function pop() {
- 1299: 	function set($name, $value) {
- 1305: 	function get($name) {
- 1349: 	function parse($str = null, $initialVariables = null) {
- 1378: 
- 1379: 	function setFormatter($name) {
- 1382: 
- 1383: 	function newFormatter() {
- 1397: 	function throwError($msg = null) {
- 1408: 	function __construct($fname = null, $opts = null) {
- 1713: 
- 1714: 	function __construct($lessc, $sourceName = null) {
- 1732: 
- 1733: 	function parse($buffer) {
- 2430: 	function mixinTags(&$tags) {
- 2748: 	function append($prop, $pos = null) {
- 2754: 	function pop() {
+	,	{ "trigger": "findImport", "contents": "findImport($url);" } {
+   83:
+	,	{ "trigger": "fileExists", "contents": "fileExists($name);" } {
+	,	{ "trigger": "mergeBlock", "contents": "mergeBlock($target, $from);" } {
+	,	{ "trigger": "mixImport", "contents": "mixImport($import, $parentBlock, &$props);" } {
+	,	{ "trigger": "mixImports", "contents": "mixImports($block, $importDir = null);" } {
+	,	{ "trigger": "compileBlock", "contents": "compileBlock($block, $parent_tags = null);" } {
+  247:
+	,	{ "trigger": "sortProps", "contents": "sortProps($props);" } {
+  260:
+	,	{ "trigger": "expandParentSelectors", "contents": "expandParentSelectors(&$tag, $replace);" } {
+	,	{ "trigger": "multiplyTags", "contents": "multiplyTags($parents, $current);" } {
+  300:
+	,	{ "trigger": "eq", "contents": "eq($left, $right);" } {
+  304:
+	,	{ "trigger": "patternMatch", "contents": "patternMatch($block, $callingArgs);" } {
+  377:
+	,	{ "trigger": "patternMatchAll", "contents": "patternMatchAll($blocks, $callingArgs);" } {
+	,	{ "trigger": "findBlocks", "contents": "findBlocks($search_in, $path, $args, $seen=array();" }) {
+	,	{ "trigger": "zipSetArgs", "contents": "zipSetArgs($args, $values);" } {
+	,	{ "trigger": "compileProp", "contents": "compileProp($prop, $block, $tags, &$_lines, &$_blocks);" } {
+	,	{ "trigger": "compileValue", "contents": "compileValue($value);" } {
+  620:
+	,	{ "trigger": "compileMedia", "contents": "compileMedia($block);" } {
+  635:
+	,	{ "trigger": "lib_isnumber", "contents": "lib_isnumber($value);" } {
+  639:
+	,	{ "trigger": "lib_isstring", "contents": "lib_isstring($value);" } {
+  643:
+	,	{ "trigger": "lib_iscolor", "contents": "lib_iscolor($value);" } {
+  647:
+	,	{ "trigger": "lib_iskeyword", "contents": "lib_iskeyword($value);" } {
+  651:
+	,	{ "trigger": "lib_ispixel", "contents": "lib_ispixel($value);" } {
+  655:
+	,	{ "trigger": "lib_ispercentage", "contents": "lib_ispercentage($value);" } {
+  659:
+	,	{ "trigger": "lib_isem", "contents": "lib_isem($value);" } {
+  663:
+	,	{ "trigger": "lib_rgbahex", "contents": "lib_rgbahex($color);" } {
+  673:
+	,	{ "trigger": "lib_argb", "contents": "lib_argb($color);" }{
+	,	{ "trigger": "lib_e", "contents": "lib_e($arg);" } {
+  694:
+	,	{ "trigger": "lib__sprintf", "contents": "lib__sprintf($args);" } {
+  724:
+	,	{ "trigger": "lib_floor", "contents": "lib_floor($arg);" } {
+  728:
+	,	{ "trigger": "lib_ceil", "contents": "lib_ceil($arg);" } {
+  732:
+	,	{ "trigger": "lib_round", "contents": "lib_round($arg);" } {
+	,	{ "trigger": "quoted", "contents": "quoted($s);" } {
+	,	{ "trigger": "colorArgs", "contents": "colorArgs($args);" } {
+  758:
+	,	{ "trigger": "lib_darken", "contents": "lib_darken($args);" } {
+  766:
+	,	{ "trigger": "lib_lighten", "contents": "lib_lighten($args);" } {
+  774:
+	,	{ "trigger": "lib_saturate", "contents": "lib_saturate($args);" } {
+  782:
+	,	{ "trigger": "lib_desaturate", "contents": "lib_desaturate($args);" } {
+  790:
+	,	{ "trigger": "lib_spin", "contents": "lib_spin($args);" } {
+  801:
+	,	{ "trigger": "lib_fadeout", "contents": "lib_fadeout($args);" } {
+  807:
+	,	{ "trigger": "lib_fadein", "contents": "lib_fadein($args);" } {
+  813:
+	,	{ "trigger": "lib_hue", "contents": "lib_hue($color);" } {
+  818:
+	,	{ "trigger": "lib_saturation", "contents": "lib_saturation($color);" } {
+  823:
+	,	{ "trigger": "lib_lightness", "contents": "lib_lightness($color);" } {
+	,	{ "trigger": "lib_alpha", "contents": "lib_alpha($color);" } {
+	,	{ "trigger": "lib_fade", "contents": "lib_fade($args);" } {
+  842:
+	,	{ "trigger": "lib_percentage", "contents": "lib_percentage($number);" } {
+	,	{ "trigger": "lib_mix", "contents": "lib_mix($args);" } {
+  880:
+	,	{ "trigger": "assertColor", "contents": "assertColor($value, $error = "expected color value");" } {
+  886:
+	,	{ "trigger": "toHSL", "contents": "toHSL($color);" } {
+  921:
+	,	{ "trigger": "toRGB_helper", "contents": "toRGB_helper($comp, $temp1, $temp2);" } {
+	,	{ "trigger": "toRGB", "contents": "toRGB($color);" } {
+  963:
+	,	{ "trigger": "clamp", "contents": "clamp($v, $max = 1, $min = 0);" } {
+	,	{ "trigger": "funcToColor", "contents": "funcToColor($func);" } {
+ 1017:
+	,	{ "trigger": "toName", "contents": "toName($val);" } {
+	,	{ "trigger": "reduce", "contents": "reduce($var);" } {
+	,	{ "trigger": "coerceColor", "contents": "coerceColor($value);" } {
+ 1122:
+	,	{ "trigger": "toBool", "contents": "toBool($a);" } {
+	,	{ "trigger": "evaluate", "contents": "evaluate($op, $left, $right);" } {
+	,	{ "trigger": "fixColor", "contents": "fixColor($c);" } {
+ 1195:
+	,	{ "trigger": "op_number_color", "contents": "op_number_color($op, $lft, $rgt);" } {
+ 1201:
+	,	{ "trigger": "op_color_number", "contents": "op_color_number($op, $lft, $rgt);" } {
+ 1208:
+	,	{ "trigger": "op_color_color", "contents": "op_color_color($op, $left, $right);" } {
+	,	{ "trigger": "op_number_number", "contents": "op_number_number($op, $left, $right);" } {
+	,	{ "trigger": "pushEnv", "contents": "pushEnv();" } {
+	,	{ "trigger": "pop", "contents": "pop();" } {
+	,	{ "trigger": "set", "contents": "set($name, $value);" } {
+	,	{ "trigger": "get", "contents": "get($name);" } {
+	,	{ "trigger": "parse", "contents": "parse($str = null, $initialVariables = null);" } {
+ 1378:
+	,	{ "trigger": "setFormatter", "contents": "setFormatter($name);" } {
+ 1382:
+	,	{ "trigger": "newFormatter", "contents": "newFormatter();" } {
+	,	{ "trigger": "throwError", "contents": "throwError($msg = null);" } {
+	,	{ "trigger": "__construct", "contents": "__construct($fname = null, $opts = null);" } {
+ 1713:
+	,	{ "trigger": "__construct", "contents": "__construct($lessc, $sourceName = null);" } {
+ 1732:
+	,	{ "trigger": "parse", "contents": "parse($buffer);" } {
+	,	{ "trigger": "mixinTags", "contents": "mixinTags(&$tags);" } {
+	,	{ "trigger": "append", "contents": "append($prop, $pos = null);" } {
+	,	{ "trigger": "pop", "contents": "pop();" } {
  2819: 
  2820: class lessc_formatter {
- 2835: 	function indentAmount($block) {
- 2840: 	function block($tags, $wrapChildren, $lines, $children, $indentLevel) {
- 2891: 
- 2892: 	function property($name, $values) {
+	,	{ "trigger": "indentAmount", "contents": "indentAmount($block);" } {
+	,	{ "trigger": "block", "contents": "block($tags, $wrapChildren, $lines, $children, $indentLevel);" } {
+ 2891:
+	,	{ "trigger": "property", "contents": "property($name, $values);" } {
  2896: 
  2897: class lessc_formatter_compressed extends lessc_formatter {
  2908: 
  2909: class lessc_formatter_indent extends lessc_formatter {
- 2910: 	function indentAmount($block) {
+	,	{ "trigger": "indentAmount", "contents": "indentAmount($block);" } {
 
 C:\www\lemonstand\ls\modules\sslesscompiler\classes\sslesscompiler_module.php:
     2: 
@@ -2968,28 +2962,28 @@ C:\www\lemonstand\ls\modules\templar\vendor\php-liquid\Liquid.class.php:
   116: class Liquid
 
 C:\www\lemonstand\ls\modules\templar\vendor\php-liquid\lib\LiquidBlankFileSystem.class.php:
-   31: 	function read_template_file($template_path)
+	,	{ "trigger": "read_template_file", "contents": "read_template_file($template_path);" }
 
 C:\www\lemonstand\ls\modules\templar\vendor\php-liquid\lib\LiquidBlock.class.php:
-  100: 	function end_tag()
-  112: 	function unknown_tag($tag, $params, & $tokens)
-  134: 	function block_delimiter()
-  145: 	function block_name()
-  157: 	function create_variable($token)
-  185: 	function assert_missing_delimitation()
+	,	{ "trigger": "end_tag", "contents": "end_tag();" }
+	,	{ "trigger": "unknown_tag", "contents": "unknown_tag($tag, $params, & $tokens);" }
+	,	{ "trigger": "block_delimiter", "contents": "block_delimiter();" }
+	,	{ "trigger": "block_name", "contents": "block_name();" }
+	,	{ "trigger": "create_variable", "contents": "create_variable($token);" }
+	,	{ "trigger": "assert_missing_delimitation", "contents": "assert_missing_delimitation();" }
 
 C:\www\lemonstand\ls\modules\templar\vendor\php-liquid\lib\LiquidContext.class.php:
-  152: 	function has_key($key)
+	,	{ "trigger": "has_key", "contents": "has_key($key);" }
 
 C:\www\lemonstand\ls\modules\templar\vendor\php-liquid\lib\LiquidDecisionBlock.class.php:
-   32: 	function string_value($value)
-   67: 	function equal_variables($left, $right, & $context)
-   86: 	function interpret_condition($left, $right, $op = null, & $context)
+	,	{ "trigger": "string_value", "contents": "string_value($value);" }
+	,	{ "trigger": "equal_variables", "contents": "equal_variables($left, $right, & $context);" }
+	,	{ "trigger": "interpret_condition", "contents": "interpret_condition($left, $right, $op = null, & $context);" }
 
 C:\www\lemonstand\ls\modules\templar\vendor\php-liquid\lib\LiquidDocument.class.php:
-   28: 	function __construct($tokens, &$file_system)
-   63: 	function block_delimiter()
-   73: 	function assert_missing_delimitation()
+	,	{ "trigger": "__construct", "contents": "__construct($tokens, &$file_system);" }
+	,	{ "trigger": "block_delimiter", "contents": "block_delimiter();" }
+	,	{ "trigger": "assert_missing_delimitation", "contents": "assert_missing_delimitation();" }
 
 C:\www\lemonstand\ls\modules\templar\vendor\php-liquid\lib\LiquidException.class.php:
    11: 
@@ -2997,121 +2991,121 @@ C:\www\lemonstand\ls\modules\templar\vendor\php-liquid\lib\LiquidException.class
    13: class LiquidException extends Exception
 
 C:\www\lemonstand\ls\modules\templar\vendor\php-liquid\lib\LiquidFilterbank.class.php:
-   63: 	function add_filter($filter)
-  112: 	function invoke($name, $value, $args)
+	,	{ "trigger": "add_filter", "contents": "add_filter($filter);" }
+	,	{ "trigger": "invoke", "contents": "invoke($name, $value, $args);" }
 
 C:\www\lemonstand\ls\modules\templar\vendor\php-liquid\lib\LiquidRegexp.class.php:
-   59: 	function quote($string)
-   71: 	function scan($string)
-  114: 	function match_all($string)
-  127: 	function split($string, $limit = null)
+	,	{ "trigger": "quote", "contents": "quote($string);" }
+	,	{ "trigger": "scan", "contents": "scan($string);" }
+	,	{ "trigger": "match_all", "contents": "match_all($string);" }
+	,	{ "trigger": "split", "contents": "split($string, $limit = null);" }
 
 C:\www\lemonstand\ls\modules\templar\vendor\php-liquid\lib\LiquidVariable.class.php:
-   98: 	function render($context)
+	,	{ "trigger": "render", "contents": "render($context);" }
 
 C:\www\lemonstand\ls\modules\templar\vendor\php-liquid\lib\Tag\LiquidTagCase.class.php:
-   49: 	function __construct($markup, &$tokens, &$file_system)
-   73: 	function end_tag()
-   86: 	function unknown_tag($tag, $params, & $tokens)
-  123: 	function push_nodelist()
+	,	{ "trigger": "__construct", "contents": "__construct($markup, &$tokens, &$file_system);" }
+	,	{ "trigger": "end_tag", "contents": "end_tag();" }
+	,	{ "trigger": "unknown_tag", "contents": "unknown_tag($tag, $params, & $tokens);" }
+	,	{ "trigger": "push_nodelist", "contents": "push_nodelist();" }
 
 C:\www\lemonstand\ls\modules\templar\vendor\php-liquid\lib\Tag\LiquidTagIf.class.php:
-   59: 	function unknown_tag($tag, $params, &$tokens)
+	,	{ "trigger": "unknown_tag", "contents": "unknown_tag($tag, $params, &$tokens);" }
 
 C:\www\lemonstand\ls\modules\templar\vendor\Twig\CompilerInterface.php:
-   27:     function compile(Twig_NodeInterface $node);
-   34:     function getSource();
+	,	{ "trigger": "compile", "contents": "compile(Twig_NodeInterface $node);" };
+	,	{ "trigger": "getSource", "contents": "getSource();" };
 
 C:\www\lemonstand\ls\modules\templar\vendor\Twig\ExtensionInterface.php:
-   27:     function initRuntime(Twig_Environment $environment);
-   34:     function getTokenParsers();
-   41:     function getNodeVisitors();
-   48:     function getFilters();
-   55:     function getTests();
-   62:     function getFunctions();
-   69:     function getOperators();
-   76:     function getGlobals();
-   83:     function getName();
+	,	{ "trigger": "initRuntime", "contents": "initRuntime(Twig_Environment $environment);" };
+	,	{ "trigger": "getTokenParsers", "contents": "getTokenParsers();" };
+	,	{ "trigger": "getNodeVisitors", "contents": "getNodeVisitors();" };
+	,	{ "trigger": "getFilters", "contents": "getFilters();" };
+	,	{ "trigger": "getTests", "contents": "getTests();" };
+	,	{ "trigger": "getFunctions", "contents": "getFunctions();" };
+	,	{ "trigger": "getOperators", "contents": "getOperators();" };
+	,	{ "trigger": "getGlobals", "contents": "getGlobals();" };
+	,	{ "trigger": "getName", "contents": "getName();" };
 
 C:\www\lemonstand\ls\modules\templar\vendor\Twig\FilterInterface.php:
-   25:     function compile();
-   26: 
-   27:     function needsEnvironment();
-   28: 
-   29:     function needsContext();
-   30: 
-   31:     function getSafe(Twig_Node $filterArgs);
-   32: 
-   33:     function getPreEscape();
+	,	{ "trigger": "compile", "contents": "compile();" };
+   26:
+	,	{ "trigger": "needsEnvironment", "contents": "needsEnvironment();" };
+   28:
+	,	{ "trigger": "needsContext", "contents": "needsContext();" };
+   30:
+	,	{ "trigger": "getSafe", "contents": "getSafe(Twig_Node $filterArgs);" };
+   32:
+	,	{ "trigger": "getPreEscape", "contents": "getPreEscape();" };
 
 C:\www\lemonstand\ls\modules\templar\vendor\Twig\FunctionInterface.php:
-   26:     function compile();
-   27: 
-   28:     function needsEnvironment();
-   29: 
-   30:     function needsContext();
-   31: 
-   32:     function getSafe(Twig_Node $filterArgs);
+	,	{ "trigger": "compile", "contents": "compile();" };
+   27:
+	,	{ "trigger": "needsEnvironment", "contents": "needsEnvironment();" };
+   29:
+	,	{ "trigger": "needsContext", "contents": "needsContext();" };
+   31:
+	,	{ "trigger": "getSafe", "contents": "getSafe(Twig_Node $filterArgs);" };
 
 C:\www\lemonstand\ls\modules\templar\vendor\Twig\LexerInterface.php:
-   28:     function tokenize($code, $filename = null);
+	,	{ "trigger": "tokenize", "contents": "tokenize($code, $filename = null);" };
 
 C:\www\lemonstand\ls\modules\templar\vendor\Twig\LoaderInterface.php:
-   27:     function getSource($name);
-   36:     function getCacheKey($name);
-   44:     function isFresh($name, $time);
+	,	{ "trigger": "getSource", "contents": "getSource($name);" };
+	,	{ "trigger": "getCacheKey", "contents": "getCacheKey($name);" };
+	,	{ "trigger": "isFresh", "contents": "isFresh($name, $time);" };
 
 C:\www\lemonstand\ls\modules\templar\vendor\Twig\NodeInterface.php:
-   25:     function compile(Twig_Compiler $compiler);
-   26: 
-   27:     function getLine();
-   28: 
-   29:     function getNodeTag();
+	,	{ "trigger": "compile", "contents": "compile(Twig_Compiler $compiler);" };
+   26:
+	,	{ "trigger": "getLine", "contents": "getLine();" };
+   28:
+	,	{ "trigger": "getNodeTag", "contents": "getNodeTag();" };
 
 C:\www\lemonstand\ls\modules\templar\vendor\Twig\NodeVisitorInterface.php:
-   28:     function enterNode(Twig_NodeInterface $node, Twig_Environment $env);
-   38:     function leaveNode(Twig_NodeInterface $node, Twig_Environment $env);
-   47:     function getPriority();
+	,	{ "trigger": "enterNode", "contents": "enterNode(Twig_NodeInterface $node, Twig_Environment $env);" };
+	,	{ "trigger": "leaveNode", "contents": "leaveNode(Twig_NodeInterface $node, Twig_Environment $env);" };
+	,	{ "trigger": "getPriority", "contents": "getPriority();" };
 
 C:\www\lemonstand\ls\modules\templar\vendor\Twig\ParserInterface.php:
-   27:     function parse(Twig_TokenStream $code);
+	,	{ "trigger": "parse", "contents": "parse(Twig_TokenStream $code);" };
 
 C:\www\lemonstand\ls\modules\templar\vendor\Twig\TemplateInterface.php:
-   31:     function render(array $context);
-   39:     function display(array $context, array $blocks = array());
-   46:     function getEnvironment();
+	,	{ "trigger": "render", "contents": "render(array $context);" };
+	,	{ "trigger": "display", "contents": "display(array $context, array $blocks = array();" });
+	,	{ "trigger": "getEnvironment", "contents": "getEnvironment();" };
 
 C:\www\lemonstand\ls\modules\templar\vendor\Twig\TestInterface.php:
-   25:     function compile();
+	,	{ "trigger": "compile", "contents": "compile();" };
 
 C:\www\lemonstand\ls\modules\templar\vendor\Twig\TokenParserBrokerInterface.php:
-   30:     function getTokenParser($tag);
-   37:     function setParser(Twig_ParserInterface $parser);
-   44:     function getParser();
+	,	{ "trigger": "getTokenParser", "contents": "getTokenParser($tag);" };
+	,	{ "trigger": "setParser", "contents": "setParser(Twig_ParserInterface $parser);" };
+	,	{ "trigger": "getParser", "contents": "getParser();" };
 
 C:\www\lemonstand\ls\modules\templar\vendor\Twig\TokenParserInterface.php:
-   25:     function setParser(Twig_Parser $parser);
-   34:     function parse(Twig_Token $token);
-   41:     function getTag();
+	,	{ "trigger": "setParser", "contents": "setParser(Twig_Parser $parser);" };
+	,	{ "trigger": "parse", "contents": "parse(Twig_Token $token);" };
+	,	{ "trigger": "getTag", "contents": "getTag();" };
 
 C:\www\lemonstand\ls\modules\templar\vendor\Twig\Extension\Core.php:
-  337:     function twig_jsonencode_filter($value, $options = 0)
-  356:     function twig_jsonencode_filter($value, $options = 0)
+	,	{ "trigger": "twig_jsonencode_filter", "contents": "twig_jsonencode_filter($value, $options = 0);" }
+	,	{ "trigger": "twig_jsonencode_filter", "contents": "twig_jsonencode_filter($value, $options = 0);" }
   367: 
   368: function _twig_markup2string(&$value)
-  610:     function twig_convert_encoding($string, $to, $from)
-  615:     function twig_convert_encoding($string, $to, $from)
-  620:     function twig_convert_encoding($string, $to, $from)
+	,	{ "trigger": "twig_convert_encoding", "contents": "twig_convert_encoding($string, $to, $from);" }
+	,	{ "trigger": "twig_convert_encoding", "contents": "twig_convert_encoding($string, $to, $from);" }
+	,	{ "trigger": "twig_convert_encoding", "contents": "twig_convert_encoding($string, $to, $from);" }
   625: 
   626: function _twig_escape_js_callback($matches)
-  651:     function twig_length_filter(Twig_Environment $env, $thing)
-  664:     function twig_upper_filter(Twig_Environment $env, $string)
-  681:     function twig_lower_filter(Twig_Environment $env, $string)
-  698:     function twig_title_string_filter(Twig_Environment $env, $string)
-  715:     function twig_capitalize_string_filter(Twig_Environment $env, $string)
-  736:     function twig_length_filter(Twig_Environment $env, $thing)
-  749:     function twig_title_string_filter(Twig_Environment $env, $string)
-  762:     function twig_capitalize_string_filter(Twig_Environment $env, $string)
+	,	{ "trigger": "twig_length_filter", "contents": "twig_length_filter(Twig_Environment $env, $thing);" }
+	,	{ "trigger": "twig_upper_filter", "contents": "twig_upper_filter(Twig_Environment $env, $string);" }
+	,	{ "trigger": "twig_lower_filter", "contents": "twig_lower_filter(Twig_Environment $env, $string);" }
+	,	{ "trigger": "twig_title_string_filter", "contents": "twig_title_string_filter(Twig_Environment $env, $string);" }
+	,	{ "trigger": "twig_capitalize_string_filter", "contents": "twig_capitalize_string_filter(Twig_Environment $env, $string);" }
+	,	{ "trigger": "twig_length_filter", "contents": "twig_length_filter(Twig_Environment $env, $thing);" }
+	,	{ "trigger": "twig_title_string_filter", "contents": "twig_title_string_filter(Twig_Environment $env, $string);" }
+	,	{ "trigger": "twig_capitalize_string_filter", "contents": "twig_capitalize_string_filter(Twig_Environment $env, $string);" }
 
 C:\www\lemonstand\ls\modules\templar\vendor\Twig\Extension\Debug.php:
    38: 
@@ -3126,19 +3120,19 @@ C:\www\lemonstand\ls\modules\templar\vendor\Twig\Node\Expression\AssignName.php:
    13: class Twig_Node_Expression_AssignName extends Twig_Node_Expression_Name
 
 C:\www\lemonstand\ls\modules\templar\vendor\Twig\NodeVisitor\Escaper.php:
-   25: 
-   26:     function __construct()
+   25:
+	,	{ "trigger": "__construct", "contents": "__construct();" }
 
 C:\www\lemonstand\ls\modules\templar\vendor\Twig\NodeVisitor\SafeAnalysis.php:
     2: 
     3: class Twig_NodeVisitor_SafeAnalysis implements Twig_NodeVisitorInterface
 
 C:\www\lemonstand\ls\modules\templar\vendor\Twig\Sandbox\SecurityPolicyInterface.php:
-   20:     function checkSecurity($tags, $filters, $functions);
-   21: 
-   22:     function checkMethodAllowed($obj, $method);
-   23: 
-   24:     function checkPropertyAllowed($obj, $method);
+	,	{ "trigger": "checkSecurity", "contents": "checkSecurity($tags, $filters, $functions);" };
+   21:
+	,	{ "trigger": "checkMethodAllowed", "contents": "checkMethodAllowed($obj, $method);" };
+   23:
+	,	{ "trigger": "checkPropertyAllowed", "contents": "checkPropertyAllowed($obj, $method);" };
 
 C:\www\lemonstand\ls\modules\testimonial\classes\testimonial_actions.php:
     2: 
@@ -3177,7 +3171,7 @@ C:\www\lemonstand\ls\modules\trends\controllers\trends_ap.php:
     3: 	class Trends_AP extends Backend_Controller
 
 C:\www\lemonstand\ls\modules\trends\init\custom_helpers.php:
-    7: 	function verify_ein($value)
+	,	{ "trigger": "verify_ein", "contents": "verify_ein($value);" }
 
 C:\www\lemonstand\ls\modules\tumblr\classes\tumblr_account.php:
     2: 
@@ -3196,7 +3190,7 @@ C:\www\lemonstand\ls\modules\tumblr\thirdpart\phpTumblr\class.read.tumblr.php:
    23: class readTumblr {
 
 C:\www\lemonstand\ls\modules\tumblr\thirdpart\phpTumblr\clearbricks\common\_main.php:
-   50: 	function __autoload($name) {
+	,	{ "trigger": "__autoload", "contents": "__autoload($name);" } {
 
 C:\www\lemonstand\ls\modules\tweak\classes\tweak_actions.php:
     2: 
@@ -3221,53 +3215,53 @@ C:\www\lemonstand\ls\modules\twitter\classes\twitter_module.php:
 C:\www\lemonstand\ls\modules\twitter\thirdpart\php-twitter\class.twitter.php:
    13: 
    14: class twitter{
-   60:     
-   61: 	function twitter()
-   73: 	function update( $status, $replying_to = false )
-   94: 	function getReplies( $page = false, $since = false, $since_id = false )
-  120: 	function deleteStatus( $id )
-  135: 	function publicTimeline( $sinceid = false )
-  156: 	function userTimeline($id=false,$count=20,$since=false,$since_id=false,$page=false)
-  190: 	function showStatus( $id )
-  205: 	function friends( $id = false, $page = false )
-  229: 	function followers( $page = false )
-  250: 	function getFavorites( $id, $page=false )
-  267: 	function makeFavorite( $id )
-  281: 	function removeFavorite( $id )
-  298: 	function isFriend( $user_a, $user_b )
-  314: 	function followUser( $id, $notifications = false )
-  331: 	function leaveUser( $id )
-  347: 	function blockUser( $id )
-  361: 	function unblockUser()
-  379: 	function socialGraphFollowing( $id = false)
-  398: 	function socialGraphFollowedBy( $id = false )
-  422: 	function showUser( $id, $email = false, $user_id = false, $screen_name=false )
-  453: 	function directMessages( $since = false, $count = null, $since_id = false, $page = false )
-  480: 	function sentDirectMessage( $since = false, $since_id = false, $page = false )
-  505: 	function sendDirectMessage( $user, $text )
-  521: 	function deleteDirectMessage( $id )
-  537: 	function updateDevice( $device )
-  554: 	function updateAvatar( $file )
-  569: 	function updateBackground( $file )
-  584: 	function updateProfile( $fields = array() )
-  623: 	function updateColors( $colors = array() )
-  643: 	function ratelimit()
-  655: 	function ratelimit_status()
-  666: 	function twitterAvailable()
-  683: 	function maintenanceSchedule()
-  695: 	function shorturl( $url )
-  710: 	function process($url,$postargs=false)
-  758: 	function featured()
-  769: 	function updateLocation( $location )
-  782: 	function friendsTimeline( $id = false, $since = false, $since_id = false, $count = 20, $page = false )
-  793: 	function objectify( $data )
-  815: 	function _glue( $array )
+   60:
+	,	{ "trigger": "twitter", "contents": "twitter();" }
+	,	{ "trigger": "update", "contents": "update( $status, $replying_to = false );" }
+	,	{ "trigger": "getReplies", "contents": "getReplies( $page = false, $since = false, $since_id = false );" }
+	,	{ "trigger": "deleteStatus", "contents": "deleteStatus( $id );" }
+	,	{ "trigger": "publicTimeline", "contents": "publicTimeline( $sinceid = false );" }
+	,	{ "trigger": "userTimeline", "contents": "userTimeline($id=false,$count=20,$since=false,$since_id=false,$page=false);" }
+	,	{ "trigger": "showStatus", "contents": "showStatus( $id );" }
+	,	{ "trigger": "friends", "contents": "friends( $id = false, $page = false );" }
+	,	{ "trigger": "followers", "contents": "followers( $page = false );" }
+	,	{ "trigger": "getFavorites", "contents": "getFavorites( $id, $page=false );" }
+	,	{ "trigger": "makeFavorite", "contents": "makeFavorite( $id );" }
+	,	{ "trigger": "removeFavorite", "contents": "removeFavorite( $id );" }
+	,	{ "trigger": "isFriend", "contents": "isFriend( $user_a, $user_b );" }
+	,	{ "trigger": "followUser", "contents": "followUser( $id, $notifications = false );" }
+	,	{ "trigger": "leaveUser", "contents": "leaveUser( $id );" }
+	,	{ "trigger": "blockUser", "contents": "blockUser( $id );" }
+	,	{ "trigger": "unblockUser", "contents": "unblockUser();" }
+	,	{ "trigger": "socialGraphFollowing", "contents": "socialGraphFollowing( $id = false);" }
+	,	{ "trigger": "socialGraphFollowedBy", "contents": "socialGraphFollowedBy( $id = false );" }
+	,	{ "trigger": "showUser", "contents": "showUser( $id, $email = false, $user_id = false, $screen_name=false );" }
+	,	{ "trigger": "directMessages", "contents": "directMessages( $since = false, $count = null, $since_id = false, $page = false );" }
+	,	{ "trigger": "sentDirectMessage", "contents": "sentDirectMessage( $since = false, $since_id = false, $page = false );" }
+	,	{ "trigger": "sendDirectMessage", "contents": "sendDirectMessage( $user, $text );" }
+	,	{ "trigger": "deleteDirectMessage", "contents": "deleteDirectMessage( $id );" }
+	,	{ "trigger": "updateDevice", "contents": "updateDevice( $device );" }
+	,	{ "trigger": "updateAvatar", "contents": "updateAvatar( $file );" }
+	,	{ "trigger": "updateBackground", "contents": "updateBackground( $file );" }
+	,	{ "trigger": "updateProfile", "contents": "updateProfile( $fields = array();" } )
+	,	{ "trigger": "updateColors", "contents": "updateColors( $colors = array();" } )
+	,	{ "trigger": "ratelimit", "contents": "ratelimit();" }
+	,	{ "trigger": "ratelimit_status", "contents": "ratelimit_status();" }
+	,	{ "trigger": "twitterAvailable", "contents": "twitterAvailable();" }
+	,	{ "trigger": "maintenanceSchedule", "contents": "maintenanceSchedule();" }
+	,	{ "trigger": "shorturl", "contents": "shorturl( $url );" }
+	,	{ "trigger": "process", "contents": "process($url,$postargs=false);" }
+	,	{ "trigger": "featured", "contents": "featured();" }
+	,	{ "trigger": "updateLocation", "contents": "updateLocation( $location );" }
+	,	{ "trigger": "friendsTimeline", "contents": "friendsTimeline( $id = false, $since = false, $since_id = false, $count = 20, $page = false );" }
+	,	{ "trigger": "objectify", "contents": "objectify( $data );" }
+	,	{ "trigger": "_glue", "contents": "_glue( $array );" }
   834: 
   835: class summize extends twitter
-  842: 	
-  843: 	function search( $terms=false, $callback=false )
-  857: 	
-  858: 	function trends( $callback = false )
+  842:
+	,	{ "trigger": "search", "contents": "search( $terms=false, $callback=false );" }
+  857:
+	,	{ "trigger": "trends", "contents": "trends( $callback = false );" }
 
 C:\www\lemonstand\ls\modules\upsclicknship\classes\uspsclicknship_module.php:
     2: 
@@ -3330,10 +3324,10 @@ C:\www\lemonstand\ls\modules\zbeemfilters\classes\zbeemfilters_module.php:
     4: class zbeemFilters_module extends core_ModuleBase
 
 C:\www\lemonstand\ls\modules\zbeemfilters\classes\zbeemfilters_price.php:
-  163: 
-  164: 					function update_products()
-  171: 
-  172: 					function update_price_filter(event, ui)
+  163:
+	,	{ "trigger": "update_products", "contents": "update_products();" }
+  171:
+	,	{ "trigger": "update_price_filter", "contents": "update_price_filter(event, ui);" }
 
 C:\www\lemonstand\ls\modules\zbeemfulfillment\classes\zbeemfulfillment_module.php:
     2: 
@@ -3356,13 +3350,13 @@ C:\www\lemonstand\ls\phproad\modules\db\classes\db_act_as_tree.php:
 
 C:\www\lemonstand\ls\phproad\modules\db\classes\db_activerecord.php:
    46: 	class Db_ActiveRecord extends Db_SqlBase implements IteratorAggregate
- 1551: 		function getIterator() 
- 1564: 
- 1565: 		function __call($method_name, $parameters = null) 
- 1600: 		
- 1601: 		function __get($name) 
- 1648: 
- 1649: 		function __set($name, $value) 
+	,	{ "trigger": "getIterator", "contents": "getIterator();" } 
+ 1564:
+	,	{ "trigger": "__call", "contents": "__call($method_name, $parameters = null);" } 
+ 1600:
+	,	{ "trigger": "__get", "contents": "__get($name);" } 
+ 1648:
+	,	{ "trigger": "__set", "contents": "__set($name, $value);" } 
 
 C:\www\lemonstand\ls\phproad\modules\db\classes\db_activerecordcolumn.php:
     2: 
@@ -3371,16 +3365,16 @@ C:\www\lemonstand\ls\phproad\modules\db\classes\db_activerecordcolumn.php:
 C:\www\lemonstand\ls\phproad\modules\db\classes\db_activerecorditerator.php:
     2: 
     3: 	class Db_ActiveRecordIterator implements Iterator
-   16: 
-   17: 		function current() 
-   21: 	
-   22: 		function key() 
-   26: 	
-   27: 		function next() 
-   31: 
-   32: 		function rewind() 
-   36: 	
-   37: 		function valid()
+   16:
+	,	{ "trigger": "current", "contents": "current();" } 
+   21:
+	,	{ "trigger": "key", "contents": "key();" } 
+   26:
+	,	{ "trigger": "next", "contents": "next();" } 
+   31:
+	,	{ "trigger": "rewind", "contents": "rewind();" } 
+   36:
+	,	{ "trigger": "valid", "contents": "valid();" }
 
 C:\www\lemonstand\ls\phproad\modules\db\classes\db_activerecordproxy.php:
     2: 
@@ -3398,41 +3392,41 @@ C:\www\lemonstand\ls\phproad\modules\db\classes\db_columndefinition.php:
 
 C:\www\lemonstand\ls\phproad\modules\db\classes\db_datacollection.php:
    11: 	class Db_DataCollection implements ArrayAccess, IteratorAggregate, Countable 
-   38: 	 
-   39: 		function offsetExists($offset) 
-   46: 	 
-   47: 		function offsetGet($offset) 
-   54: 	 
-   55: 		function offsetSet($offset, $value) 
-   65: 	 
-   66: 		function offsetUnset($offset) 
-   70: 	 
-   71: 		function getIterator() 
-   85: 		function first() 
-   98: 		function count() 
-  102: 
-  103: 		function position(&$object) 
-  107: 	
-  108: 		function limit($count) 
-  120: 
-  121: 		function skip($count)
-  134: 
-  135: 		function except($value, $key = 'id') 
-  139: 
-  140: 		function find($value, $field = 'id')
-  147: 
-  148: 		function find_by($field = 'id', $value) 
-  172: 		function as_array($field = null, $key_field = null)
-  193: 		function as_mapped_array()
-  209: 		function as_dict($field = '', $key = '', $subkey = '') 
-  251: 	
-  252: 		function exclude($values, $key = 'id') 
-  264: 
-  265: 		function has($value, $field) 
-  277: 		function __get($key) 
-  300: 		function __call($name, $arguments) 
-  375: 
-  376: 		function sql_count() 
+   38:
+	,	{ "trigger": "offsetExists", "contents": "offsetExists($offset);" } 
+   46:
+	,	{ "trigger": "offsetGet", "contents": "offsetGet($offset);" } 
+   54:
+	,	{ "trigger": "offsetSet", "contents": "offsetSet($offset, $value);" } 
+   65:
+	,	{ "trigger": "offsetUnset", "contents": "offsetUnset($offset);" } 
+   70:
+	,	{ "trigger": "getIterator", "contents": "getIterator();" }
+	,	{ "trigger": "first", "contents": "first();" }
+	,	{ "trigger": "count", "contents": "count();" } 
+  102:
+	,	{ "trigger": "position", "contents": "position(&$object);" } 
+  107:
+	,	{ "trigger": "limit", "contents": "limit($count);" } 
+  120:
+	,	{ "trigger": "skip", "contents": "skip($count);" }
+  134:
+	,	{ "trigger": "except", "contents": "except($value, $key = 'id');" } 
+  139:
+	,	{ "trigger": "find", "contents": "find($value, $field = 'id');" }
+  147:
+	,	{ "trigger": "find_by", "contents": "find_by($field = 'id', $value);" }
+	,	{ "trigger": "as_array", "contents": "as_array($field = null, $key_field = null);" }
+	,	{ "trigger": "as_mapped_array", "contents": "as_mapped_array();" }
+	,	{ "trigger": "as_dict", "contents": "as_dict($field = '', $key = '', $subkey = '');" } 
+  251:
+	,	{ "trigger": "exclude", "contents": "exclude($values, $key = 'id');" } 
+  264:
+	,	{ "trigger": "has", "contents": "has($value, $field);" }
+	,	{ "trigger": "__get", "contents": "__get($key);" }
+	,	{ "trigger": "__call", "contents": "__call($name, $arguments);" } 
+  375:
+	,	{ "trigger": "sql_count", "contents": "sql_count();" } 
 
 C:\www\lemonstand\ls\phproad\modules\db\classes\db_datafilter.php:
     2: 
@@ -3597,16 +3591,16 @@ C:\www\lemonstand\ls\phproad\modules\phpr\classes\phpr_extension.php:
 
 C:\www\lemonstand\ls\phproad\modules\phpr\classes\phpr_flash.php:
    27: 	class Phpr_Flash implements ArrayAccess, IteratorAggregate, Countable
-   78: 		
-   79: 		function offsetExists( $offset )
-   83: 		
-   84: 		function offsetGet( $offset )
-   91: 		
-   92: 		function offsetSet ($offset, $value )
-  100: 		
-  101: 		function offsetUnset($offset)
-  106: 		
-  107: 		function getIterator()
+   78:
+	,	{ "trigger": "offsetExists", "contents": "offsetExists( $offset );" }
+   83:
+	,	{ "trigger": "offsetGet", "contents": "offsetGet( $offset );" }
+   91:
+	,	{ "trigger": "offsetSet ", "contents": "offsetSet ($offset, $value );" }
+  100:
+	,	{ "trigger": "offsetUnset", "contents": "offsetUnset($offset);" }
+  106:
+	,	{ "trigger": "getIterator", "contents": "getIterator();" }
 
 C:\www\lemonstand\ls\phproad\modules\phpr\classes\phpr_language.php:
    32: 	class Phpr_Language
@@ -3640,16 +3634,16 @@ C:\www\lemonstand\ls\phproad\modules\phpr\classes\phpr_securityframework.php:
 
 C:\www\lemonstand\ls\phproad\modules\phpr\classes\phpr_session.php:
    27: 	class Phpr_Session implements ArrayAccess, IteratorAggregate, Countable
-  161: 		
-  162: 		function offsetExists( $offset )
-  166: 		
-  167: 		function offsetGet( $offset )
-  171: 		
-  172: 		function offsetSet ($offset, $value )
-  176: 		
-  177: 		function offsetUnset($offset)
-  181: 		
-  182: 		function getIterator()
+  161:
+	,	{ "trigger": "offsetExists", "contents": "offsetExists( $offset );" }
+  166:
+	,	{ "trigger": "offsetGet", "contents": "offsetGet( $offset );" }
+  171:
+	,	{ "trigger": "offsetSet ", "contents": "offsetSet ($offset, $value );" }
+  176:
+	,	{ "trigger": "offsetUnset", "contents": "offsetUnset($offset);" }
+  181:
+	,	{ "trigger": "getIterator", "contents": "getIterator();" }
 
 C:\www\lemonstand\ls\phproad\modules\phpr\classes\phpr_tracelog.php:
    21: 	class Phpr_TraceLog
@@ -3707,23 +3701,23 @@ C:\www\lemonstand\ls\phproad\modules\phpr\models\phpr_user.php:
    23: 	class Phpr_User extends Db_ActiveRecord
 
 C:\www\lemonstand\ls\phproad\system\class_functions.php:
-    6: 
-    7: 	function pass()
-   12: 
-   13: 	function callFunction($function, $params)
-   20: 
-   21: 	function extractFunctionArg(&$args, $offset = 0)
+    6:
+	,	{ "trigger": "pass", "contents": "pass();" }
+   12:
+	,	{ "trigger": "callFunction", "contents": "callFunction($function, $params);" }
+   20:
+	,	{ "trigger": "extractFunctionArg", "contents": "extractFunctionArg(&$args, $offset = 0);" }
 
 C:\www\lemonstand\ls\phproad\system\classloader.php:
     8: 	class Phpr_ClassLoader {
 
 C:\www\lemonstand\ls\phproad\system\combine_resources.php:
-   13: 		
-   14: 	function phpr_minify_css($css) 
-   28: 	
-   29: 	function phpr_is_remote_file($path)
-  126: 	 
-  127: 	function phpr_get_resource_type() {
+   13:
+	,	{ "trigger": "phpr_minify_css", "contents": "phpr_minify_css($css);" } 
+   28:
+	,	{ "trigger": "phpr_is_remote_file", "contents": "phpr_is_remote_file($path);" }
+  126:
+	,	{ "trigger": "phpr_get_resource_type", "contents": "phpr_get_resource_type();" } {
 
 C:\www\lemonstand\ls\phproad\system\exceptions.php:
    12: 	class Phpr_Exception extends Exception
@@ -3732,14 +3726,14 @@ C:\www\lemonstand\ls\phproad\system\exceptions.php:
   183: 	class Phpr_DatabaseException extends Phpr_Exception
   192: 	class Phpr_HttpException extends Phpr_ApplicationException
   293: 	class Phpr_PhpException extends Phpr_SystemException
-  335: 	function Phpr_SysErrorHandler( $errno, $errstr, $errfile, $errline )
-  360: 	function Phpr_SysExceptionHandler( $Exception )
+	,	{ "trigger": "Phpr_SysErrorHandler", "contents": "Phpr_SysErrorHandler( $errno, $errstr, $errfile, $errline );" }
+	,	{ "trigger": "Phpr_SysExceptionHandler", "contents": "Phpr_SysExceptionHandler( $Exception );" }
 
 C:\www\lemonstand\ls\phproad\system\initialize.php:
-   77: 	function Phpr_InternalAutoload($name) 
-   91: 		function __autoload($name) 
-  172: 	
-  173: 	function init_lemonstand_modules()
+	,	{ "trigger": "Phpr_InternalAutoload", "contents": "Phpr_InternalAutoload($name);" }
+	,	{ "trigger": "__autoload", "contents": "__autoload($name);" } 
+  172:
+	,	{ "trigger": "init_lemonstand_modules", "contents": "init_lemonstand_modules();" }
 
 C:\www\lemonstand\ls\phproad\system\phpr.php:
    24: 	class Phpr
@@ -3751,3 +3745,7 @@ C:\www\lemonstand\ls\phproad\thirdpart\javascriptpacker\JSMin.php:
   357: class JSMin_UnterminatedStringException extends Exception {}
 
 */
+
+
+	]
+}
