@@ -28,24 +28,23 @@ C:\www\lemonstand\ls\controllers\application.php:
     3: 	class Application extends Phpr_Controller
  */
 
-
+    /* Custom Helpers */
 
 		{ "trigger": "h", "contents": "h(${1:str});\n$0" }
 	,	{ "trigger": "plainText", "contents": "plainText(${1:str});\n$0" }
-	,	{ "trigger": "displayDate", "contents": "displayDate( ${1:date}, ${2:Format});\n$0" }
+	,	{ "trigger": "displayDate", "contents": "displayDate( ${1:date}${2:, ${3:Format}});\n$0" }
+	,	{ "trigger": "gmtNow", "contents": "gmtNow();\n$0" }
+	,	{ "trigger": "traceLog", "contents": "traceLog(${1:Str}${2:, ${3:Listener}});\n$0" }
+	,	{ "trigger": "flash", "contents": "flash();\n$0" }
+	,	{ "trigger": "post", "contents": "post(${1:name}${2:, ${3:default}});\n$0" }
+	,	{ "trigger": "post_array_item", "contents": "post_array_item(${1:array_name}, ${2:name}${3:, ${4:default}});\n$0" }
+  , { "trigger": "option_state", "contents": "option_state(${1:current_value}, ${2:selected_value});\n$0" }
+  , { "trigger": "checkbox_state", "contents": "checkbox_state(${1:value});\n$0" }
+  , { "trigger": "radio_state", "contents": "radio_state(${1:value});\n$0" }
+  , { "trigger": "root_url", "contents": "root_url(${1:value}${2:, ${3:add_host_name_and_protocol}${4:, ${5:protocol}}});\n$0" }
 
 /*
-	,	{ "trigger": "gmtNow", "contents": "gmtNow();" }
-	,	{ "trigger": "traceLog", "contents": "traceLog($Str, $Listener = 'INFO');" }
    71:
-	,	{ "trigger": "flash", "contents": "flash();" }
-	,	{ "trigger": "post", "contents": "post($name, $default = null);" }
-	,	{ "trigger": "post_array_item", "contents": "post_array_item($array_name, $name, $default = null);" }
-	,	{ "trigger": "option_state", "contents": "option_state($current_value, $selected_value);" }
-	,	{ "trigger": "checkbox_state", "contents": "checkbox_state($value);" }
-	,	{ "trigger": "radio_state", "contents": "radio_state($value);" }
-	,	{ "trigger": "root_url", "contents": "root_url($value = '/', $add_host_name_and_protocol = false, $protocol = null);" }
-
 C:\www\lemonstand\ls\modules\accesstools\classes\accesstools_module.php:
     2: 
     3: class AccessTools_Module extends Core_ModuleBase {
