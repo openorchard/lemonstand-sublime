@@ -60,6 +60,20 @@ C:\www\lemonstand\ls\controllers\application.php:
     ,   { "trigger": "click_link", "contents": "click_link(${1:url});\n$0" }
     ,   { "trigger": "alt_click_link", "contents": "alt_click_link(${1:url}, ${2:alt_url});\n$0" }
 
+/* /modules/cms */
+
+    ,   { "trigger": "open_form", "contents": "open_form(${1:attributes});\n$0" }
+    ,   { "trigger": "close_form", "contents": "close_form();\n$0" } 
+    ,   { "trigger": "flash_message", "contents": "flash_message();\n$0" }
+    ,   { "trigger": "content_block", "contents": "content_block(${1:code}, ${2:name});\n$0" }
+    ,   { "trigger": "text_content_block", "contents": "text_content_block(${1:code}, ${2:name});\n$0" }
+    ,   { "trigger": "global_content_block", "contents": "global_content_block(${1:code}${2:, ${3:return_content}});\n$0" }
+    ,   { "trigger": "site_url", "contents": "site_url(${1:url}${2:, ${3:add_host_name_and_protocol}});\n$0" }
+    ,   { "trigger": "include_resources", "contents": "include_resources(${1:src_mode});\n$0" }
+  
+    ,   { "trigger": "process_ls_tags", "contents": "process_ls_tags(${1:str});\n$0" }
+    ,   { "trigger": "theme_resource_url", "contents": "theme_resource_url(${1:path}${2:, ${3:root_url}${4:, ${5:add_host_name_and_protocol}}});\n$0" }
+    ,   { "trigger": "resource_url", "contents": "resource_url(${1:path}${2:, ${3:root_url}${4:, ${5:add_host_name_and_protocol}}});\n$0" }
 
 /*
    71:
@@ -868,18 +882,6 @@ C:\www\lemonstand\ls\modules\cms\helpers\cms_router.php:
     6:  class Cms_Router
 
 C:\www\lemonstand\ls\modules\cms\init\custom_helpers.php:
-    ,   { "trigger": "open_form", "contents": "open_form($attributes = array();" })
-    ,   { "trigger": "close_form", "contents": "close_form();" } {
-    ,   { "trigger": "flash_message", "contents": "flash_message();" }
-    ,   { "trigger": "content_block", "contents": "content_block($code, $name);" }
-    ,   { "trigger": "text_content_block", "contents": "text_content_block($code, $name);" }
-    ,   { "trigger": "global_content_block", "contents": "global_content_block($code, $return_content = false);" }
-    ,   { "trigger": "site_url", "contents": "site_url($url = "", $add_host_name_and_protocol = true);" }
-    ,   { "trigger": "include_resources", "contents": "include_resources($src_mode = false);" }
-  226:
-    ,   { "trigger": "process_ls_tags", "contents": "process_ls_tags($str);" }
-    ,   { "trigger": "theme_resource_url", "contents": "theme_resource_url($path, $root_url = true, $add_host_name_and_protocol = false);" }
-    ,   { "trigger": "resource_url", "contents": "resource_url($path, $root_url = true, $add_host_name_and_protocol = false);" }
 
 C:\www\lemonstand\ls\modules\cms\models\cms_contentblock.php:
     2: 
