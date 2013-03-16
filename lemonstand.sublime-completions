@@ -85,462 +85,470 @@ C:\www\lemonstand\ls\controllers\application.php:
     ,   { "trigger": "tax_incl_label", "contents": "tax_incl_label(${1:order});\n$0" }
 
 /*
-   71:
 
-    3:  class Backend_CsvImport extends Phpr_ControllerBehavior
-    3:  class Backend_FileBrowser extends Phpr_ControllerBehavior
-    3:  class Backend
-    7:  class Backend_Controller extends Phpr_Controller
-    3:  class Backend_CsvImportModel extends Db_ActiveRecord
-    3:  class Backend_Dashboard
-    3:  class Backend_DashboardController extends Backend_ReportingController
-    3:  class Backend_Events extends Phpr_Extensible
-    3:  class Backend_Module extends Core_ModuleBase
-    6:  class Backend_ReportingController extends Backend_Controller
-    3:  class Backend_ReportsData
-    6:  class Backend_SettingsController extends Backend_Controller
-    3:  class Backend_SettingsRecord extends Db_ActiveRecord
-    7:  class Backend_Tab
-    6:  class Backend_TabCollection
-    3:  class Backend_AppearanceSettings extends Backend_Controller
-    3:  class Backend_ChartData extends Backend_DashboardController
-    3:  class Backend_CodeEditorSettings extends Backend_Controller
-    3:  class Backend_Files extends Backend_Controller
-    3:  class Backend_Index extends Backend_DashboardController
-    3:  class Backend_ReportsController extends Backend_Controller
-    3:  class Backend_Html
-    3:  class Backend_Reports
-    3:  class Backend_AppearanceConfiguration extends Core_Configuration_Model
-    3:  class Backend_CodeEditorConfiguration extends Core_Configuration_Model
-    3:  class Blog_Actions extends Cms_ActionScope
-    3:  class Blog_Module extends Core_ModuleBase
-    3:  class Blog_Categories extends Backend_Controller
-    3:  class Blog_Comments extends Backend_Controller
-    3:  class Blog_Posts extends Backend_Controller
-    3:  class Blog_Settings extends Backend_Controller
-    3:  class Blog_Category extends Db_ActiveRecord
-    3:  class Blog_Comment extends Db_ActiveRecord
-    3:  class Blog_Comment_Status extends Db_ActiveRecord
-    3:  class Blog_Comment_Subscriber extends Db_ActiveRecord
-    3:  class Blog_Configuration extends Core_Configuration_Model
-    3:  class Blog_Post extends Db_ActiveRecord
-    3:  class Cms_PageSelector extends Phpr_ControllerBehavior
-    3:  class Cms_ThemeSelector extends Phpr_ControllerBehavior
-    3:  class Cms_ActionManager
-    3:  class Cms_ActionScope extends Cms_Controller
-    3:  class Cms_Analytics
-    3:  class Cms_CallStackItem
-   15:  class Cms_Controller
-    3:  class Cms_Data_Generator
-    3:  class Cms_Exception extends Phpr_ApplicationException
-    3:  class Cms_ExecutionException extends Phpr_SystemException
-    9:  class Cms_ExportManager
-    3:  class Cms_FatalException extends Phpr_ApplicationException
-    3:  class Cms_GaCaptchaException extends Phpr_ApplicationException
-    3:  class Cms_GoogleAnalytics
-    3:  class CMS_Module extends Core_ModuleBase
-    6:  class Cms_Object extends Db_ActiveRecord
-   14:  class Cms_PageNavigationNode
-    3:  class Cms_Twig extends Core_Twig
-    6:  class Cms_TwigControllerExtension extends Twig_Extension
-   17:  class Cms_VisitorPreferences
-    3:  class Cms_Backup extends Backend_Controller
-    3:  class Cms_Content extends Backend_Controller
-    3:  class Cms_Maintenance extends Backend_SettingsController
-    3:  class Cms_Pages extends Backend_Controller
-    3:  class Cms_Partials extends Backend_Controller
-    3:  class Cms_Resources extends Backend_Controller
-    3:  class Cms_Settings extends Backend_SettingsController
-    3:  class Cms_Templates extends Backend_Controller
-    3:  class Cms_Themes extends Backend_Controller
-    3:  class Cms_Html
-    3:  class Cms_ContentBlock extends Db_ActiveRecord
-    3:  class Cms_GlobalContentBlock extends Db_ActiveRecord
-    3:  class Cms_MaintenanceParams extends Core_Configuration_Model
-   13:  class Cms_Page extends Cms_Object
-    3:  class Cms_PageFileImportModel extends Db_ActiveRecord
-    3:  class Cms_PageReference
-   15:  class Cms_Partial extends Cms_Object
-    3:  class Cms_SecurityMode extends Db_ActiveRecord
-    3:  class Cms_SettingsManager extends Backend_SettingsRecord
-    3:  class Cms_Stats_Settings extends Backend_SettingsRecord
-   11:  class Cms_Template extends Cms_Object
-   24:  class Cms_Theme extends Cms_Object
-    3:  class Cms_ThemeExportModel extends Db_ActiveRecord
-    3:  class Cms_ThemeImportModel extends Db_ActiveRecord
-    3:  class Core_Actions extends Cms_ActionScope
-    6:  class Core_ApcCache extends Core_CacheBase
-    3:  class Core_ConfigSecurity extends Phpr_Security
-    6:  class Core_Configuration
-    3:  class Core_Configuration_Model extends Db_ActiveRecord
-    3:  class Core_ConfigUser
-    3:  class Core_CronManager
-    9:  class Core_DummyCache extends Core_CacheBase
-   11:  class Core_Email
-    7:  class Core_EmailViewWrapper
-    3:  class Core_EulaManager
-    6:  class Core_FileCache extends Core_CacheBase
-    8:  class Core_FrontEndSecurity extends Phpr_Security
-    6:  class Core_MemCache extends Core_CacheBase
-    3:  class Core_Metrics
-    6:  class Core_Module extends Core_ModuleBase
-    6:  class Core_ModuleInfo
-    3:  class Core_ModuleManager
-    3:  class Core_ModuleSettings extends Core_Configuration_Model
-    7:  class Core_PostStorage
-    3:  class Core_Rss
-    8:  class Core_Security extends Phpr_Security
-    3:  class Core_SimpleXMLExtended extends SimpleXMLElement 
-    3:  class Core_Twig
-    7:  class Core_TwigExtension extends Twig_Extension
-    4:  class Core_TwigNamedStringLoader implements Twig_LoaderInterface
-    6:  class Core_UpdateManager
-    7:  class Core_XmlController
-    3:  class Core_LicenseAgreement extends Backend_Controller
-    3:  class Core_Settings extends Backend_Controller
-    3:  class Core_ViewLicenseAgreement extends Backend_SettingsController
-    3:  class LemonStand_ConfigController extends Phpr_Controller
-    6:  class Core_Array
-    6:  class Core_Cli
-    6:  class Core_CsvHelper
-    3:  class Core_Http
-    6:  class Core_Number {
-    6:  class Core_Object
-    6:  class Core_String
-    3:  class Core_Xml
-    5:  class Core_ZipHelper
-    3:  class Core_EulaInfo extends Db_ActiveRecord
-    3:  class Core_Version extends Db_ActiveRecord
-   35: class PHPMailer {
-   36: class SMTP {
-    3:  class Session_Handle extends Backend_Controller
-    3:  class Session_Index extends Backend_Controller
-    7:  class Shop_BundleProductUiBehavior extends Phpr_ControllerBehavior
-    6:  class Shop_OptionMatrixBehavior extends Phpr_ControllerBehavior
-    3:  class Shop_RuleConditionsBehavior extends Phpr_ControllerBehavior
-    3:  class Shop_RuleListBehavior extends Phpr_ControllerBehavior
-    6:  class Shop_Actions extends Cms_ActionScope
-    6:  class Shop_AutoBilling
-   18:  class Shop_Cart
-   12:  class Shop_CartItem
-    3:  class Shop_CartRuleActionBase extends Shop_RuleActionBase
-    3:  class Shop_CategoryFilter extends Db_DataFilter
-   12:  class Shop_CheckoutAddressInfo
-   13:  class Shop_CheckoutData
-   18:  class Shop_ComparisonList
-    3:  class Shop_CountryLookup
-    3:  class Shop_CouponFilter extends Db_DataFilter
-    3:  class Shop_CurrencyConverter
-    3:  class Shop_CustomerBillingCountryFilter extends Db_DataFilter
-    3:  class Shop_CustomerBillingStateFilter extends Db_DataFilter
-    3:  class Shop_CustomerCart extends Shop_CartBase
-    3:  class Shop_CustomerGroupFilter extends Db_DataFilter
-    3:  class Shop_CustomGroupExactFilter extends Db_DataFilter
-    3:  class Shop_CustomGroupFilter extends Db_DataFilter
-    3:  class Shop_DeletedFilter extends Db_DataFilter
-    3:  class Shop_DiscountData
-    3:  class Shop_DisplayInvoicesSwitcher extends Db_DataFilterSwitcher
-    3:  class Shop_GridTierPriceEditor extends Db_GridEditor
-    3:  class Shop_HideDisabledProductsSwitcher extends Db_DataFilterSwitcher
-    3:  class Shop_InMemoryCart extends Shop_CartBase
-    3:  class Shop_InMemoryCartItem
-    3:  class Shop_ManufacturerFilter extends Db_DataFilter
-    3:  class Shop_Module extends Core_ModuleBase
-    3:  class Shop_OptionMatrix
-   11:  class Shop_OptionMatrixManager
-    3:  class Shop_OrderBillingCountryFilter extends Db_DataFilter
-    3:  class Shop_OrderShippingCountryFilter extends Db_DataFilter
-    3:  class Shop_OrderStatusFilter extends Db_DataFilter
-    3:  class Shop_PriceRuleConditionProxy
-    3:  class Shop_ProductExport
-    3:  class Shop_ProductFilter extends Db_DataFilter
-    9:  class Shop_ProductHelper
-    6:  class Shop_ProductSearch
-    6:  class Shop_ProductStatisticsData
-    3:  class Shop_ProductTypeFilter extends Db_DataFilter
-    6:  class Shop_RuleActionBase
-    3:  class Shop_RuleCompoundConditionBase extends Shop_RuleConditionBase
-    3:  class Shop_RuleConditionBase
-    3:  class Shop_RuleIfCondition extends Shop_RuleCompoundConditionBase
-    6:  class Shop_TierPrice
-   12:  class Shop_TransactionUpdate
-    3:  class Shop_AutoBilling_Settings extends Backend_SettingsController
-    3:  class Shop_Cart_Rules extends Backend_Controller
-    3:  class Shop_Catalog_Rules extends Backend_Controller
-    3:  class Shop_Categories extends Backend_Controller
-    3:  class Shop_Categories_Report extends Shop_GenericReport
-    3:  class Shop_Company_Info extends Backend_SettingsController
-    3:  class Shop_Configuration extends Backend_SettingsController
-    3:  class Shop_Coupons_Report extends Shop_GenericReport
-    3:  class Shop_Currency_Converter_Settings extends Backend_SettingsController
-    3:  class Shop_Custom_Groups_Report extends Shop_GenericReport
-    3:  class Shop_Customer_Groups extends Backend_Controller
-    3:  class Shop_Customer_Notifications extends Backend_Controller
-    3:  class Shop_Customers extends Backend_Controller
-    3:  class Shop_Extras_Sets extends Backend_Controller
-    3:  class Shop_Groups extends Backend_Controller
-    3:  class Shop_Manufacturers extends Backend_Controller
-    3:  class Shop_Manufacturers_Report extends Shop_GenericReport
-    3:  class Shop_Order_Numbering extends Backend_SettingsController
-    3:  class Shop_Orders extends Backend_Controller
-    3:  class Shop_Orders_Report extends Shop_GenericReport
-    3:  class Shop_Payment extends Backend_Controller
-    3:  class Shop_Product_Types extends Backend_Controller
-    3:  class Shop_Product_Types_Report extends Shop_GenericReport
-    3:  class Shop_Products extends Backend_Controller
-    3:  class Shop_Products_Report extends Shop_GenericReport
-    3:  class Shop_Reports extends Backend_Controller
-    3:  class Shop_Reviews extends Backend_Controller
-    3:  class Shop_Reviews_Config extends Backend_SettingsController
-    3:  class Shop_Roles extends Backend_SettingsController
-    3:  class Shop_Settings extends Backend_SettingsController
-    3:  class Shop_Shipping extends Backend_Controller
-    3:  class Shop_Shipping_Settings extends Backend_SettingsController
-    3:  class Shop_Statuses extends Backend_SettingsController
-    3:  class Shop_Stock_Report extends Shop_GenericReport
-    3:  class Shop_Tax_Classes extends Backend_Controller
-    3:  class Shop_Taxes_Report extends Shop_GenericReport
-    7:  class Shop_Ecb_Converter extends Shop_CurrencyConverterBase
-    7:  class Shop_Yahoo_Converter extends Shop_CurrencyConverterBase
-   13:  class Shop_BundleHelper
-    3:  class Shop_AutoBillingParams extends Backend_SettingsRecord
-   23:  class Shop_BundleItemProduct extends Db_ActiveRecord
-    3:  class Shop_CartPriceRule extends Shop_PriceRuleBase
-    3:  class Shop_CatalogPriceRule extends Shop_PriceRuleBase
-   41:  class Shop_Category extends Db_ActiveRecord
-   13:  class Shop_CompanyInformation extends Db_ActiveRecord 
-    3:  class Shop_ConfigurationRecord extends Db_ActiveRecord 
-   19:  class Shop_Country extends Db_ActiveRecord
-   14:  class Shop_CountryState extends Db_ActiveRecord
-    3:  class Shop_Coupon extends Db_ActiveRecord
-    3:  class Shop_CurrencyConversionParams extends Db_ActiveRecord 
-    3:  class Shop_CurrencyRateRecord extends Db_ActiveRecord
-    3:  class Shop_CurrencySettings extends Backend_SettingsRecord
-   14:  class Shop_CustomAttribute extends Db_ActiveRecord
-   37:  class Shop_Customer extends Db_ActiveRecord
-    3:  class Shop_CustomerCartItem extends Db_ActiveRecord
-    3:  class Shop_CustomerCsvImportModel extends Backend_CsvImportModel
-   14:  class Shop_CustomerGroup extends Db_ActiveRecord
-   18:  class Shop_CustomerPaymentProfile extends Db_ActiveRecord
-   14:  class Shop_CustomGroup extends Db_ActiveRecord
-   21:  class Shop_ExtraOption extends Db_ActiveRecord
-    3:  class Shop_ExtraOptionSet extends Db_ActiveRecord
-    3:  class Shop_GroupProductsModel extends Db_ActiveRecord
-   42:  class Shop_Manufacturer extends Db_ActiveRecord
-    3:  class Shop_MergeCustomersModel extends Db_ActiveRecord
-    3:  class Shop_OptionMatrixOption extends Db_ActiveRecord
-   27:  class Shop_OptionMatrixRecord extends Db_ActiveRecord implements Db_MemoryCacheable
-    3:  class Shop_OptionSet extends Db_ActiveRecord
-    3:  class Shop_OptionSetOption extends Db_ActiveRecord
-   63:  class Shop_Order extends Db_ActiveRecord
-    3:  class Shop_OrderCsvImportModel extends Backend_CsvImportModel
-    3:  class Shop_OrderDeletedStatus extends Db_ActiveRecord
-   39:  class Shop_OrderItem extends Db_ActiveRecord
-    6:  class Shop_OrderNote extends Db_ActiveRecord
-    6:  class Shop_OrderNotification extends Db_ActiveRecord
-    3:  class Shop_OrderShippingLabelParams extends Db_ActiveRecord
-   35:  class Shop_OrderStatus extends Db_ActiveRecord
-   12:  class Shop_OrderStatusLog extends Db_ActiveRecord
-    3:  class Shop_OrderTrackingCode extends Db_ActiveRecord
-    3:  class Shop_PaymentLogRecord extends Db_ActiveRecord
-   20:  class Shop_PaymentMethod extends Db_ActiveRecord
-    3:  class Shop_PaymentTransaction extends Db_ActiveRecord
-    3:  class Shop_PriceRuleBase extends Db_ActiveRecord
-    3:  class Shop_PriceRuleCondition extends Db_ActiveRecord
-    3:  class Shop_PriceTier extends Db_ActiveRecord
-   94:  class Shop_Product extends Db_ActiveRecord
-   25:  class Shop_ProductBundleItem extends Db_ActiveRecord
-    5:  class Shop_ProductCsvImportModel extends Backend_CsvImportModel
-   13:  class Shop_ProductFile extends Db_File
-   13:  class Shop_ProductProperty extends Db_ActiveRecord
-   18:  class Shop_ProductReview extends Db_ActiveRecord
-   21:  class Shop_ProductType extends Db_ActiveRecord
-    3:  class Shop_PropertySet extends Db_ActiveRecord
-    3:  class Shop_PropertySetProperty extends Db_ActiveRecord
-    3:  class Shop_ReviewsConfiguration extends Core_Configuration_Model
-    3:  class Shop_Role extends Db_ActiveRecord
-    3:  class Shop_ShippingLabel
-   36:  class Shop_ShippingOption extends Db_ActiveRecord
-   31:  class Shop_ShippingParams extends Db_ActiveRecord 
-    3:  class Shop_StatusTransition extends Db_ActiveRecord 
-    3:  class Shop_TaxClass extends Db_ActiveRecord
-    3:  class Shop_Authorize_Net_Aim_Payment extends Shop_PaymentType
-    3:  class Shop_Authorize_Net_Dpm_Payment extends Shop_PaymentType {
-    3:  class Shop_Authorize_Net_Sim_Payment extends Shop_PaymentType
-    3:  class Shop_Beanstream_Basic_Payment extends Shop_PaymentType
-    3:  class Shop_Beanstream_ServerToServer_Payment extends Shop_PaymentType
-    3:  class Shop_Braintree_TranspRedirect_Payment extends Shop_PaymentType
-    3:  class Shop_Custom_Payment extends Shop_PaymentType
-    2:  class Shop_EselectPlus_Payment extends Shop_PaymentType
-    3:  class Shop_Eway_Au_Redirection_Payment extends Shop_PaymentType
-    3:  class Shop_Eway_Mhp_Payment extends Shop_PaymentType
-    3:  class Shop_Eway_UKNZ_Redirection_Payment extends Shop_PaymentType
-    3:  class Shop_Exact_Hosted_Checkout_Payment extends Shop_PaymentType
-    3:  class Shop_Exact_Soap_Payment extends Shop_PaymentType
-    3:  class Shop_FirstData_Api_Payment extends Shop_PaymentType
-    3:  class Shop_Google_Checkout_Payment extends Shop_PaymentType {
-    3:  class Shop_HSBC_Payment extends Shop_PaymentType
-    3:  class Shop_PayPal_Pro_Payment extends Shop_PaymentType
-    3:  class Shop_PayPal_Standard_Payment extends Shop_PaymentType
-    3:  class Shop_PsiGate_Xml_Payment extends Shop_PaymentType
-    3:  class Shop_SagePay_Direct_Payment extends Shop_PaymentType
-    3:  class Shop_SagePay_Server_Payment extends Shop_PaymentType
-    3:  class Shop_SecureTrading_PaymentPages_Payment extends Shop_PaymentType
-    3:  class Shop_SecureTrading_Xml_Payment extends Shop_PaymentType
-    3:  class Shop_WorldPay_Html_Redirect_Payment extends Shop_PaymentType {
-   20: class Braintree_Configuration extends Braintree
-    3: class Braintree_KeyValueNode
-    3: class Braintree_MultipleValueNode
-    3: class Braintree_MultipleValueOrTextNode extends Braintree_MultipleValueNode
-    3: class Braintree_PartialMatchNode extends Braintree_EqualityNode
-    3: class Braintree_RangeNode
-    3: class Braintree_TextNode extends Braintree_PartialMatchNode
-    3:  class Shop_CartBuyMGetNFree_Action extends Shop_CartRuleActionBase
-    3:  class Shop_CartFixed_Action extends Shop_CartRuleActionBase
-    3:  class Shop_CartPercentage_Action extends Shop_CartRuleActionBase
-    3:  class Shop_CartProductFixed_Action extends Shop_CartRuleActionBase
-    3:  class Shop_CartProductFixedPrice_Action extends Shop_CartRuleActionBase
-    3:  class Shop_CartProductFreeShipping_Action extends Shop_CartRuleActionBase
-    3:  class Shop_CartProductPercent_Action extends Shop_CartRuleActionBase
-    3:  class Shop_ProductByFixedAmount_Action extends Shop_RuleActionBase
-    3:  class Shop_ProductByPercentage_Action extends Shop_RuleActionBase
-    3:  class Shop_ProductToFixedPrice_Action extends Shop_RuleActionBase
-    3:  class Shop_ProductToPercentage_Action extends Shop_RuleActionBase
-    3:  class Shop_CartAttribute_Condition extends Shop_ModelAttributesConditionBase
-  184:  class Shop_CartAttributeContainer extends Db_ActiveRecord
-    3:  class Shop_CartItemAttribute_Condition extends Shop_ModelAttributesConditionBase
-  142:  class Shop_CartItemAttributeContainer extends Db_ActiveRecord
-    3:  class Shop_CartItemPresence_Condition extends Shop_RuleIfCondition
-    3:  class Shop_CartProductAmtQty_Condition extends Shop_RuleIfCondition
-    2:  class Shop_ProductAttr_Condition extends Shop_ModelAttributesConditionBase
-    3:  class Shop_ProductAttribute_Condition extends Shop_ModelAttributesConditionBase
-    3:  class Shop_ModelAttributesConditionBase extends Shop_RuleConditionBase
-    3:  class Shop_CanadaPostShipping extends Shop_ShippingType {
-    3:  class Shop_FedExShipping extends Shop_ShippingType {
-    3:  class Shop_PurolatorShipping extends Shop_ShippingType {
-    3:  class Shop_TableRateShipping extends Shop_ShippingType
-    3:  class Shop_UpsShipping extends Shop_ShippingType
-    3:  class Shop_UspsShipping extends Shop_ShippingType
-    3:  class System_Module extends Core_ModuleBase
-    3:  class System_Access_Log extends Backend_SettingsController
-    3:  class System_Backup extends Backend_Controller
-    3:  class System_ColorTheme extends Backend_SettingsController
-    3:  class System_CompoundEmailVars extends Backend_SettingsController
-    3:  class System_Editor_Config extends Backend_SettingsController
-    3:  class System_Email extends Backend_SettingsController
-    3:  class System_Email_Layouts extends Backend_SettingsController
-    3:  class System_Email_Templates extends Backend_SettingsController
-    3:  class System_Error_Log extends Backend_SettingsController
-    3:  class System_Modules extends Backend_Controller
-    3:  class System_MySettings extends Backend_Controller
-    3:  class System_Security extends Backend_Controller
-    3:  class System_Settings extends Backend_Controller
-    3:  class System_Users extends Backend_Controller
-    6:  class System_Backup_Archive extends Db_ActiveRecord 
-    2:  class System_Backup_Params extends Db_ActiveRecord 
-    2:  class System_Backup_Status extends Db_ActiveRecord 
-    3:  class System_ColorThemeParams extends Db_ActiveRecord 
-    3:  class System_CompoundEmailVar extends Db_ActiveRecord 
-    3:  class System_EmailLayout extends Db_ActiveRecord 
-    2:  class System_EmailParams extends Db_ActiveRecord 
-    6:  class System_EmailTemplate extends Db_ActiveRecord 
-    3:  class System_HtmlEditorConfig extends Db_ActiveRecord
-    2:  class System_LoginLogRecord extends Db_ActiveRecord 
-    3:  class Users_Module extends Core_ModuleBase
-    3:  class Users_Permissions
-    3:  class Users_Groups extends Db_ActiveRecord
-    3:  class Users_Rights extends Db_ActiveRecord
-   17:  class Users_User extends Phpr_User
-   25:  class Db_FilterBehavior extends Phpr_ControllerBehavior
-   29:  class Db_FormBehavior extends Phpr_ControllerBehavior
-   29:  class Db_ListBehavior extends Phpr_ControllerBehavior
-    2:  class Db
-   13:  class Db_Act_As_Tree extends Phpr_Extension
-   46:  class Db_ActiveRecord extends Db_SqlBase implements IteratorAggregate
-    3:  class Db_ActiveRecordColumn 
-    3:  class Db_ActiveRecordIterator implements Iterator
-    3:  class Db_ActiverecordProxy extends Phpr_Extensible
-    6:  class Db_AutoFootprints extends Phpr_Extension
-    3:  class Db_Base extends Phpr_Validatable
-   12:  class Db_ColumnDefinition
-   11:  class Db_DataCollection implements ArrayAccess, IteratorAggregate, Countable 
-    3:  class Db_DataFilter
-    3:  class Db_DataFilterSwitcher
-    3:  class Db_DbHelper
-    3:  class Db_Driver
-   14:  class Db_FormCustomArea extends Db_FormElement
-    9:  class Db_FormElement
-   40:  class Db_FormFieldDefinition extends Db_FormElement
-   11:  class Db_FormPartial extends Db_FormElement
-   12:  class Db_FormSection extends Db_FormElement
-    7:  class Db_FormWidget
-    3:  class Db_GridDateEditor extends Db_GridEditor
-    3:  class Db_GridImagesEditor extends Db_GridEditor
-    7:  class Db_GridWidgetDataSource
-    7:  class Db_ModelAttachments extends Phpr_Extension
-    8:  class Db_ModelLog extends Phpr_Extension
-    3:  class Db_ModuleParameters
-    3:  class Db_MySQLDriver extends Db_Driver 
-    3:  class Db_SecureSettings
-   14:  class Db_Sortable extends Phpr_Extension
-    3:  class Db_Sql extends Db_SqlBase 
-    3:  class Db_SqlBase extends Db_WhereBase 
-    6:  class Db_UpdateManager
-    3:  class Db_UserParameters
-    3:  class Db_Where extends Db_WhereBase
-    3:  class Db_WhereBase extends Db_Base 
-    3:  class Db_CsvFileImport extends Db_ActiveRecord
-    3:  class Db_DeferredBinding extends Db_ActiveRecord 
-   48:  class Db_File extends Db_ActiveRecord 
-    3:  class Db_RecordLock extends Db_ActiveRecord 
-    3:  class Db_GridWidget extends Db_FormWidget
-    3:  class Net_Request {
-    3:  class Net_Response {
-    3:  class Net_Service {
-    2:  class Phpr_Closure
-   18:  class Phpr_Component extends Phpr_ControllerBase
-   27:  class Phpr_Config implements ArrayAccess
-   22:  class Phpr_Controller extends Phpr_ControllerBase
-    6:  class Phpr_ControllerBehavior extends Phpr_Extension
-   12:  class Phpr_DateTime
-   26:  class Phpr_DateTimeFormat
-   23:  class Phpr_DateTimeInterval
-    3:  class Phpr_DebugHelper
-   20:  class Phpr_ErrorLog
-   13:  class Phpr_Events extends Phpr_Extension {
-    6:  class Phpr_Extensible extends Phpr_Extension {
-    6:  class Phpr_Extension
-   27:  class Phpr_Flash implements ArrayAccess, IteratorAggregate, Countable
-   32:  class Phpr_Language
-  340:  class Phpr_LocalizationManager
-   27:  class Phpr_LogHelper
-   23:  class Phpr_Module
-   16:  class Phpr_Pagination
-   13:  class Phpr_Request
-   12:  class Phpr_Response
-   23:  class Phpr_Router
-  381:  class Phpr_RouterRule
-   27:  class Phpr_Security
-    3:  class Phpr_SecurityFramework
-   27:  class Phpr_Session implements ArrayAccess, IteratorAggregate, Countable
-   21:  class Phpr_TraceLog
-   23:  class Phpr_Validatable extends Phpr_Extensible
-   23:  class Phpr_Validation
-  372:  class Phpr_ValidationException extends Phpr_ApplicationException
-  412:  class Phpr_ValidationRules
-    7:  class Phpr_Date
-    3:  class Phpr_Files
-   23:  class Phpr_Form
-   23:  class Phpr_Html
-    7:  class Phpr_Image
-    3:  class Phpr_Inflector 
-    3:  class Phpr_Strings
-    8:  class Phpr_Url
-   23:  class Phpr_Util
-   23:  class Phpr_View
-   23:  class Phpr_Group extends Db_ActiveRecord
-    6:  class Phpr_Trace_Log_Record extends Db_ActiveRecord
-   23:  class Phpr_User extends Db_ActiveRecord
+
+ Backend
+ Backend_AppearanceConfiguration extends Core_Configuration_Model
+ Backend_AppearanceSettings extends Backend_Controller
+ Backend_ChartData extends Backend_DashboardController
+ Backend_CodeEditorConfiguration extends Core_Configuration_Model
+ Backend_CodeEditorSettings extends Backend_Controller
+ Backend_Controller extends Phpr_Controller
+ Backend_CsvImport extends Phpr_ControllerBehavior
+ Backend_CsvImportModel extends Db_ActiveRecord
+ Backend_Dashboard
+ Backend_DashboardController extends Backend_ReportingController
+ Backend_Events extends Phpr_Extensible
+ Backend_FileBrowser extends Phpr_ControllerBehavior
+ Backend_Files extends Backend_Controller
+ Backend_Html
+ Backend_Index extends Backend_DashboardController
+ Backend_Module extends Core_ModuleBase
+ Backend_ReportingController extends Backend_Controller
+ Backend_Reports
+ Backend_ReportsController extends Backend_Controller
+ Backend_ReportsData
+ Backend_SettingsController extends Backend_Controller
+ Backend_SettingsRecord extends Db_ActiveRecord
+ Backend_Tab
+ Backend_TabCollection
+ Blog_Actions extends Cms_ActionScope
+ Blog_Categories extends Backend_Controller
+ Blog_Category extends Db_ActiveRecord
+ Blog_Comment extends Db_ActiveRecord
+ Blog_Comment_Status extends Db_ActiveRecord
+ Blog_Comment_Subscriber extends Db_ActiveRecord
+ Blog_Comments extends Backend_Controller
+ Blog_Configuration extends Core_Configuration_Model
+ Blog_Module extends Core_ModuleBase
+ Blog_Post extends Db_ActiveRecord
+ Blog_Posts extends Backend_Controller
+ Blog_Settings extends Backend_Controller
+ Braintree_Configuration extends Braintree
+ Braintree_KeyValueNode
+ Braintree_MultipleValueNode
+ Braintree_MultipleValueOrTextNode extends Braintree_MultipleValueNode
+ Braintree_PartialMatchNode extends Braintree_EqualityNode
+ Braintree_RangeNode
+ Braintree_TextNode extends Braintree_PartialMatchNode
+ Cms_ActionManager
+ Cms_ActionScope extends Cms_Controller
+ Cms_Analytics
+ Cms_Backup extends Backend_Controller
+ Cms_CallStackItem
+ Cms_Content extends Backend_Controller
+ Cms_ContentBlock extends Db_ActiveRecord
+ Cms_Controller
+ Cms_Data_Generator
+ Cms_Exception extends Phpr_ApplicationException
+ Cms_ExecutionException extends Phpr_SystemException
+ Cms_ExportManager
+ Cms_FatalException extends Phpr_ApplicationException
+ Cms_GaCaptchaException extends Phpr_ApplicationException
+ Cms_GlobalContentBlock extends Db_ActiveRecord
+ Cms_GoogleAnalytics
+ Cms_Html
+ Cms_Maintenance extends Backend_SettingsController
+ Cms_MaintenanceParams extends Core_Configuration_Model
+ CMS_Module extends Core_ModuleBase
+ Cms_Object extends Db_ActiveRecord
+ Cms_Page extends Cms_Object
+ Cms_PageFileImportModel extends Db_ActiveRecord
+ Cms_PageNavigationNode
+ Cms_PageReference
+ Cms_Pages extends Backend_Controller
+ Cms_PageSelector extends Phpr_ControllerBehavior
+ Cms_Partial extends Cms_Object
+ Cms_Partials extends Backend_Controller
+ Cms_Resources extends Backend_Controller
+ Cms_SecurityMode extends Db_ActiveRecord
+ Cms_Settings extends Backend_SettingsController
+ Cms_SettingsManager extends Backend_SettingsRecord
+ Cms_Stats_Settings extends Backend_SettingsRecord
+ Cms_Template extends Cms_Object
+ Cms_Templates extends Backend_Controller
+ Cms_Theme extends Cms_Object
+ Cms_ThemeExportModel extends Db_ActiveRecord
+ Cms_ThemeImportModel extends Db_ActiveRecord
+ Cms_Themes extends Backend_Controller
+ Cms_ThemeSelector extends Phpr_ControllerBehavior
+ Cms_Twig extends Core_Twig
+ Cms_TwigControllerExtension extends Twig_Extension
+ Cms_VisitorPreferences
+ Core_Actions extends Cms_ActionScope
+ Core_ApcCache extends Core_CacheBase
+ Core_Array
+ Core_Cli
+ Core_ConfigSecurity extends Phpr_Security
+ Core_Configuration
+ Core_Configuration_Model extends Db_ActiveRecord
+ Core_ConfigUser
+ Core_CronManager
+ Core_CsvHelper
+ Core_DummyCache extends Core_CacheBase
+ Core_Email
+ Core_EmailViewWrapper
+ Core_EulaInfo extends Db_ActiveRecord
+ Core_EulaManager
+ Core_FileCache extends Core_CacheBase
+ Core_FrontEndSecurity extends Phpr_Security
+ Core_Http
+ Core_LicenseAgreement extends Backend_Controller
+ Core_MemCache extends Core_CacheBase
+ Core_Metrics
+ Core_Module extends Core_ModuleBase
+ Core_ModuleInfo
+ Core_ModuleManager
+ Core_ModuleSettings extends Core_Configuration_Model
+ Core_Number 
+ Core_Object
+ Core_PostStorage
+ Core_Rss
+ Core_Security extends Phpr_Security
+ Core_Settings extends Backend_Controller
+ Core_SimpleXMLExtended extends SimpleXMLElement
+ Core_String
+ Core_Twig
+ Core_TwigExtension extends Twig_Extension
+ Core_TwigNamedStringLoader implements Twig_LoaderInterface
+ Core_UpdateManager
+ Core_Version extends Db_ActiveRecord
+ Core_ViewLicenseAgreement extends Backend_SettingsController
+ Core_Xml
+ Core_XmlController
+ Core_ZipHelper
+ Db
+ Db_Act_As_Tree extends Phpr_Extension
+ Db_ActiveRecord extends Db_SqlBase implements IteratorAggregate
+ Db_ActiveRecordColumn
+ Db_ActiveRecordIterator implements Iterator
+ Db_ActiverecordProxy extends Phpr_Extensible
+ Db_AutoFootprints extends Phpr_Extension
+ Db_Base extends Phpr_Validatable
+ Db_ColumnDefinition
+ Db_CsvFileImport extends Db_ActiveRecord
+ Db_DataCollection implements ArrayAccess, IteratorAggregate, Countable
+ Db_DataFilter
+ Db_DataFilterSwitcher
+ Db_DbHelper
+ Db_DeferredBinding extends Db_ActiveRecord
+ Db_Driver
+ Db_File extends Db_ActiveRecord
+ Db_FilterBehavior extends Phpr_ControllerBehavior
+ Db_FormBehavior extends Phpr_ControllerBehavior
+ Db_FormCustomArea extends Db_FormElement
+ Db_FormElement
+ Db_FormFieldDefinition extends Db_FormElement
+ Db_FormPartial extends Db_FormElement
+ Db_FormSection extends Db_FormElement
+ Db_FormWidget
+ Db_GridDateEditor extends Db_GridEditor
+ Db_GridImagesEditor extends Db_GridEditor
+ Db_GridWidget extends Db_FormWidget
+ Db_GridWidgetDataSource
+ Db_ListBehavior extends Phpr_ControllerBehavior
+ Db_ModelAttachments extends Phpr_Extension
+ Db_ModelLog extends Phpr_Extension
+ Db_ModuleParameters
+ Db_MySQLDriver extends Db_Driver
+ Db_RecordLock extends Db_ActiveRecord
+ Db_SecureSettings
+ Db_Sortable extends Phpr_Extension
+ Db_Sql extends Db_SqlBase
+ Db_SqlBase extends Db_WhereBase
+ Db_UpdateManager
+ Db_UserParameters
+ Db_Where extends Db_WhereBase
+ Db_WhereBase extends Db_Base
+ LemonStand_ConfigController extends Phpr_Controller
+ Net_Request 
+ Net_Response 
+ Net_Service 
+ PHPMailer 
+ Phpr
+ Phpr_ApplicationException extends Phpr_Exception
+ Phpr_ClassLoader 
+ Phpr_Closure
+ Phpr_Component extends Phpr_ControllerBase
+ Phpr_Config implements ArrayAccess
+ Phpr_Controller extends Phpr_ControllerBase
+ Phpr_ControllerBehavior extends Phpr_Extension
+ Phpr_DatabaseException extends Phpr_Exception
+ Phpr_Date
+ Phpr_DateTime
+ Phpr_DateTimeFormat
+ Phpr_DateTimeInterval
+ Phpr_DebugHelper
+ Phpr_ErrorLog
+ Phpr_Events extends Phpr_Extension 
+ Phpr_Exception extends Exception
+ Phpr_Extensible extends Phpr_Extension 
+ Phpr_Extension
+ Phpr_Files
+ Phpr_Flash implements ArrayAccess, IteratorAggregate, Countable
+ Phpr_Form
+ Phpr_Group extends Db_ActiveRecord
+ Phpr_Html
+ Phpr_HttpException extends Phpr_ApplicationException
+ Phpr_Image
+ Phpr_Inflector
+ Phpr_Language
+ Phpr_LocalizationManager
+ Phpr_LogHelper
+ Phpr_Module
+ Phpr_Pagination
+ Phpr_PhpException extends Phpr_SystemException
+ Phpr_Request
+ Phpr_Response
+ Phpr_Router
+ Phpr_RouterRule
+ Phpr_Security
+ Phpr_SecurityFramework
+ Phpr_Session implements ArrayAccess, IteratorAggregate, Countable
+ Phpr_Strings
+ Phpr_SystemException extends Phpr_Exception
+ Phpr_Trace_Log_Record extends Db_ActiveRecord
+ Phpr_TraceLog
+ Phpr_Url
+ Phpr_User extends Db_ActiveRecord
+ Phpr_Util
+ Phpr_Validatable extends Phpr_Extensible
+ Phpr_Validation
+ Phpr_ValidationException extends Phpr_ApplicationException
+ Phpr_ValidationRules
+ Phpr_View
+ Session_Handle extends Backend_Controller
+ Session_Index extends Backend_Controller
+ Shop_Actions extends Cms_ActionScope
+ Shop_Authorize_Net_Aim_Payment extends Shop_PaymentType
+ Shop_Authorize_Net_Dpm_Payment extends Shop_PaymentType 
+ Shop_Authorize_Net_Sim_Payment extends Shop_PaymentType
+ Shop_AutoBilling
+ Shop_AutoBilling_Settings extends Backend_SettingsController
+ Shop_AutoBillingParams extends Backend_SettingsRecord
+ Shop_Beanstream_Basic_Payment extends Shop_PaymentType
+ Shop_Beanstream_ServerToServer_Payment extends Shop_PaymentType
+ Shop_Braintree_TranspRedirect_Payment extends Shop_PaymentType
+ Shop_BundleHelper
+ Shop_BundleItemProduct extends Db_ActiveRecord
+ Shop_BundleProductUiBehavior extends Phpr_ControllerBehavior
+ Shop_CanadaPostShipping extends Shop_ShippingType 
+ Shop_Cart
+ Shop_Cart_Rules extends Backend_Controller
+ Shop_CartAttribute_Condition extends Shop_ModelAttributesConditionBase
+ Shop_CartAttributeContainer extends Db_ActiveRecord
+ Shop_CartBuyMGetNFree_Action extends Shop_CartRuleActionBase
+ Shop_CartFixed_Action extends Shop_CartRuleActionBase
+ Shop_CartItem
+ Shop_CartItemAttribute_Condition extends Shop_ModelAttributesConditionBase
+ Shop_CartItemAttributeContainer extends Db_ActiveRecord
+ Shop_CartItemPresence_Condition extends Shop_RuleIfCondition
+ Shop_CartPercentage_Action extends Shop_CartRuleActionBase
+ Shop_CartPriceRule extends Shop_PriceRuleBase
+ Shop_CartProductAmtQty_Condition extends Shop_RuleIfCondition
+ Shop_CartProductFixed_Action extends Shop_CartRuleActionBase
+ Shop_CartProductFixedPrice_Action extends Shop_CartRuleActionBase
+ Shop_CartProductFreeShipping_Action extends Shop_CartRuleActionBase
+ Shop_CartProductPercent_Action extends Shop_CartRuleActionBase
+ Shop_CartRuleActionBase extends Shop_RuleActionBase
+ Shop_Catalog_Rules extends Backend_Controller
+ Shop_CatalogPriceRule extends Shop_PriceRuleBase
+ Shop_Categories extends Backend_Controller
+ Shop_Categories_Report extends Shop_GenericReport
+ Shop_Category extends Db_ActiveRecord
+ Shop_CategoryFilter extends Db_DataFilter
+ Shop_CheckoutAddressInfo
+ Shop_CheckoutData
+ Shop_Company_Info extends Backend_SettingsController
+ Shop_CompanyInformation extends Db_ActiveRecord
+ Shop_ComparisonList
+ Shop_Configuration extends Backend_SettingsController
+ Shop_ConfigurationRecord extends Db_ActiveRecord
+ Shop_Country extends Db_ActiveRecord
+ Shop_CountryLookup
+ Shop_CountryState extends Db_ActiveRecord
+ Shop_Coupon extends Db_ActiveRecord
+ Shop_CouponFilter extends Db_DataFilter
+ Shop_Coupons_Report extends Shop_GenericReport
+ Shop_Currency_Converter_Settings extends Backend_SettingsController
+ Shop_CurrencyConversionParams extends Db_ActiveRecord
+ Shop_CurrencyConverter
+ Shop_CurrencyRateRecord extends Db_ActiveRecord
+ Shop_CurrencySettings extends Backend_SettingsRecord
+ Shop_Custom_Groups_Report extends Shop_GenericReport
+ Shop_Custom_Payment extends Shop_PaymentType
+ Shop_CustomAttribute extends Db_ActiveRecord
+ Shop_Customer extends Db_ActiveRecord
+ Shop_Customer_Groups extends Backend_Controller
+ Shop_Customer_Notifications extends Backend_Controller
+ Shop_CustomerBillingCountryFilter extends Db_DataFilter
+ Shop_CustomerBillingStateFilter extends Db_DataFilter
+ Shop_CustomerCart extends Shop_CartBase
+ Shop_CustomerCartItem extends Db_ActiveRecord
+ Shop_CustomerCsvImportModel extends Backend_CsvImportModel
+ Shop_CustomerGroup extends Db_ActiveRecord
+ Shop_CustomerGroupFilter extends Db_DataFilter
+ Shop_CustomerPaymentProfile extends Db_ActiveRecord
+ Shop_Customers extends Backend_Controller
+ Shop_CustomGroup extends Db_ActiveRecord
+ Shop_CustomGroupExactFilter extends Db_DataFilter
+ Shop_CustomGroupFilter extends Db_DataFilter
+ Shop_DeletedFilter extends Db_DataFilter
+ Shop_DiscountData
+ Shop_DisplayInvoicesSwitcher extends Db_DataFilterSwitcher
+ Shop_Ecb_Converter extends Shop_CurrencyConverterBase
+ Shop_EselectPlus_Payment extends Shop_PaymentType
+ Shop_Eway_Au_Redirection_Payment extends Shop_PaymentType
+ Shop_Eway_Mhp_Payment extends Shop_PaymentType
+ Shop_Eway_UKNZ_Redirection_Payment extends Shop_PaymentType
+ Shop_Exact_Hosted_Checkout_Payment extends Shop_PaymentType
+ Shop_Exact_Soap_Payment extends Shop_PaymentType
+ Shop_ExtraOption extends Db_ActiveRecord
+ Shop_ExtraOptionSet extends Db_ActiveRecord
+ Shop_Extras_Sets extends Backend_Controller
+ Shop_FedExShipping extends Shop_ShippingType 
+ Shop_FirstData_Api_Payment extends Shop_PaymentType
+ Shop_Google_Checkout_Payment extends Shop_PaymentType 
+ Shop_GridTierPriceEditor extends Db_GridEditor
+ Shop_GroupProductsModel extends Db_ActiveRecord
+ Shop_Groups extends Backend_Controller
+ Shop_HideDisabledProductsSwitcher extends Db_DataFilterSwitcher
+ Shop_HSBC_Payment extends Shop_PaymentType
+ Shop_InMemoryCart extends Shop_CartBase
+ Shop_InMemoryCartItem
+ Shop_Manufacturer extends Db_ActiveRecord
+ Shop_ManufacturerFilter extends Db_DataFilter
+ Shop_Manufacturers extends Backend_Controller
+ Shop_Manufacturers_Report extends Shop_GenericReport
+ Shop_MergeCustomersModel extends Db_ActiveRecord
+ Shop_ModelAttributesConditionBase extends Shop_RuleConditionBase
+ Shop_Module extends Core_ModuleBase
+ Shop_OptionMatrix
+ Shop_OptionMatrixBehavior extends Phpr_ControllerBehavior
+ Shop_OptionMatrixManager
+ Shop_OptionMatrixOption extends Db_ActiveRecord
+ Shop_OptionMatrixRecord extends Db_ActiveRecord implements Db_MemoryCacheable
+ Shop_OptionSet extends Db_ActiveRecord
+ Shop_OptionSetOption extends Db_ActiveRecord
+ Shop_Order extends Db_ActiveRecord
+ Shop_Order_Numbering extends Backend_SettingsController
+ Shop_OrderBillingCountryFilter extends Db_DataFilter
+ Shop_OrderCsvImportModel extends Backend_CsvImportModel
+ Shop_OrderDeletedStatus extends Db_ActiveRecord
+ Shop_OrderItem extends Db_ActiveRecord
+ Shop_OrderNote extends Db_ActiveRecord
+ Shop_OrderNotification extends Db_ActiveRecord
+ Shop_Orders extends Backend_Controller
+ Shop_Orders_Report extends Shop_GenericReport
+ Shop_OrderShippingCountryFilter extends Db_DataFilter
+ Shop_OrderShippingLabelParams extends Db_ActiveRecord
+ Shop_OrderStatus extends Db_ActiveRecord
+ Shop_OrderStatusFilter extends Db_DataFilter
+ Shop_OrderStatusLog extends Db_ActiveRecord
+ Shop_OrderTrackingCode extends Db_ActiveRecord
+ Shop_Payment extends Backend_Controller
+ Shop_PaymentLogRecord extends Db_ActiveRecord
+ Shop_PaymentMethod extends Db_ActiveRecord
+ Shop_PaymentTransaction extends Db_ActiveRecord
+ Shop_PayPal_Pro_Payment extends Shop_PaymentType
+ Shop_PayPal_Standard_Payment extends Shop_PaymentType
+ Shop_PriceRuleBase extends Db_ActiveRecord
+ Shop_PriceRuleCondition extends Db_ActiveRecord
+ Shop_PriceRuleConditionProxy
+ Shop_PriceTier extends Db_ActiveRecord
+ Shop_Product extends Db_ActiveRecord
+ Shop_Product_Types extends Backend_Controller
+ Shop_Product_Types_Report extends Shop_GenericReport
+ Shop_ProductAttr_Condition extends Shop_ModelAttributesConditionBase
+ Shop_ProductAttribute_Condition extends Shop_ModelAttributesConditionBase
+ Shop_ProductBundleItem extends Db_ActiveRecord
+ Shop_ProductByFixedAmount_Action extends Shop_RuleActionBase
+ Shop_ProductByPercentage_Action extends Shop_RuleActionBase
+ Shop_ProductCsvImportModel extends Backend_CsvImportModel
+ Shop_ProductExport
+ Shop_ProductFile extends Db_File
+ Shop_ProductFilter extends Db_DataFilter
+ Shop_ProductHelper
+ Shop_ProductProperty extends Db_ActiveRecord
+ Shop_ProductReview extends Db_ActiveRecord
+ Shop_Products extends Backend_Controller
+ Shop_Products_Report extends Shop_GenericReport
+ Shop_ProductSearch
+ Shop_ProductStatisticsData
+ Shop_ProductToFixedPrice_Action extends Shop_RuleActionBase
+ Shop_ProductToPercentage_Action extends Shop_RuleActionBase
+ Shop_ProductType extends Db_ActiveRecord
+ Shop_ProductTypeFilter extends Db_DataFilter
+ Shop_PropertySet extends Db_ActiveRecord
+ Shop_PropertySetProperty extends Db_ActiveRecord
+ Shop_PsiGate_Xml_Payment extends Shop_PaymentType
+ Shop_PurolatorShipping extends Shop_ShippingType 
+ Shop_Reports extends Backend_Controller
+ Shop_Reviews extends Backend_Controller
+ Shop_Reviews_Config extends Backend_SettingsController
+ Shop_ReviewsConfiguration extends Core_Configuration_Model
+ Shop_Role extends Db_ActiveRecord
+ Shop_Roles extends Backend_SettingsController
+ Shop_RuleActionBase
+ Shop_RuleCompoundConditionBase extends Shop_RuleConditionBase
+ Shop_RuleConditionBase
+ Shop_RuleConditionsBehavior extends Phpr_ControllerBehavior
+ Shop_RuleIfCondition extends Shop_RuleCompoundConditionBase
+ Shop_RuleListBehavior extends Phpr_ControllerBehavior
+ Shop_SagePay_Direct_Payment extends Shop_PaymentType
+ Shop_SagePay_Server_Payment extends Shop_PaymentType
+ Shop_SecureTrading_PaymentPages_Payment extends Shop_PaymentType
+ Shop_SecureTrading_Xml_Payment extends Shop_PaymentType
+ Shop_Settings extends Backend_SettingsController
+ Shop_Shipping extends Backend_Controller
+ Shop_Shipping_Settings extends Backend_SettingsController
+ Shop_ShippingLabel
+ Shop_ShippingOption extends Db_ActiveRecord
+ Shop_ShippingParams extends Db_ActiveRecord
+ Shop_Statuses extends Backend_SettingsController
+ Shop_StatusTransition extends Db_ActiveRecord
+ Shop_Stock_Report extends Shop_GenericReport
+ Shop_TableRateShipping extends Shop_ShippingType
+ Shop_Tax_Classes extends Backend_Controller
+ Shop_TaxClass extends Db_ActiveRecord
+ Shop_Taxes_Report extends Shop_GenericReport
+ Shop_TierPrice
+ Shop_TransactionUpdate
+ Shop_UpsShipping extends Shop_ShippingType
+ Shop_UspsShipping extends Shop_ShippingType
+ Shop_WorldPay_Html_Redirect_Payment extends Shop_PaymentType 
+ Shop_Yahoo_Converter extends Shop_CurrencyConverterBase
+ SMTP 
+ System_Access_Log extends Backend_SettingsController
+ System_Backup extends Backend_Controller
+ System_Backup_Archive extends Db_ActiveRecord
+ System_Backup_Params extends Db_ActiveRecord
+ System_Backup_Status extends Db_ActiveRecord
+ System_ColorTheme extends Backend_SettingsController
+ System_ColorThemeParams extends Db_ActiveRecord
+ System_CompoundEmailVar extends Db_ActiveRecord
+ System_CompoundEmailVars extends Backend_SettingsController
+ System_Editor_Config extends Backend_SettingsController
+ System_Email extends Backend_SettingsController
+ System_Email_Layouts extends Backend_SettingsController
+ System_Email_Templates extends Backend_SettingsController
+ System_EmailLayout extends Db_ActiveRecord
+ System_EmailParams extends Db_ActiveRecord
+ System_EmailTemplate extends Db_ActiveRecord
+ System_Error_Log extends Backend_SettingsController
+ System_HtmlEditorConfig extends Db_ActiveRecord
+ System_LoginLogRecord extends Db_ActiveRecord
+ System_Module extends Core_ModuleBase
+ System_Modules extends Backend_Controller
+ System_MySettings extends Backend_Controller
+ System_Security extends Backend_Controller
+ System_Settings extends Backend_Controller
+ System_Users extends Backend_Controller
+ Users_Groups extends Db_ActiveRecord
+ Users_Module extends Core_ModuleBase
+ Users_Permissions
+ Users_Rights extends Db_ActiveRecord
+ Users_User extends Phpr_User
 
 C:\www\lemonstand\ls\phproad\system\class_functions.php:
     6:
@@ -549,15 +557,6 @@ C:\www\lemonstand\ls\phproad\system\class_functions.php:
     ,   { "trigger": "callFunction", "contents": "callFunction($function, $params);" }
    20:
     ,   { "trigger": "extractFunctionArg", "contents": "extractFunctionArg(&$args, $offset = 0);" }
-
-    8:  class Phpr_ClassLoader {
-   12:  class Phpr_Exception extends Exception
-  165:  class Phpr_SystemException extends Phpr_Exception
-  174:  class Phpr_ApplicationException extends Phpr_Exception
-  183:  class Phpr_DatabaseException extends Phpr_Exception
-  192:  class Phpr_HttpException extends Phpr_ApplicationException
-  293:  class Phpr_PhpException extends Phpr_SystemException
-   24:  class Phpr
 
 
  /*
