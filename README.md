@@ -1,4 +1,4 @@
-super-lemonstand-sublime-integrated-autocomplete-and-predictive-text-made-on-day-off-package
-============================================================================================
+LemonStand Sublime Package
+==========================
 
-Placeholder for a sublime package for lemonstand work
+This will be a package for Sublime Text to provide completions and more related to the LemonStand ecommerce platform.
