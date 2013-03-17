@@ -28,7 +28,7 @@ C:\www\lemonstand\ls\controllers\application.php:
     3:  class Application extends Phpr_Controller
  */
 
-    /* Custom Helpers */
+/* Custom Helpers */
 
     /* (root) */
 
@@ -81,7 +81,7 @@ C:\www\lemonstand\ls\controllers\application.php:
     ,   { "trigger": "customer_logout", "contents": "customer_logout(${1:redirect});\n$0" }
     ,   { "trigger": "tax_incl_label", "contents": "tax_incl_label(${1:order});\n$0" }
 
-    /* Static */
+/* Static */
 
     /* backend module */
 
@@ -148,7 +148,7 @@ C:\www\lemonstand\ls\controllers\application.php:
 
     /* blog module */
 
-        "Blog_Actions" , "Blog_Categories" , "Blog_Category" , "Blog_Comment" , "Blog_Comment_Status"
+    ,   "Blog_Actions" , "Blog_Categories" , "Blog_Category" , "Blog_Comment" , "Blog_Comment_Status"
     ,   "Blog_Comment_Subscriber" , "Blog_Comments" , "Blog_Configuration" , "Blog_Module" , "Blog_Post"
     ,   "Blog_Posts" , "Blog_Settings" 
 
@@ -172,22 +172,187 @@ C:\www\lemonstand\ls\controllers\application.php:
 
     /* Blog_Comment_Subscriber */
 
-	,	{ "trigger": "Blog_Comment_Subscriber::create", "contents": "Blog_Comment_Subscriber::create();\n$0" }
-	,	{ "trigger": "Blog_Comment_Subscriber::send_notifications", "contents": "Blog_Comment_Subscriber::send_notifications(${1:post}, ${2:comment});\n$0" }
-	,	{ "trigger": "Blog_Comment_Subscriber::unsubscribe", "contents": "Blog_Comment_Subscriber::unsubscribe(${1:post_id}, ${2:email_hash});\n$0" }
+    ,   { "trigger": "Blog_Comment_Subscriber::create", "contents": "Blog_Comment_Subscriber::create();\n$0" }
+    ,   { "trigger": "Blog_Comment_Subscriber::send_notifications", "contents": "Blog_Comment_Subscriber::send_notifications(${1:post}, ${2:comment});\n$0" }
+    ,   { "trigger": "Blog_Comment_Subscriber::unsubscribe", "contents": "Blog_Comment_Subscriber::unsubscribe(${1:post_id}, ${2:email_hash});\n$0" }
 
     /* Blog_Configuration */
 
-	,	{ "trigger": "Blog_Configuration::create", "contents": "Blog_Configuration::create();\n$0" }
+    ,   { "trigger": "Blog_Configuration::create", "contents": "Blog_Configuration::create();\n$0" }
 
     /* Blog_Post */
 
-	,	{ "trigger": "Blog_Post::create", "contents": "Blog_Post::create();\n$0" }
-	,	{ "trigger": "Blog_Post::get_rss", "contents": "Blog_Post::get_rss(${1:feed_name}, ${2:feed_description}, ${3:feed_url}, ${4:post_url}, ${5:category_url}, ${6:blog_url}${7:, ${8:post_number}${9:, ${10:exclude_category_ids}}});\n$0" }
-	,	{ "trigger": "Blog_Post::get_comments_rss", "contents": "Blog_Post::get_comments_rss(${1:feed_name}, ${2:feed_description}, ${3:feed_url}, ${4:post_url}, ${5:category_url}, ${6:blog_url}${7:, ${8:comment_number}${9:, ${10:exclude_category_ids}}});\n$0" }
-	,	{ "trigger": "Blog_Post::eval_posts_statistics", "contents": "Blog_Post::eval_posts_statistics();\n$0" }
-	,	{ "trigger": "Blog_Post::list_recent_posts", "contents": "Blog_Post::list_recent_posts(${1:number}${2:, ${3:show_future_posts}});\n$0" }
+    ,   { "trigger": "Blog_Post::create", "contents": "Blog_Post::create();\n$0" }
+    ,   { "trigger": "Blog_Post::get_rss", "contents": "Blog_Post::get_rss(${1:feed_name}, ${2:feed_description}, ${3:feed_url}, ${4:post_url}, ${5:category_url}, ${6:blog_url}${7:, ${8:post_number}${9:, ${10:exclude_category_ids}}});\n$0" }
+    ,   { "trigger": "Blog_Post::get_comments_rss", "contents": "Blog_Post::get_comments_rss(${1:feed_name}, ${2:feed_description}, ${3:feed_url}, ${4:post_url}, ${5:category_url}, ${6:blog_url}${7:, ${8:comment_number}${9:, ${10:exclude_category_ids}}});\n$0" }
+    ,   { "trigger": "Blog_Post::eval_posts_statistics", "contents": "Blog_Post::eval_posts_statistics();\n$0" }
+    ,   { "trigger": "Blog_Post::list_recent_posts", "contents": "Blog_Post::list_recent_posts(${1:number}${2:, ${3:show_future_posts}});\n$0" }
     
+    /* CMS module */
+
+    ,   "Cms_ActionManager" , "Cms_ActionScope" , "Cms_Analytics" , "Cms_Backup" , "Cms_CallStackItem"
+    ,   "Cms_Content" , "Cms_ContentBlock" , "Cms_Controller" , "Cms_Data_Generator" , "Cms_Exception"
+    ,   "Cms_ExecutionException" , "Cms_ExportManager" , "Cms_FatalException" , "Cms_GaCaptchaException"
+    ,   "Cms_GlobalContentBlock" , "Cms_GoogleAnalytics" , "Cms_Html" , "Cms_Maintenance" , "Cms_MaintenanceParams"
+    ,   "CMS_Module" , "Cms_Object" , "Cms_Page" , "Cms_PageFileImportModel" , "Cms_PageNavigationNode"
+    ,   "Cms_PageReference" , "Cms_Pages" , "Cms_PageSelector" , "Cms_Partial" , "Cms_Partials" , "Cms_Resources"
+    ,   "Cms_SecurityMode" , "Cms_Settings" , "Cms_SettingsManager" , "Cms_Stats_Settings" , "Cms_Template"
+    ,   "Cms_Templates" , "Cms_Theme" , "Cms_ThemeExportModel" , "Cms_ThemeImportModel" , "Cms_Themes"
+    ,   "Cms_ThemeSelector" , "Cms_Twig" , "Cms_TwigControllerExtension" , "Cms_VisitorPreferences"
+
+    /* Cms_ActionManager */
+
+	,	{ "trigger": "Cms_ActionManager::listActions", "contents": "Cms_ActionManager::listActions();\n$0" }
+	,	{ "trigger": "Cms_ActionManager::execAction", "contents": "Cms_ActionManager::execAction(${1:name}, ${2:controller});\n$0" }
+	,	{ "trigger": "Cms_ActionManager::execAjaxHandler", "contents": "Cms_ActionManager::execAjaxHandler(${1:name}, ${2controller});\n$0" }
+	,	{ "trigger": "Cms_ActionManager::getActionInfo", "contents": "Cms_ActionManager::getActionInfo(${1:name});\n$0" }
+
+    /* Cms_Analytics */
+
+	,	{ "trigger": "Cms_Analytics::evalVisiorsStatistics", "contents": "Cms_Analytics::evalVisiorsStatistics(${1:start}, ${2:end});\n$0" }
+	,	{ "trigger": "Cms_Analytics::getVisitorsChartData", "contents": "Cms_Analytics::getVisitorsChartData(${1:start}, ${2:end});\n$0" }
+	,	{ "trigger": "Cms_Analytics::evalTopPages", "contents": "Cms_Analytics::evalTopPages(${1:start}, ${2:end});\n$0" }
+	,	{ "trigger": "Cms_Analytics::deleteStalePageviews", "contents": "Cms_Analytics::deleteStalePageviews(${1:numberToKeep});\n$0" }
+	,	{ "trigger": "Cms_Analytics::logVisit", "contents": "Cms_Analytics::logVisit(${1:page}, ${2:url});\n$0" }
+	,	{ "trigger": "Cms_Analytics::isGoogleAnalyticsEnabled", "contents": "Cms_Analytics::isGoogleAnalyticsEnabled();\n$0" }
+	,	{ "trigger": "Cms_Analytics::clearGaCache", "contents": "Cms_Analytics::clearGaCache();\n$0" }
+
+    /* Cms_Controller */
+
+	,	{ "trigger": "Cms_Controller::create", "contents": "Cms_Controller::create();\n$0" }
+	,	{ "trigger": "Cms_Controller::get_instance", "contents": "Cms_Controller::get_instance();\n$0" }
+	,	{ "trigger": "Cms_Controller::get_customer_group_id", "contents": "Cms_Controller::get_customer_group_id();\n$0" }
+	,	{ "trigger": "Cms_Controller::get_customer_group", "contents": "Cms_Controller::get_customer_group();\n$0" }
+	,	{ "trigger": "Cms_Controller::get_customer", "contents": "Cms_Controller::get_customer();\n$0" }
+	,	{ "trigger": "Cms_Controller::is_php_allowed", "contents": "Cms_Controller::is_php_allowed();\n$0" }
+
+    /* Cms_Data_Generator */
+
+	,	{ "trigger": "Cms_Data_Generator::generate_page_visits_file", "contents": "Cms_Data_Generator::generate_page_visits_file(${1:sql_file_path}, ${2:start_date}, ${3:visits_per_day}, ${4:days});\n$0" }
+	,	{ "trigger": "Cms_Data_Generator::generate_totals_chart_data", "contents": "Cms_Data_Generator::generate_totals_chart_data(${1:visit_data}, ${2:start_date});\n$0" }
+
+    /* Cms_ExportManager */
+
+	,	{ "trigger": "Cms_ExportManager::create", "contents": "Cms_ExportManager::create();\n$0" }
+
+    /* CMS_Module */
+
+	,	{ "trigger": "CMS_Module::get_cms_content_version", "contents": "CMS_Module::get_cms_content_version();\n$0" }
+	,	{ "trigger": "CMS_Module::update_cms_content_version", "contents": "CMS_Module::update_cms_content_version();\n$0" }
+	,	{ "trigger": "CMS_Module::begin_content_version_update", "contents": "CMS_Module::begin_content_version_update();\n$0" }
+	,	{ "trigger": "CMS_Module::end_content_version_update", "contents": "CMS_Module::end_content_version_update();\n$0" }
+
+    /* Cms_Object */
+
+	,	{ "trigger": "Cms_Object::parse_object_file", "contents": "Cms_Object:parse_object_file(${1:file_path}, ${2:file_content}, ${3:variables});\n$0" }
+	,	{ "trigger": "Cms_Object::get_content_extension", "contents": "Cms_Object:get_content_extension();\n$0" }
+	,	{ "trigger": "Cms_Object::change_dir_file_extensions", "contents": "Cms_Object:change_dir_file_extensions(${1:dir}, ${2:old}, ${3:new});\n$0" }
+
+    /* Cms_VisitorPreferences */
+
+	,	{ "trigger": "Cms_VisitorPreferences::set", "contents": "Cms_VisitorPreferences::set(${1:name}, ${2:value});\n$0" }
+	,	{ "trigger": "Cms_VisitorPreferences::get", "contents": "Cms_VisitorPreferences::get( ${1:name}${2:, ${3:default}});\n$0" }
+
+    /* Cms_Resources */
+
+	,	{ "trigger": "Cms_Resources::sort_files", "contents": "Cms_Resources::sort_files(${1:a}, ${2:b});\n$0" }
+
+    /* Cms_Html */
+
+	,	{ "trigger": "Cms_Html::flash", "contents": "Cms_Html::flash();\n$0" }
+	,	{ "trigger": "Cms_Html::content_block", "contents": "Cms_Html::content_block(${1:code}, ${2:name});\n$0" }
+	,	{ "trigger": "Cms_Html::global_content_block", "contents": "Cms_Html::global_content_block(${1:code}${2:, ${3:return_content}});\n$0" }
+	,	{ "trigger": "Cms_Html::site_url", "contents": "Cms_Html::site_url(${1:url}${2:, ${3:add_host_name_and_protocol}});\n$0" }
+	,	{ "trigger": "Cms_Html::theme_resource_url", "contents": "Cms_Html::theme_resource_url(${1:path}${2:, ${3:root_url}${4:, ${5:add_host_name_and_protocol}}});\n$0" }
+	,	{ "trigger": "Cms_Html::resource_url", "contents": "Cms_Html::resource_url(${1:path}${2:, ${3:root_url}${4:, ${5:add_host_name_and_protocol}}});\n$0" }
+	,	{ "trigger": "Cms_Html::include_resources", "contents": "Cms_Html::include_resources(${1:src_mode});\n$0" }
+
+    /* Cms_Router */
+
+	,	{ "trigger": "Cms_Router::find_object_by_url", "contents": "Cms_Router::find_object_by_url(${1:url}, ${2:objects}, ${3:params});\n$0" }
+	,	{ "trigger": "Cms_Router::remove_page_segments", "contents": "Cms_Router::remove_page_segments(${1:url});\n$0" }
+	,	{ "trigger": "Cms_Router::sort_objects", "contents": "Cms_Router::sort_objects(${1:a}, ${2:b});\n$0" }
+
+    /* Cms_ContentBlock */
+
+	,	{ "trigger": "Cms_ContentBlock::create", "contents": "Cms_ContentBlock::create();\n$0" }
+	,	{ "trigger": "Cms_ContentBlock::get_by_page_and_code", "contents": "Cms_ContentBlock::get_by_page_and_code(${1:page_id}, ${2:code});\n$0" }
+	,	{ "trigger": "Cms_ContentBlock::clear_cache", "contents": "Cms_ContentBlock::clear_cache();\n$0" }
+
+    /* Cms_GlobalContentBlock */
+
+	,	{ "trigger": "Cms_GlobalContentBlock::create", "contents": "Cms_GlobalContentBlock::create();\n$0" }
+	,	{ "trigger": "Cms_GlobalContentBlock::get_by_code", "contents": "Cms_GlobalContentBlock::get_by_code(${1:code});\n$0" }
+
+    /* Cms_MaintenanceParams */
+
+	,	{ "trigger": "Cms_MaintenanceParams::create", "contents": "Cms_MaintenanceParams::create();\n$0" }
+	,	{ "trigger": "Cms_MaintenanceParams::set_status", "contents": "Cms_MaintenanceParams::set_status(${1:enabled});\n$0" }
+	,	{ "trigger": "Cms_MaintenanceParams::handle_theme_activation", "contents": "Cms_MaintenanceParams::handle_theme_activation(${1:theme});\n$0" }
+
+    /* Cms_Page */
+
+	,	{ "trigger": "Cms_Page::create", "contents": "Cms_Page::create();\n$0" }
+	,	{ "trigger": "Cms_Page::findByUrl", "contents": "Cms_Page::findByUrl(${1:url}, ${2:params});\n$0" }
+	,	{ "trigger": "Cms_Page::find_by_id", "contents": "Cms_Page::find_by_id(${1:id});\n$0" }
+	,	{ "trigger": "Cms_Page::content_by_url", "contents": "Cms_Page::content_by_url(${1:url});\n$0" }
+	,	{ "trigger": "Cms_Page::eval_page_statistics", "contents": "Cms_Page::eval_page_statistics();\n$0" }
+	,	{ "trigger": "Cms_Page::navigation_root_pages", "contents": "Cms_Page::navigation_root_pages();\n$0" }
+	,	{ "trigger": "Cms_Page::set_orders", "contents": "Cms_Page::set_orders(${1:item_ids}, ${2:item_orders});\n$0" }
+	,	{ "trigger": "Cms_Page::list_orphan_directories", "contents": "Cms_Page::list_orphan_directories();\n$0" }
+	,	{ "trigger": "Cms_Page::update_content_file_extension", "contents": "Cms_Page::update_content_file_extension(${1:templates_dir}, ${2:old}, ${3:new});\n$0" }
+
+    /* Cms_PageFileImportModel */
+
+	,	{ "trigger": "Cms_PageFileImportModel::init", "contents": "Cms_PageFileImportModel::init();\n$0" }
+	,	{ "trigger": "Cms_PageFileImportModel::import", "contents": "Cms_PageFileImportModel::import(${1:data});\n$0" }
+
+    /* Cms_PageReference */
+
+	,	{ "trigger": "Cms_PageReference::list_page_references", "contents": "Cms_PageReference::list_page_references(${1:object}, ${2:reference_name});\n$0" }
+	,	{ "trigger": "Cms_PageReference::pages_as_string", "contents": "Cms_PageReference::pages_as_string(${1:object}, ${2:reference_name});\n$0" }
+	,	{ "trigger": "Cms_PageReference::references_as_string", "contents": "Cms_PageReference::references_as_string(${1:references});\n$0" }
+	,	{ "trigger": "Cms_PageReference::get_page_info", "contents": "Cms_PageReference::get_page_info(${1:object}, ${2:reference_name}${3:, ${4:default}});\n$0" }
+	,	{ "trigger": "Cms_PageReference::get_page_url", "contents": "Cms_PageReference::get_page_url(${1:object}, ${2:reference_name}${3:, ${4:default}});\n$0" }
+
+    /* Cms_Partial */
+
+	,	{ "trigger": "Cms_Partial::create", "contents": "Cms_Partial::create();\n$0" }
+	,	{ "trigger": "Cms_Partial::find_by_name", "contents": "Cms_Partial::find_by_name(${1:name});\n$0" }
+	,	{ "trigger": "Cms_Partial::get_content", "contents": "Cms_Partial::get_content(${1:name}, ${2:content}, ${3:file_name});\n$0" }
+	,	{ "trigger": "Cms_Partial::auto_create_from_files", "contents": "Cms_Partial::auto_create_from_files();\n$0" }
+	,	{ "trigger": "Cms_Partial::update_content_file_extension", "contents": "Cms_Partial::update_content_file_extension(${1:templates_dir}, ${2:old}, ${3:new});\n$0" }
+
+    /* Cms_SettingsManager */
+
+	,	{ "trigger": "Cms_SettingsManager::get", "contents": "Cms_SettingsManager::get(${1:className}${2:, ${3:init_columns}});\n$0" }
+
+    /* Cms_Stats_Settings */
+
+	,	{ "trigger": "Cms_Stats_Settings::get", "contents": "Cms_Stats_Settings::get(${1:className}${2:, ${3:init_columns}});\n$0" }
+	,	{ "trigger": "Cms_Stats_Settings::getLazy", "contents": "Cms_Stats_Settings::getLazy();\n$0" }
+	,	{ "trigger": "Cms_Stats_Settings::ipIsFiltered", "contents": "Cms_Stats_Settings::ipIsFiltered(${1:ip});\n$0" }
+
+    /* Cms_Template */
+
+	,	{ "trigger": "Cms_Template::create", "contents": "Cms_Template::create();\n$0" }
+	,	{ "trigger": "Cms_Template::auto_create_from_files", "contents": "Cms_Template::auto_create_from_files();\n$0" }
+	,	{ "trigger": "Cms_Template::update_content_file_extension", "contents": "Cms_Template::update_content_file_extension($templates_dir, $old, $new);\n$0" }
+
+    /* Cms_Theme */
+
+	,	{ "trigger": "Cms_Theme::create", "contents": "Cms_Tsheme::create();\n$0" }
+	,	{ "trigger": "Cms_Theme::decode_agent_list", "contents": "Cms_Theme::decode_agent_list(${1:agent_list});\n$0" }
+	,	{ "trigger": "Cms_Theme::get_themes_path", "contents": "Cms_Theme::get_themes_path(${1:absolute});\n$0" }
+	,	{ "trigger": "Cms_Theme::create_theme_directory", "contents": "Cms_Theme::create_theme_directory(${1:theme_code});\n$0" }
+	,	{ "trigger": "Cms_Theme::is_theming_enabled", "contents": "Cms_Theme::is_theming_enabled();\n$0" }
+	,	{ "trigger": "Cms_Theme::get_active_theme", "contents": "Cms_Theme::get_active_theme();\n$0" }
+	,	{ "trigger": "Cms_Theme::get_default_theme", "contents": "Cms_Theme::get_default_theme();\n$0" }
+	,	{ "trigger": "Cms_Theme::get_edit_theme", "contents": "Cms_Theme::get_edit_theme();\n$0" }
+	,	{ "trigger": "Cms_Theme::set_edit_theme", "contents": "Cms_Theme::set_edit_theme(${1:id});\n$0" }
+	,	{ "trigger": "Cms_Theme::get_theme_by_id", "contents": "Cms_Theme::get_theme_by_id(${1:id});\n$0" }
+	,	{ "trigger": "Cms_Theme::list_themes", "contents": "Cms_Theme::list_themes();\n$0" }
+	,	{ "trigger": "Cms_Theme::create_safe", "contents": "Cms_Theme::create_safe(${1:code}, ${2:name}, ${3:description}, ${4:author_name}, ${5:author_website}, ${6:agent_detection_mode}, ${7:agent_list}, ${8:agent_detection_code}, ${9:templating_engine});\n$0" }
 
 
 
@@ -195,7 +360,6 @@ C:\www\lemonstand\ls\controllers\application.php:
 
 
 
-"Cms_ActionManager" , "Cms_ActionScope" , "Cms_Analytics" , "Cms_Backup" , "Cms_CallStackItem" , "Cms_Content" , "Cms_ContentBlock" , "Cms_Controller" , "Cms_Data_Generator" , "Cms_Exception" , "Cms_ExecutionException" , "Cms_ExportManager" , "Cms_FatalException" , "Cms_GaCaptchaException" , "Cms_GlobalContentBlock" , "Cms_GoogleAnalytics" , "Cms_Html" , "Cms_Maintenance" , "Cms_MaintenanceParams" , "CMS_Module" , "Cms_Object" , "Cms_Page" , "Cms_PageFileImportModel" , "Cms_PageNavigationNode" , "Cms_PageReference" , "Cms_Pages" , "Cms_PageSelector" , "Cms_Partial" , "Cms_Partials" , "Cms_Resources" , "Cms_SecurityMode" , "Cms_Settings" , "Cms_SettingsManager" , "Cms_Stats_Settings" , "Cms_Template" , "Cms_Templates" , "Cms_Theme" , "Cms_ThemeExportModel" , "Cms_ThemeImportModel" , "Cms_Themes" , "Cms_ThemeSelector" , "Cms_Twig" , "Cms_TwigControllerExtension" , "Cms_VisitorPreferences"
 
 "Core_Actions" , "Core_ApcCache" , "Core_Array" , "Core_Cli" , "Core_ConfigSecurity" , "Core_Configuration" , "Core_Configuration_Model" , "Core_ConfigUser" , "Core_CronManager" , "Core_CsvHelper" , "Core_DummyCache" , "Core_Email" , "Core_EmailViewWrapper" , "Core_EulaInfo" , "Core_EulaManager" , "Core_FileCache" , "Core_FrontEndSecurity" , "Core_Http" , "Core_LicenseAgreement" , "Core_MemCache" , "Core_Metrics" , "Core_Module" , "Core_ModuleInfo" , "Core_ModuleManager" , "Core_ModuleSettings" , "Core_Number" , "Core_Object" , "Core_PostStorage" , "Core_Rss" , "Core_Security" , "Core_Settings" , "Core_SimpleXMLExtended" , "Core_String" , "Core_Twig" , "Core_TwigExtension" , "Core_TwigNamedStringLoader" , "Core_UpdateManager" , "Core_Version" , "Core_ViewLicenseAgreement" , "Core_Xml" , "Core_XmlController" , "Core_ZipHelper" 
 
@@ -229,315 +393,9 @@ C:\www\lemonstand\ls\phproad\system\class_functions.php:
 
 
 
-C:\www\lemonstand\ls\modules\cms\behaviors\cms_pageselector.php:
-    2: 
-    3:  class Cms_PageSelector extends Phpr_ControllerBehavior
 
-C:\www\lemonstand\ls\modules\cms\behaviors\cms_themeselector.php:
-    2: 
-    3:  class Cms_ThemeSelector extends Phpr_ControllerBehavior
 
-C:\www\lemonstand\ls\modules\cms\classes\cms_actionmanager.php:
-    2: 
-    3:  class Cms_ActionManager
-    6:      
-	,	{ "trigger": "::listActions", "contents": "listActions();\n$0" }
-	,	{ "trigger": "::execAction", "contents": "execAction($name, $controller);\n$0" }
-	,	{ "trigger": "::execAjaxHandler", "contents": "execAjaxHandler($name, $controller);\n$0" }
-	,	{ "trigger": "::getActionInfo", "contents": "getActionInfo($name);\n$0" }
 
-C:\www\lemonstand\ls\modules\cms\classes\cms_actionscope.php:
-    2: 
-    3:  class Cms_ActionScope extends Cms_Controller
-
-C:\www\lemonstand\ls\modules\cms\classes\cms_analytics.php:
-    2: 
-    3:  class Cms_Analytics
-    6:      
-	,	{ "trigger": "::evalVisiorsStatistics", "contents": "evalVisiorsStatistics($start, $end);\n$0" }
-	,	{ "trigger": "::getVisitorsChartData", "contents": "getVisitorsChartData($start, $end);\n$0" }
-	,	{ "trigger": "::evalTopPages", "contents": "evalTopPages($start, $end);\n$0" }
-	,	{ "trigger": "::deleteStalePageviews", "contents": "deleteStalePageviews($numberToKeep = null);\n$0" }
-	,	{ "trigger": "::logVisit", "contents": "logVisit($page, $url);\n$0" }
-	,	{ "trigger": "::isGoogleAnalyticsEnabled", "contents": "isGoogleAnalyticsEnabled();\n$0" }
-	,	{ "trigger": "::clearGaCache", "contents": "clearGaCache();\n$0" }
-
-C:\www\lemonstand\ls\modules\cms\classes\cms_callstackitem.php:
-    2: 
-    3:  class Cms_CallStackItem
-
-C:\www\lemonstand\ls\modules\cms\classes\cms_controller.php:
-   15:  class Cms_Controller
-   68: 
-	,	{ "trigger": "::create", "contents": "create();\n$0" }
-	,	{ "trigger": "::get_instance", "contents": "get_instance();\n$0" }
-	,	{ "trigger": "::get_customer_group_id", "contents": "get_customer_group_id();\n$0" }
-	,	{ "trigger": "::get_customer_group", "contents": "get_customer_group();\n$0" }
-	,	{ "trigger": "::get_customer", "contents": "get_customer();\n$0" }
-	,	{ "trigger": "::is_php_allowed", "contents": "is_php_allowed();\n$0" }
-
-C:\www\lemonstand\ls\modules\cms\classes\cms_data_generator.php:
-    2: 
-    3:  class Cms_Data_Generator
-	,	{ "trigger": "::generate_page_visits_file", "contents": "generate_page_visits_file($sql_file_path, $start_date, $visits_per_day, $days);\n$0" }
-	,	{ "trigger": "::generate_totals_chart_data", "contents": "generate_totals_chart_data($visit_data, $start_date);\n$0" }
-
-C:\www\lemonstand\ls\modules\cms\classes\cms_exception.php:
-    2: 
-    3:  class Cms_Exception extends Phpr_ApplicationException
-
-C:\www\lemonstand\ls\modules\cms\classes\cms_executionexception.php:
-    2: 
-    3:  class Cms_ExecutionException extends Phpr_SystemException
-
-C:\www\lemonstand\ls\modules\cms\classes\cms_exportmanager.php:
-    9:  class Cms_ExportManager
-   60:      
-	,	{ "trigger": "::create", "contents": "create();\n$0" }
-
-C:\www\lemonstand\ls\modules\cms\classes\cms_fatalexception.php:
-    2: 
-    3:  class Cms_FatalException extends Phpr_ApplicationException
-
-C:\www\lemonstand\ls\modules\cms\classes\cms_gacaptchaexception.php:
-    2: 
-    3:  class Cms_GaCaptchaException extends Phpr_ApplicationException
-
-C:\www\lemonstand\ls\modules\cms\classes\cms_googleanalytics.php:
-    2: 
-    3:  class Cms_GoogleAnalytics
-
-C:\www\lemonstand\ls\modules\cms\classes\cms_module.php:
-    2: 
-    3:  class CMS_Module extends Core_ModuleBase
-  185:      
-	,	{ "trigger": "::get_cms_content_version", "contents": "get_cms_content_version();\n$0" }
-  190:      
-	,	{ "trigger": "::update_cms_content_version", "contents": "update_cms_content_version();\n$0" }
-  198:      
-	,	{ "trigger": "::begin_content_version_update", "contents": "begin_content_version_update();\n$0" }
-  203: 
-	,	{ "trigger": "::end_content_version_update", "contents": "end_content_version_update();\n$0" }
-
-C:\www\lemonstand\ls\modules\cms\classes\cms_object.php:
-    6:  class Cms_Object extends Db_ActiveRecord
-	,	{ "trigger": "::parse_object_file", "contents": "parse_object_file($file_path, &$file_content, &$variables);\n$0" }
-	,	{ "trigger": "::get_content_extension", "contents": "get_content_extension();\n$0" }
-	,	{ "trigger": "::change_dir_file_extensions", "contents": "change_dir_file_extensions($dir, $old, $new);\n$0" }
-
-C:\www\lemonstand\ls\modules\cms\classes\cms_pagenavigationnode.php:
-   14:  class Cms_PageNavigationNode
-
-C:\www\lemonstand\ls\modules\cms\classes\cms_twig.php:
-    2: 
-    3:  class Cms_Twig extends Core_Twig
-
-C:\www\lemonstand\ls\modules\cms\classes\cms_twigcontrollerextension.php:
-    6:  class Cms_TwigControllerExtension extends Twig_Extension
-
-C:\www\lemonstand\ls\modules\cms\classes\cms_visitorpreferences.php:
-   17:  class Cms_VisitorPreferences
-	,	{ "trigger": "::set", "contents": "set($name, $value);\n$0" }
-	,	{ "trigger": "::get", "contents": "get( $name, $default = null);\n$0" }
-
-C:\www\lemonstand\ls\modules\cms\controllers\cms_backup.php:
-    2: 
-    3:  class Cms_Backup extends Backend_Controller
-
-C:\www\lemonstand\ls\modules\cms\controllers\cms_content.php:
-    2: 
-    3:  class Cms_Content extends Backend_Controller
-
-C:\www\lemonstand\ls\modules\cms\controllers\cms_maintenance.php:
-    2: 
-    3:  class Cms_Maintenance extends Backend_SettingsController
-
-C:\www\lemonstand\ls\modules\cms\controllers\cms_pages.php:
-    2: 
-    3:  class Cms_Pages extends Backend_Controller
-
-C:\www\lemonstand\ls\modules\cms\controllers\cms_partials.php:
-    2: 
-    3:  class Cms_Partials extends Backend_Controller
-
-C:\www\lemonstand\ls\modules\cms\controllers\cms_resources.php:
-    2: 
-    3:  class Cms_Resources extends Backend_Controller
-  813:      
-	,	{ "trigger": "::sort_files", "contents": "sort_files($a, $b);\n$0" }
-
-C:\www\lemonstand\ls\modules\cms\controllers\cms_settings.php:
-    2: 
-    3:  class Cms_Settings extends Backend_SettingsController
-
-C:\www\lemonstand\ls\modules\cms\controllers\cms_templates.php:
-    2: 
-    3:  class Cms_Templates extends Backend_Controller
-
-C:\www\lemonstand\ls\modules\cms\controllers\cms_themes.php:
-    2: 
-    3:  class Cms_Themes extends Backend_Controller
-
-C:\www\lemonstand\ls\modules\cms\helpers\cms_html.php:
-    2: 
-    3:  class Cms_Html
-	,	{ "trigger": "::flash", "contents": "flash();\n$0" }
-   21:      
-	,	{ "trigger": "::content_block", "contents": "content_block($code, $name);\n$0" }
-   30:      
-	,	{ "trigger": "::global_content_block", "contents": "global_content_block($code, $return_content = false);\n$0" }
-   42:      
-	,	{ "trigger": "::site_url", "contents": "site_url($url, $add_host_name_and_protocol = true);\n$0" }
-	,	{ "trigger": "::theme_resource_url", "contents": "theme_resource_url($path, $root_url = true, $add_host_name_and_protocol = false);\n$0" }
-	,	{ "trigger": "::resource_url", "contents": "resource_url($path, $root_url = true, $add_host_name_and_protocol = false);\n$0" }
-   94:      
-	,	{ "trigger": "::include_resources", "contents": "include_resources($src_mode = false);\n$0" }
-
-C:\www\lemonstand\ls\modules\cms\helpers\cms_router.php:
-    6:  class Cms_Router
-	,	{ "trigger": "::find_object_by_url", "contents": "find_object_by_url($url, &$objects, &$params);\n$0" }
-	,	{ "trigger": "::remove_page_segments", "contents": "remove_page_segments($url);\n$0" }
-	,	{ "trigger": "::sort_objects", "contents": "sort_objects($a, $b);\n$0" }
-
-C:\www\lemonstand\ls\modules\cms\models\cms_contentblock.php:
-    2: 
-    3:  class Cms_ContentBlock extends Db_ActiveRecord
-    8: 
-	,	{ "trigger": "::create", "contents": "create();\n$0" }
-   13:      
-	,	{ "trigger": "::get_by_page_and_code", "contents": "get_by_page_and_code($page_id, $code);\n$0" }
-   24:      
-	,	{ "trigger": "::clear_cache", "contents": "clear_cache();\n$0" }
-
-C:\www\lemonstand\ls\modules\cms\models\cms_globalcontentblock.php:
-    2: 
-    3:  class Cms_GlobalContentBlock extends Db_ActiveRecord
-   10: 
-	,	{ "trigger": "::create", "contents": "create();\n$0" }
-   50:      
-	,	{ "trigger": "::get_by_code", "contents": "get_by_code($code);\n$0" }
-
-C:\www\lemonstand\ls\modules\cms\models\cms_maintenanceparams.php:
-    2: 
-    3:  class Cms_MaintenanceParams extends Core_Configuration_Model
-    6:      
-	,	{ "trigger": "::create", "contents": "create();\n$0" }
-   24:      
-	,	{ "trigger": "::set_status", "contents": "set_status($enabled);\n$0" }
-   39:      
-	,	{ "trigger": "::handle_theme_activation", "contents": "handle_theme_activation($theme);\n$0" }
-
-C:\www\lemonstand\ls\modules\cms\models\cms_page.php:
-   13:  class Cms_Page extends Cms_Object
-  127:      
-	,	{ "trigger": "::create", "contents": "create();\n$0" }
-	,	{ "trigger": "::findByUrl", "contents": "findByUrl($url, &$params);\n$0" }
-	,	{ "trigger": "::find_by_id", "contents": "find_by_id($id);\n$0" }
-	,	{ "trigger": "::content_by_url", "contents": "content_by_url($url);\n$0" }
-  762:      
-	,	{ "trigger": "::eval_page_statistics", "contents": "eval_page_statistics();\n$0" }
-	,	{ "trigger": "::navigation_root_pages", "contents": "navigation_root_pages();\n$0" }
- 1023:      
-	,	{ "trigger": "::set_orders", "contents": "set_orders($item_ids, $item_orders);\n$0" }
-	,	{ "trigger": "::list_orphan_directories", "contents": "list_orphan_directories();\n$0" }
- 1709:      
-	,	{ "trigger": "::update_content_file_extension", "contents": "update_content_file_extension($templates_dir, $old, $new);\n$0" }
-
-C:\www\lemonstand\ls\modules\cms\models\cms_pagefileimportmodel.php:
-    2: 
-    3:  class Cms_PageFileImportModel extends Db_ActiveRecord
-   24: 
-	,	{ "trigger": "::init", "contents": "init();\n$0" }
-   45:      
-	,	{ "trigger": "::import", "contents": "import($data);\n$0" }
-
-C:\www\lemonstand\ls\modules\cms\models\cms_pagereference.php:
-    2: 
-    3:  class Cms_PageReference
-	,	{ "trigger": "::list_page_references", "contents": "list_page_references($object, $reference_name);\n$0" }
-	,	{ "trigger": "::pages_as_string", "contents": "pages_as_string($object, $reference_name);\n$0" }
-   68:      
-	,	{ "trigger": "::references_as_string", "contents": "references_as_string($references);\n$0" }
-	,	{ "trigger": "::get_page_info", "contents": "get_page_info($object, $reference_name, $default = null);\n$0" }
-	,	{ "trigger": "::get_page_url", "contents": "get_page_url($object, $reference_name, $default = null);\n$0" }
-
-C:\www\lemonstand\ls\modules\cms\models\cms_partial.php:
-   15:  class Cms_Partial extends Cms_Object
-   40: 
-	,	{ "trigger": "::create", "contents": "create();\n$0" }
-	,	{ "trigger": "::find_by_name", "contents": "find_by_name($name);\n$0" }
-	,	{ "trigger": "::get_content", "contents": "get_content($name, &$content, $file_name);\n$0" }
-  383:      
-	,	{ "trigger": "::auto_create_from_files", "contents": "auto_create_from_files();\n$0" }
-  501:      
-	,	{ "trigger": "::update_content_file_extension", "contents": "update_content_file_extension($templates_dir, $old, $new);\n$0" }
-
-C:\www\lemonstand\ls\modules\cms\models\cms_securitymode.php:
-    2: 
-    3:  class Cms_SecurityMode extends Db_ActiveRecord
-
-C:\www\lemonstand\ls\modules\cms\models\cms_settingsmanager.php:
-    2: 
-    3:  class Cms_SettingsManager extends Backend_SettingsRecord
-    9: 
-	,	{ "trigger": "::get", "contents": "get($className = null, $init_columns = true);\n$0" }
-
-C:\www\lemonstand\ls\modules\cms\models\cms_stats_settings.php:
-    2: 
-    3:  class Cms_Stats_Settings extends Backend_SettingsRecord
-   10: 
-	,	{ "trigger": "::get", "contents": "get($className = null, $init_columns = true);\n$0" }
-  257:      
-	,	{ "trigger": "::getLazy", "contents": "getLazy();\n$0" }
-  272:      
-	,	{ "trigger": "::ipIsFiltered", "contents": "ipIsFiltered($ip);\n$0" }
-
-C:\www\lemonstand\ls\modules\cms\models\cms_template.php:
-   11:  class Cms_Template extends Cms_Object
-   33:      
-	,	{ "trigger": "::create", "contents": "create();\n$0" }
-  268:      
-	,	{ "trigger": "::auto_create_from_files", "contents": "auto_create_from_files();\n$0" }
-  383:      
-	,	{ "trigger": "::update_content_file_extension", "contents": "update_content_file_extension($templates_dir, $old, $new);\n$0" }
-
-C:\www\lemonstand\ls\modules\cms\models\cms_theme.php:
-   24:  class Cms_Theme extends Cms_Object
-   39:      
-	,	{ "trigger": "::create", "contents": "create();\n$0" }
-  264:      
-	,	{ "trigger": "::decode_agent_list", "contents": "decode_agent_list($agent_list);\n$0" }
-  278: 
-	,	{ "trigger": "::get_themes_path", "contents": "get_themes_path($absolute = true);\n$0" }
-  287:      
-	,	{ "trigger": "::create_theme_directory", "contents": "create_theme_directory($theme_code = null);\n$0" }
-  333:      
-	,	{ "trigger": "::is_theming_enabled", "contents": "is_theming_enabled();\n$0" }
-	,	{ "trigger": "::get_active_theme", "contents": "get_active_theme();\n$0" }
-	,	{ "trigger": "::get_default_theme", "contents": "get_default_theme();\n$0" }
-	,	{ "trigger": "::get_edit_theme", "contents": "get_edit_theme();\n$0" }
-  446:      
-	,	{ "trigger": "::set_edit_theme", "contents": "set_edit_theme($id);\n$0" }
-  459:      
-	,	{ "trigger": "::get_theme_by_id", "contents": "get_theme_by_id($id);\n$0" }
-  470:      
-	,	{ "trigger": "::list_themes", "contents": "list_themes();\n$0" }
-	,	{ "trigger": "::create_safe", "contents": "create_safe($code, $name, $description, $author_name, $author_website, $agent_detection_mode, $agent_list, $agent_detection_code, $templating_engine);\n$0" }
-
-C:\www\lemonstand\ls\modules\cms\models\cms_themeexportmodel.php:
-    2: 
-    3:  class Cms_ThemeExportModel extends Db_ActiveRecord
-
-C:\www\lemonstand\ls\modules\cms\models\cms_themeimportmodel.php:
-    2: 
-    3:  class Cms_ThemeImportModel extends Db_ActiveRecord
-
-C:\www\lemonstand\ls\modules\contact\classes\contact_actions.php:
-    2: 
-    3: class Contact_Actions extends Cms_ActionScope {
-
-C:\www\lemonstand\ls\modules\contact\classes\contact_message.php:
-    2:  
     3:  class Contact_Message {
 	,	{ "trigger": "::send", "contents": "send();\n$0" } {
 
